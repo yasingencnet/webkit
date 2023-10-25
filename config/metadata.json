@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "title": "Yasin Genc - Front-End Developer",
+    "description": "I develop accessible, responsive, interactive, and animated websites with a strong focus on performance."
+  },
+  "personal": {
+    "name": "Yasin",
+    "surname": "Genc",
+    "email": "yasin@yasingenc.net",
+    "country": "Turkey",
+    "city": "Istanbul"
+  },
+  "social": {
+    "twitter": "https://twitter.com/yasingencnet",
+    "instagram": "https://www.instagram.com/yasingencnet",
+    "github": "https://github.com/yasingencnet",
+    "devto": "https://dev.to/yasingencnet",
+    "codepen": "https://codepen.io/yasingencnet",
+    "linkedin": "https://www.linkedin.com/in/yasingencnet/"
+  }
+}

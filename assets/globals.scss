@@ -1,0 +1,129 @@
+//////////////////////////////
+// THEMING
+//////////////////////////////
+:root {
+  --color-bg: 210 75% 98%; //#F8FBFE; Off White
+  --color-bg-alt: 230 12% 10%; //#Smoke;
+
+  --color-primary: 50 100% 50%; //#FFD600; Yellow
+
+  --color-white: 0 0% 100%; //#FFF; White
+  --color-black: 0 0% 0%; //#000; Black
+
+  --color-title: 0 0% 0%; //#000; Black
+  --color-body: 213 9% 45%; //#69727E; Pale Sky
+
+  --fs-xs: 1.6rem;
+  --fs-sm: 1.8rem;
+  --fs-md: 2.4rem;
+  --fs-lg: 3.4rem;
+  --fs-xl: 6.8rem;
+  --fs-xxl: 16rem;
+}
+
+
+//////////////////////////////
+// CSS RESET
+//////////////////////////////
+
+/* Box sizing rules */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  font-size: 62.5%;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/* Remove list styles on ul and ol */
+ul, ol {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100dvh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Create a root stacking context */
+#root, #__next {
+  isolation: isolate;
+}
+
+
+//////////////////////////////
+// GLOBAL STYLES
+//////////////////////////////
+h1, h2 {
+  line-height: 1.2;
+}
+
+h3, h4, h5, h6 {
+  line-height: 1.4;
+}
+
+%visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > * {
+    position: absolute;
+    inset: 0;
+  }
+}

@@ -1,0 +1,57 @@
+.hero {
+  --gap: 6rem;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: hsl(var(--color-bg-alt));
+  padding: calc(var(--gap) * 2);
+
+  h1 {
+    font-size: var(--fs-xl);
+    color: hsl(var(--color-title));
+    margin-bottom: calc(var(--gap) / 2);
+  }
+
+  p {
+    font-size: var(--fs-sm);
+    color: hsl(var(--color-title));
+    margin-bottom: var(--gap);
+  }
+}
+
+.inner{
+  width: 75vw;
+  min-height: calc(100vh - (var(--gap) * 4));
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  background-color: hsl(var(--color-primary));
+}
+
+.figure{
+  position: relative;
+  overflow: hidden;
+  img{
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: top right;
+  }
+}
+.content{
+  position: relative;
+  padding: calc(var(--gap) * 2) var(--gap);
+}
+
+.badge{
+  position: absolute;
+  right: var(--gap);
+  bottom: var(--gap);
+}
+
+.button{
+
+}
+
