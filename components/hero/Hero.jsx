@@ -20,7 +20,7 @@ export default function Hero() {
                     <h1>Hi, <br />
                         I&apos;m Yasin.</h1>
                     <p>I develop accessible, responsive, interactive, and animated websites with a strong focus on performance.</p>
-                    <FancyButton element='button' type='button' theme='button-1'>View Selected Works</FancyButton>
+                    <FancyButton element='button' type='button' theme='button-1'>View Selected Works.</FancyButton>
                     <Logo classVariable={styles.badge}></Logo>
                 </div>
             </div>
