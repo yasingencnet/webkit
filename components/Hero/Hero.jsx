@@ -26,7 +26,7 @@ export default function Hero() {
                     <ImageTip date="August, 2012">Oludeniz, Turkiye</ImageTip>
                 </figure>
                 <div className={styles.content}>
-                    <Title>Hi, <br /> I'm {commonConfig.personal.name}.</Title>
+                    <Title>Hi, <br /> I&apos;m {commonConfig.personal.name}.</Title>
                     <p>{commonConfig.metadata.description}</p>
                     <FancyButton theme='button-2' link='/'>View Selected Works.</FancyButton>
                     <Logo classVariable={styles.badge}></Logo>
