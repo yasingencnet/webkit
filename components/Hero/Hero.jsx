@@ -34,19 +34,18 @@ export default function Hero() {
             </div>
             <div className={styles.pattern}>
                 <Ticker words={['accessibility', 'responsiveness', 'interactive', 'performance']}></Ticker>
-                <Ticker words={['responsiveness', 'interactive', 'performance', 'accessibility']}></Ticker>
-                <Ticker words={['interactive', 'performance', 'accessibility', 'responsiveness']}></Ticker>
-                <Ticker words={['performance', 'accessibility', 'responsiveness', 'interactive']}></Ticker>
+                <Ticker speed={'20'} direction={'left'} words={['gsap', 'animation', 'three.js', 'lottie']}></Ticker>
+                <Ticker speed={'60'} words={['webpack', 'parcel', 'vite', 'gulp']}></Ticker>
+                <Ticker speed={'40'} direction={'left'} words={['html', 'a11y', 'react.js', 'next.js', 'css']}></Ticker>
+                <Ticker speed={'70'} words={['responsiveness', 'performance', 'accessibility', 'interactive']}></Ticker>
+                <Ticker speed={'30'} direction={'left'} words={['html', 'a11y', 'react.js', 'next.js', 'css']}></Ticker>
 
+                <Ticker speed={'20'} direction={'left'} words={['gsap', 'animation', 'three.js', 'lottie']}></Ticker>
+                <Ticker speed={'60'} words={['webpack', 'parcel', 'vite', 'gulp']}></Ticker>
                 <Ticker words={['accessibility', 'responsiveness', 'interactive', 'performance']}></Ticker>
-                <Ticker words={['responsiveness', 'interactive', 'performance', 'accessibility']}></Ticker>
-                <Ticker words={['interactive', 'performance', 'accessibility', 'responsiveness']}></Ticker>
-                <Ticker words={['performance', 'accessibility', 'responsiveness', 'interactive']}></Ticker>
-
-                <Ticker words={['accessibility', 'responsiveness', 'interactive', 'performance']}></Ticker>
-                <Ticker words={['responsiveness', 'interactive', 'performance', 'accessibility']}></Ticker>
-                <Ticker words={['interactive', 'performance', 'accessibility', 'responsiveness']}></Ticker>
-                <Ticker words={['performance', 'accessibility', 'responsiveness', 'interactive']}></Ticker>
+                <Ticker speed={'30'} direction={'left'} words={['html', 'a11y', 'react.js', 'next.js', 'css']}></Ticker>
+                <Ticker speed={'70'} words={['responsiveness', 'performance', 'accessibility', 'interactive']}></Ticker>
+                <Ticker speed={'40'} direction={'left'} words={['html', 'a11y', 'react.js', 'next.js', 'css']}></Ticker>
             </div>
         </section>
     )

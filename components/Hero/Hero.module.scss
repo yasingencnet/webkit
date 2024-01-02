@@ -29,7 +29,7 @@
   grid-template-columns: 3fr 2fr;
   background-color: hsl(var(--color-primary));
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .figure{
@@ -65,6 +65,7 @@
   position: absolute;
   inset: 0;
   margin-top: -86px;
+  z-index: 0;
   span{
     -webkit-text-stroke-color: hsl(var(--color-white));
   }
