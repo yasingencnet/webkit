@@ -1,6 +1,7 @@
 .title {
   font-weight: var(--fw-bold);
   color: hsl(var(--color-black));
+  opacity: 0;
   span {
     opacity: .5;
   }

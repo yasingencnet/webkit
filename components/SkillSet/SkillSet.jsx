@@ -6,6 +6,7 @@ import Ticker from '@/components/UI/Ticker/Ticker';
 import Card1 from "@/components/UI/Card1/Card1";
 import Title from "@/components/UI/Title/Title";
 import Skills from '@/database/Skills.json';
+
 export default function SkillSet() {
 
     return (

@@ -2,6 +2,7 @@ import React  from 'react';
 import styles from './SocialLinks.module.scss';
 import commonConfig from "@/database/config/metadata.json";
 import Link from 'next/link';
+import Magnet from "@/components/UI/Magnet/Magnet";
 
 export default function SocialLinks() {
     const socialMediaIcons = {
@@ -46,11 +47,13 @@ export default function SocialLinks() {
         <ul className={styles.social}>
             {Object.entries(commonConfig.social).map(([item, value], index) => (
                 <li key={index}>
+                    <Magnet>
                     {socialMediaIcons[item] && (
                         <Link href={value} target="_blank">
                             {socialMediaIcons[item]}
                         </Link>
                     )}
+                    </Magnet>
                 </li>
             ))}
         </ul>

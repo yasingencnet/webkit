@@ -8,8 +8,7 @@ import styles from './CustomCursor.module.scss';
 export default function CustomCursor() {
     const container = useRef();
 
-    useGSAP(
-        () => {
+    useGSAP(() => {
             const cursor = container.current;
 
             // Handle mousemove event

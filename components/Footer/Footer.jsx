@@ -22,8 +22,11 @@ export default function Footer() {
                     <div className={styles.title}>
                         <Title color="white"><span>Let’s</span>  <br/>Connect.</Title>
                     </div>
+
                     <Link className={styles.email} href={`mailto:${commonConfig.personal.email}`}>{commonConfig.personal.email}</Link>
+
                     <SocialLinks></SocialLinks>
+
                 </div>
 
                 <div className={styles.nav}>
