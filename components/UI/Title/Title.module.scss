@@ -1,0 +1,30 @@
+.title {
+  font-weight: var(--fw-bold);
+  color: hsl(var(--color-black));
+  span {
+    opacity: .5;
+  }
+
+  .splitLine{
+    overflow: hidden;
+    margin: calc(-1 * 0.5rem) 0;
+    padding: 0.5rem 0;
+  }
+}
+
+h1, h2, h3 {
+  &.title{font-size: var(--fs-xl);}
+}
+h4, h5 {
+  &.title{font-size: var(--fs-lg);}
+}
+h6{
+  &.title{font-size: var(--fs-md);}
+}
+
+.white{
+  color: hsl(var(--color-white));
+}
+.black{
+  color: hsl(var(--color-black));
+}

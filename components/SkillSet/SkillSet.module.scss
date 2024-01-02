@@ -1,0 +1,44 @@
+.section{
+  position: relative;
+  padding: 24rem 0;
+  background: url("/dot-pattern.svg") repeat;
+}
+.container{
+  width: 100%;
+  padding: 0 9rem;
+}
+
+.grid{
+  display: grid;
+  grid-gap: 12rem;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+
+  > * {
+    &:nth-child(2){
+      grid-column-start: 2;
+      grid-column-end: -1;
+      padding-right: calc(50% + 4.5rem);
+    }
+  }
+}
+
+.decor{
+  position: absolute;
+  right: 12rem;
+  top: 12rem;
+  animation: freeRotate 8s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.ticker{
+  margin-top: 24rem;
+}
+
+@keyframes freeRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

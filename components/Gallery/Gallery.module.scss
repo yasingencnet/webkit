@@ -1,0 +1,44 @@
+.section{
+  position: relative;
+  padding: 24rem 0;
+  background: hsl(var(--color-bg-alt)) url("/dash-pattern.svg") repeat;
+}
+
+.container{
+  width: 100%;
+  padding: 0 9rem;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18rem;
+}
+
+.slider{
+  --swiper-pagination-bottom: 0;
+  --swiper-pagination-top: 90%;
+}
+
+.sliderItem{
+  width: auto;
+}
+
+.figure{
+  position: relative;
+}
+
+.image{
+  background: hsl(var(--color-bg-alt));
+  object-fit: cover;
+  max-height: calc(100vh - 10rem);
+
+  &.vertical{
+    max-width: calc(100vh - 20rem);
+  }
+  &.horizontal{
+    max-width: 100vw;
+  }
+}
+

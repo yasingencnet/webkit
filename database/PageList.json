@@ -1,0 +1,32 @@
+{
+  "about": {
+    "title": "About",
+    "description": "I design & develop modern and accessible web interfaces.",
+    "image": "",
+    "link": "/about"
+  },
+  "works": {
+    "title": "Works",
+    "description": "It’s time to see some work. Here are a few projects I’ve done for clients.",
+    "image": "",
+    "link": "/works"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Articles focused on CSS, HTML, JavaScript, and other frontend stuff.",
+    "image": "",
+    "link": "/blog"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Now it’s your turn to say hi. I hope to hear from you!",
+    "image": "",
+    "link": "/contact"
+  },
+  "instagram": {
+    "title": "Instagram",
+    "description": "Good memories, best times. My photo journal.",
+    "image": "",
+    "link": "https://www.instagram.com/yasingencnet/"
+  }
+}

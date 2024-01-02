@@ -2,10 +2,17 @@
 // THEMING
 //////////////////////////////
 :root {
+  --font-alt: 'Libre Baskerville', serif;
+  --font-primary: 'Manrope', sans-serif;
+
   --color-bg: 210 75% 98%; //#F8FBFE; Off White
-  --color-bg-alt: 230 12% 10%; //#Smoke;
+  --color-bg-alt: 240 10% 8%; //#121216 Smoke;
 
   --color-primary: 50 100% 50%; //#FFD600; Yellow
+  --color-primary-alt: 50, 32%, 42%; //#8E8349; Rusty Yellow
+  --color-primary-light: 50, 32%, 42%; //#7A6A14; Rusty Yellow
+
+  --color-alert: 0, 88%, 45%; //#da0d0d; Red
 
   --color-white: 0 0% 100%; //#FFF; White
   --color-black: 0 0% 0%; //#000; Black
@@ -13,12 +20,24 @@
   --color-title: 0 0% 0%; //#000; Black
   --color-body: 213 9% 45%; //#69727E; Pale Sky
 
-  --fs-xs: 1.6rem;
+  --fs-xs: 1.8rem;
+  --fs-sm: 2.0rem;
+  --fs-md: 2.6rem;
+  --fs-lg: 3.8rem;
+  --fs-xl: 7.4rem;
+  --fs-xxl: 16rem;
+
+  /*--fs-xs: 1.6rem;
   --fs-sm: 1.8rem;
   --fs-md: 2.4rem;
   --fs-lg: 3.4rem;
   --fs-xl: 6.8rem;
-  --fs-xxl: 16rem;
+  --fs-xxl: 16rem;*/
+
+  --fw-bold: 700;
+  --fw-medium: 600;
+  --fw-regular: 400;
+  --fw-light: 300;
 }
 
 
@@ -90,16 +109,28 @@ input, button, textarea, select {
   isolation: isolate;
 }
 
+::selection {
+  color: hsl(var(--color-black));
+  background: hsl(var(--color-primary));
+}
+
 
 //////////////////////////////
 // GLOBAL STYLES
 //////////////////////////////
+h1, h3, h3, h4, h5, h6 {
+  font-weight: var(--fw-bold);
+}
 h1, h2 {
   line-height: 1.2;
 }
 
 h3, h4, h5, h6 {
   line-height: 1.4;
+}
+
+p{
+  font-weight: var(--fw-regular);
 }
 
 %visually-hidden {
@@ -126,4 +157,26 @@ h3, h4, h5, h6 {
     position: absolute;
     inset: 0;
   }
+}
+
+
+// Lenis Styles
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }

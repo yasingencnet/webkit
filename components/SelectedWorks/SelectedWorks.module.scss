@@ -1,0 +1,27 @@
+.section{
+  position: relative;
+  padding: 24rem 0;
+  background: hsl(var(--color-bg-alt)) url("/dash-pattern.svg") repeat;
+
+  color: white;
+}
+
+.slider{
+
+}
+
+.sliderItem{
+  width: auto;
+}
+
+.image{
+  height: calc(100vh - 15rem);
+  object-fit: cover;
+  margin-bottom: 3rem;
+}
+
+.title{
+  font-size: var(--fs-md);
+  color: hsl(var(--color-white));
+  font-weight: var(--fw-regular);
+}
