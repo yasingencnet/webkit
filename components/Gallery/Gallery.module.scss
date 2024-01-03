@@ -27,9 +27,12 @@
 
 .figure{
   position: relative;
+  visibility: hidden;
+  overflow: hidden;
 }
 
 .image{
+  transform-origin: left;
   background: hsl(var(--color-bg-alt));
   object-fit: cover;
   max-height: calc(100vh - 10rem);

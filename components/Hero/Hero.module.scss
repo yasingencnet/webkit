@@ -1,90 +1,49 @@
 .hero {
-  --gap: 6rem;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: flex-end;
-  background-color: hsl(var(--color-bg-alt));
-  padding: calc(var(--gap) * 2);
-
-  h1 {
-    font-size: var(--fs-xl);
-    color: hsl(var(--color-title));
-    margin-bottom: calc(var(--gap) / 2);
-  }
-
-  p {
-    font-size: var(--fs-sm);
-    color: hsl(var(--color-title));
-    margin-bottom: var(--gap);
+  .inner{
+    position: relative;
+    padding: 9rem;
+    z-index: 1;
+    overflow: hidden;
   }
 }
 
-.inner{
-  width: 75vw;
-  min-height: calc(100vh - (var(--gap) * 4));
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  background-color: hsl(var(--color-primary));
-  position: relative;
-  z-index: 2;
+.logo{
+  display: inline-block;
+  margin-bottom: 6rem;
 }
 
-.figure{
-  position: relative;
-  overflow: hidden;
+.title{
+  margin-bottom: 3rem;
 }
 
-.img{
+.description{
+  margin-bottom: 3rem;
+  font-size: var(--fs-sm);
+  color: hsl(var(--color-black));
+  max-width: 50rem;
+}
+
+.background {
   position: absolute;
-  inset: 0;
-  object-fit: cover;
+  overflow: hidden;
   width: 100%;
   height: 100%;
-  object-position: top right;
-}
-
-.content{
-  position: relative;
-  padding: calc(var(--gap) * 2) var(--gap);
-}
-
-.badge{
-  position: absolute;
-  right: var(--gap);
-  bottom: var(--gap);
-}
-
-.button{
-
-}
-
-.pattern{
-  position: absolute;
   inset: 0;
-  margin-top: -86px;
-  z-index: 0;
-  span{
-    -webkit-text-stroke-color: hsl(var(--color-white));
-  }
+  z-index: -1;
   > * {
-    &:nth-child(odd){
-      span{
-        &:nth-child(odd){
-          color: hsl(var(--color-white));
-          -webkit-text-stroke-width: 0;
-        }
-      }
-    }
-    &:nth-child(even){
-      span{
-        &:nth-child(even){
-          color: hsl(var(--color-white));
-          -webkit-text-stroke-width: 0;
-        }
-      }
-    }
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gradient{
+    background-image: url("/hero-gradient.svg");
+    background-size: 130%;
+    filter: blur(2vw);
+  }
+  .noise{
+    z-index: 1;
+    background: url("/noise.png") repeat;
   }
 }

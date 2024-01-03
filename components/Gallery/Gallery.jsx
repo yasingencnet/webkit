@@ -17,6 +17,7 @@ import FancyButton from "@/components/UI/Button/Button";
 
 import commonConfig from '@/database/config/metadata.json';
 import ImageVideo from '@/database/ImageVideo.json';
+import ImageReveal from "@/components/UI/ImageReveal/ImageReveal";
 export default function Gallery() {
 
     return (
@@ -39,18 +40,20 @@ export default function Gallery() {
             >
                 {ImageVideo.map((item, index) => (
                     <SwiperSlide key={index} className={`${styles.sliderItem}`}>
-                        <figure className={styles.figure}>
-                            <Image
-                                src={item.url}
-                                quality={90}
-                                alt={`An image from ${item.location}`}
-                                width={1400}
-                                height={1600}
-                                loading={"lazy"}
-                                className={`${styles.image} ${styles[item.direction]}`}
-                            />
-                            <ImageTip date={item.date}>{item.location}</ImageTip>
-                        </figure>
+                        <ImageReveal>
+                            <figure className={styles.figure}>
+                                <Image
+                                    src={item.url}
+                                    quality={90}
+                                    alt={`An image from ${item.location}`}
+                                    width={1400}
+                                    height={1600}
+                                    loading={"lazy"}
+                                    className={`${styles.image} ${styles[item.direction]}`}
+                                />
+                                <ImageTip date={item.date}>{item.location}</ImageTip>
+                            </figure>
+                        </ImageReveal>
                     </SwiperSlide>
                 ))}
             </Swiper>
