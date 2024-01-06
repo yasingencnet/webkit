@@ -1,52 +1,134 @@
 [
   {
-    "image": "/referance/bull-and-bear.jpg",
-    "title": "Fareya Azfar Araoui",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus."
-  },
-  {
-    "image": "/referance/denge.jpg",
-    "title": "Denge Bilgisayar",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus."
-  },
-  {
-    "image": "/referance/fareya.jpg",
-    "title": "Fareya Azfar Araoui",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus."
-  },
-  {
-    "image": "/referance/ferronato.jpg",
-    "title": "Ferronato Swiss",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus."
-  },
-  {
-    "image": "/referance/g42.jpg",
-    "title": "G42",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus."
-  },
-  {
-    "image": "/referance/luxuryx.jpg",
-    "title": "Luxury X",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus."
-  },
-  {
-    "image": "/referance/msa-restorani.jpg",
-    "title": "MSA'nin Restorani",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus."
-  },
-  {
-    "image": "/referance/peninsula.jpg",
-    "title": "Peninsula REH",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus."
-  },
-  {
-    "image": "/referance/rqitects.jpg",
-    "title": "R Qitects",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus."
-  },
-  {
-    "image": "/referance/uae-yearof.jpg",
+    "image": "/reference/uae-yearof.jpg",
     "title": "UAE Year of",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url": "https://uaeyearof.ae/",
+    "bgColor": {
+      "h": "30",
+      "s": "100%",
+      "l": "90%"
+    }
+  },
+  {
+    "image": "/reference/rqitects.jpg",
+    "title": "R Qitects",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url":  "https://rqitects.com/",
+    "bgColor": {
+      "h": "0",
+      "s": "0%",
+      "l": "0%"
+    }
+  },
+  {
+    "image": "/reference/fintx.jpg",
+    "title": "FINTX",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url":  "https://fintx.ae/",
+    "bgColor": {
+      "h": "70",
+      "s": "100%",
+      "l": "50%"
+    }
+  },
+  {
+    "image": "/reference/g42.jpg",
+    "title": "G42",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url":  "https://g42.ai/",
+    "bgColor": {
+      "h": "0",
+      "s": "0%",
+      "l": "100%"
+    }
+  },
+  {
+    "image": "/reference/ferronato.jpg",
+    "title": "Ferronato Swiss",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url":  "https://www.ferronato-switzerland.com/en/the-luxury-of-privacy/technology",
+    "bgColor": {
+      "h": "207",
+      "s": "18%",
+      "l": "24%"
+    }
+  },
+  {
+    "image": "/reference/luxuryx.jpg",
+    "title": "Luxury X",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url":  "https://luxuryx.com/",
+    "bgColor": {
+      "h": "0",
+      "s": "0%",
+      "l": "0%"
+    }
+  },
+  {
+    "image": "/reference/msa-restorani.jpg",
+    "title": "MSA'nin Restorani",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url":  "https://msa.com.tr/msaninrestorani",
+    "bgColor": {
+      "h": "19",
+      "s": "35%",
+      "l": "77%"
+    }
+  },
+  {
+    "image": "/reference/denge.jpg",
+    "title": "Denge Bilgisayar",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url":  "https://denge.com.tr/",
+    "bgColor": {
+      "h": "207",
+      "s": "81%",
+      "l": "31%"
+    }
+  },
+  {
+    "image": "/reference/fareya.jpg",
+    "title": "Fareya Azfar Araoui",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url":  "",
+    "bgColor": {
+      "h": "120",
+      "s": "29%",
+      "l": "15%"
+    }
+  },
+  {
+    "image": "/reference/bull-and-bear.jpg",
+    "title": "Bull & Bear",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url":  "",
+    "bgColor": {
+      "h": "190",
+      "s": "190%",
+      "l": "10%"
+    }
+  },
+  {
+    "image": "/reference/peninsula.jpg",
+    "title": "Peninsula REH",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url":  "",
+    "bgColor": {
+      "h": "180",
+      "s": "20%",
+      "l": "90%"
+    }
+  },
+  {
+    "image": "/reference/aliel.jpg",
+    "title": "Aliel Jewelery",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "url":  "",
+    "bgColor": {
+      "h": "345",
+      "s": "22%",
+      "l": "45%"
+    }
   }
 ]

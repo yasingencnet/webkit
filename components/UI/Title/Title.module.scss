@@ -2,7 +2,7 @@
   font-weight: var(--fw-bold);
   color: hsl(var(--color-black));
   opacity: 0;
-  span {
+  span:not([class]) {
     opacity: .5;
   }
 
@@ -14,7 +14,10 @@
 }
 
 h1, h2, h3 {
-  &.title{font-size: var(--fs-xl);}
+  &.title{
+    font-size: var(--fs-xl);
+    line-height: 1.1;
+  }
 }
 h4, h5 {
   &.title{font-size: var(--fs-lg);}

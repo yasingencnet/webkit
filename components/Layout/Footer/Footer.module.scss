@@ -1,0 +1,193 @@
+.footer{
+  position: relative;
+  background: hsl(var(--color-bg-alt));
+  padding: var(--y-spacing) var(--x-spacing) var(--x-spacing);
+
+  .inner{
+    display: grid;
+    grid-template-areas:
+          "connect nav"
+          "bottom bottom";
+    grid-template-columns: 1fr 2fr;
+  }
+  .connect{
+    grid-area: connect;
+  }
+  .nav{
+    grid-area: nav;
+  }
+  .bottom{
+    grid-area: bottom;
+    text-align: center;
+    padding: var(--y-spacing) 3rem 3rem;
+  }
+}
+
+%link-hover{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: hsl(var(--color-primary));
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.copyright{
+  color: hsl(var(--color-body));
+  font-size: var(--fs-xs);
+  margin-bottom: 3rem;
+  a{
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    &:after{
+      @extend %link-hover;
+    }
+    &:hover{
+      &:after{
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+      color: hsl(var(--color-primary));
+    }
+  }
+}
+
+.title{
+  margin-bottom: 3rem;
+}
+
+.email{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+  color: hsl(var(--color-body));
+  font-size: var(--fs-sm);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  overflow: hidden;
+  &:after{
+    @extend %link-hover;
+  }
+  &:hover{
+    &:after{
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+    color: hsl(var(--color-primary));
+  }
+}
+
+.verse{
+  color: hsl(var(--color-primary-alt));
+  font-size: var(--fs-xs);
+}
+
+
+// Logo
+.badge{
+  display: inline-block;
+  margin-bottom: 6rem;
+  svg{
+    --spin-text: hsl(var(--color-primary));
+    --inner-circle: hsl(var(--color-black));
+    --inner-stroke: hsl(var(--color-black));
+    --inner-path: hsl(var(--color-primary));
+  }
+}
+
+
+// Skeleton
+.skeleton{
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+
+  .eyeball{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #ffbebe;
+    border-radius: 50%;
+    animation: skullEye 1.8s infinite;
+    &.left{
+      left: 6%;
+      top: 62%;
+    }
+    &.right{
+      left: 15.5%;
+      top: 56.4%;
+    }
+  }
+
+  @keyframes skullEye {
+    0%,
+    100% {
+      box-shadow:0 0 4px 8px hsl(var(--color-alert));
+    }
+    50% {
+      box-shadow:0 0 4px 4px hsl(var(--color-alert));
+    }
+  }
+}
+
+
+
+
+// Capillary
+.capillaryContainer {
+  --stroke: #2f2f2f;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+.capillary {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.2;
+  transition: opacity 0.2s linear;
+  path{
+    stroke: var(--stroke);
+  }
+}
+.capillary1 {
+  bottom: 50%;
+  right: 50%;
+  margin-bottom: -300px;
+  margin-right: -400px;
+  animation: capillaryShape1 20s infinite alternate linear;
+}
+.capillary2 {
+  top: 50%;
+  left: 50%;
+  margin-top: -600px;
+  margin-left: -475px;
+  transform: rotate(15deg);
+  animation: capillaryShape2 20s infinite alternate linear;
+}
+@keyframes capillaryShape1 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(20%) rotate(20deg);
+  }
+}
+@keyframes capillaryShape2 {
+  0% {
+    transform: translateY(0) rotate(15deg);
+  }
+  100% {
+    transform: translateY(-20%) rotate(20deg);
+  }
+}

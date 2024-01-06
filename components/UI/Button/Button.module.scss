@@ -119,3 +119,11 @@
   --text-color: hsl(var(--color-black));
   --text-after-color: hsl(var(--color-black));
 }
+
+.button-3{
+  --bg-color: transparent;
+  --border-color: hsl(var(--color-black));
+  --ripple-color: hsl(var(--color-black));
+  --text-color: hsl(var(--color-black));
+  --text-after-color: hsl(var(--color-white));
+}

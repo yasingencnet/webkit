@@ -46,11 +46,13 @@ export default function CustomCursor() {
                 window.removeEventListener('pointermove', handleMouseMove);
                 window.removeEventListener('click', handleClick);
             };
-        },
-        { scope: container }
-    );
+        }, { scope: container } );
 
     return (
-        <div className={styles.customCursor} ref={container}></div>
+        <div
+            className={`${styles.customCursor}`}
+            ref={container}
+        >
+        </div>
     );
 }

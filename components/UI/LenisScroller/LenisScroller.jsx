@@ -2,7 +2,6 @@
 
 import React, { useEffect } from 'react';
 import Lenis from "@studio-freight/lenis";
-import styles from './LenisScroller.module.scss';
 
 export default function LenisScroller() {
 

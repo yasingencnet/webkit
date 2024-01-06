@@ -21,8 +21,9 @@ export default function Title({heading, color, children}) {
         title.style.opacity = 1;
 
         const splitText = new SplitText(title, {
-            type: 'lines, chars, words',
-            linesClass: `${styles.splitLine}`
+            type: 'words, chars',
+            wordsClass: `${styles.splitLine}`,
+
         });
 
         const elements = splitText.chars;
@@ -31,7 +32,7 @@ export default function Title({heading, color, children}) {
             scrollTrigger: {
                 trigger: title,
                 toggleActions: "restart pause resume reverse",
-                start: "top 80%",
+                start: "top 90%",
             },
             duration: 0.4,
             opacity: 0,

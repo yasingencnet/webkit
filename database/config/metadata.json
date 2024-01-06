@@ -1,15 +1,18 @@
 {
   "metadata": {
     "title": "Yasin Genc - Front-End Developer",
-    "description": "I develop accessible, responsive, interactive, and animated websites with a strong focus on performance."
+    "description": "I develop accessible, responsive, interactive, and animated websites with a strong focus on performance.",
+    "timeZone": "America/Los_Angeles",
+    "locale": "en-US"
   },
   "personal": {
     "name": "Yasin",
     "surname": "Genc",
     "role": "Front-End Developer",
     "email": "yasin@yasingenc.net",
-    "country": "USA",
-    "city": "Seattle"
+    "city": "Seattle",
+    "state": "WA",
+    "country": "USA"
   },
   "social": {
     "twitter": "https://twitter.com/yasingencnet",

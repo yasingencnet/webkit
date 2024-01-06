@@ -6,7 +6,7 @@ import LenisScroller from '@/components/UI/LenisScroller/LenisScroller';
 const bodyFont = Manrope({
     subsets: ['latin'],
     variable: '--font-primary',
-    weight: ['400', '500', '700'],
+    weight: ['300', '400', '500', '700'],
     display: 'swap',
 });
 export const altFont = Libre_Baskerville({

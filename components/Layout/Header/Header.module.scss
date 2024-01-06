@@ -1,0 +1,17 @@
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--x-spacing);
+  height: var(--header-height);
+}
+.logo{
+  display: inline-block;
+}

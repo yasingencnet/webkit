@@ -1,25 +1,28 @@
 import React from "react";
 
-import Hero from '@/components/Hero/Hero';
-import SkillSet from "@/components/SkillSet/SkillSet";
-import SelectedWorks from "@/components/SelectedWorks/SelectedWorks";
-import Gallery from "@/components/Gallery/Gallery";
+import Header from '@/components/Layout/Header/Header';
+import Hero from '@/components/Blocks/Hero/Hero';
+import SkillSet from "@/components/Blocks/SkillSet/SkillSet";
+import SelectedWorks from "@/components/Blocks/SelectedWorks/SelectedWorks";
+import Gallery from "@/components/Blocks/Gallery/Gallery";
 
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/Layout/Footer/Footer";
 import CustomCursor from "@/components/UI/CustomCursor/CustomCursor";
-import BlogPosts from "@/components/BlogPosts/BlogPosts";
+import BlogPosts from "@/components/Blocks/BlogPosts/BlogPosts";
 
 export default function Home() {
   return (
-    <main>
-        <Hero></Hero>
-        <SkillSet></SkillSet>
-        <SelectedWorks></SelectedWorks>
-        <Gallery></Gallery>
-        <BlogPosts></BlogPosts>
+    <>
+        <Header></Header>
+        <main>
+            <Hero></Hero>
+            <SelectedWorks></SelectedWorks>
+            <SkillSet></SkillSet>
+            <Gallery></Gallery>
+            <BlogPosts></BlogPosts>
+            <CustomCursor></CustomCursor>
+        </main>
         <Footer></Footer>
-
-        <CustomCursor></CustomCursor>
-    </main>
+    </>
   )
 }
