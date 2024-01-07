@@ -9,6 +9,7 @@ import Gallery from "@/components/Blocks/Gallery/Gallery";
 import Footer from "@/components/Layout/Footer/Footer";
 import CustomCursor from "@/components/UI/CustomCursor/CustomCursor";
 import BlogPosts from "@/components/Blocks/BlogPosts/BlogPosts";
+//import CodepenShowcase from "@/components/Blocks/CodepenShowcase/CodepenShowcase";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
             <Gallery></Gallery>
             <BlogPosts></BlogPosts>
             <CustomCursor></CustomCursor>
+            {/*<CodepenShowcase></CodepenShowcase>*/}
         </main>
         <Footer></Footer>
     </>

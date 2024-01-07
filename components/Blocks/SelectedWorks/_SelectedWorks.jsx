@@ -3,9 +3,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import Lenis from "@studio-freight/lenis";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -21,36 +18,20 @@ export default function SelectedWorks() {
     const container = useRef();
 
     useGSAP(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        const gallery = container.current;
-        const galleryWidth = gallery.clientWidth || 0;
-        let amountToScroll = galleryWidth - window.innerWidth;
-
-
-        gsap.to(gallery, {
-            x: -amountToScroll,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: gallery,
-                start: 'top 0',
-                end: '+=' + amountToScroll,
-                pin: true,
-                scrub: true,
-            }
-        });
+        const gallery = container.current.querySelector(`.${styles.xScrollContainer}`);
+        console.log(gallery.offsetWidth);
 
     }, { scope: container });
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} ref={container}>
             <Container>
                 <header className={styles.header}>
                     <Title color="white">Selected <br/>Works</Title>
                 </header>
             </Container>
 
-            <div className={styles.xScrollContainer} ref={container}>
+            <div className={styles.xScrollContainer}>
                 {Works.map((work, index) => {
                     const lightness = parseFloat(work.bgColor.l);
                     return (

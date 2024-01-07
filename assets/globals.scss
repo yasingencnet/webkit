@@ -72,6 +72,7 @@ body {
   min-height: 100dvh;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* Avoid text overflows */

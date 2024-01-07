@@ -58,7 +58,6 @@ export default function Footer() {
                     <div className={styles.verse}>{commonConfig.content.verse}</div>
                 </div>
             </div>
-
             <figure className={styles.skeleton}>
                 <Image src="/skeleton.png" alt={commonConfig.metadata.title} width={379} height={259} loading={"lazy"} />
                 <span className={`${styles.eyeball} ${styles.left}`}></span>

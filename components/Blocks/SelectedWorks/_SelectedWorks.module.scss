@@ -5,26 +5,17 @@
 }
 
 .header{
+  margin-bottom: var(--x-spacing);
 }
 
-.xScrollContainer{
-  height: 100dvh;
-  width: fit-content;
-  padding: var(--x-spacing);
-
-  display: flex;
-  flex-wrap: nowrap;
-  gap: var(--x-spacing);
-  > * {
-    width: 40dvw;
-    height: calc(100dvh - (var(--x-spacing) * 2));
-  }
+.sliderItem{
 }
 
-// Card
+
 .browser{
   position: relative;
   overflow: hidden;
+  margin-bottom: 3rem;
   border-radius: 2rem;
   background: hsl(var(--h), var(--s), var(--l));
   transition: all 0.3s ease;
@@ -43,16 +34,19 @@
     pointer-events: none;
   }
 }
+
 .browserHeader{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
 }
+
 .browserBody{
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  height: calc(100vh - 20rem);
   .image{
     width: calc(100% - 6rem);
     height: auto;
@@ -60,6 +54,8 @@
     border-radius: 1rem;
   }
 }
+
+
 .title{
   font-size: var(--fs-md);
   color: hsl(var(--color-white));
