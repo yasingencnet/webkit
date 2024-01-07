@@ -47,13 +47,13 @@ export default function SocialLinks() {
         <ul className={styles.social}>
             {Object.entries(commonConfig.social).map(([item, value], index) => (
                 <li key={index}>
-                    <Magnet>
                     {socialMediaIcons[item] && (
-                        <Link href={value} target="_blank">
-                            {socialMediaIcons[item]}
-                        </Link>
+                        <Magnet>
+                            <Link href={value} target="_blank">
+                                {socialMediaIcons[item]}
+                            </Link>
+                        </Magnet>
                     )}
-                    </Magnet>
                 </li>
             ))}
         </ul>

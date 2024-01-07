@@ -41,10 +41,15 @@
     &--v2{
       width: 10rem;
       border-radius: 100vw;
+      display: inline-grid;
+      align-items: center;
+      justify-content: center;
       img{
-        position: absolute;
-        height: auto;
+        width: 80%;
         object-fit: scale-down;
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        margin: auto;
       }
     }
   }

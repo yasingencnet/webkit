@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, cloneElement } from 'react';
-import gsap from 'gsap';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Magnet({ children }) {
     const magnetic = useRef(null);
 
-    useEffect(() => {
+    useGSAP(() => {
         const xTo = gsap.quickTo(magnetic.current, "x", {
             duration: 1,
             ease: "elastic.out(1, 0.3)",

@@ -5,8 +5,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Lenis from "@studio-freight/lenis";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,7 +22,7 @@ export default function SelectedWorks() {
         gsap.registerPlugin(ScrollTrigger);
 
         const gallery = container.current;
-        const galleryWidth = gallery.clientWidth || 0;
+        const galleryWidth = gallery?.clientWidth || 0;
         let amountToScroll = galleryWidth - window.innerWidth;
 
 
