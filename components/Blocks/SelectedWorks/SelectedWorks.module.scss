@@ -1,10 +1,7 @@
 .section{
   position: relative;
-  padding: var(--y-spacing) 0;
-  background: hsl(var(--color-bg-alt)) url("/dash-pattern.svg") repeat;
-}
-
-.header{
+  padding: calc(var(--y-spacing) - var(--x-spacing)) 0;
+  background: hsl(var(--color-bg-alt));
 }
 
 .xScrollContainer{
@@ -16,6 +13,9 @@
   flex-wrap: nowrap;
   gap: var(--x-spacing);
   > * {
+    &:first-child{
+      width: 50rem;
+    }
     width: 40dvw;
     height: calc(100dvh - (var(--x-spacing) * 2));
   }
@@ -24,21 +24,42 @@
 // Card
 .browser{
   position: relative;
-  overflow: hidden;
-  border-radius: 2rem;
-  background: hsl(var(--h), var(--s), var(--l));
-  transition: all 0.3s ease;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
   &:hover{
-    background: hsl(calc(var(--h) + 2), calc(var(--s) + 2%), calc(var(--l) + 5%));
+    .browserHeader{
+      transform: translateY(-2rem);
+    }
+    &:before{
+      background: hsl(calc(var(--h) + 2), calc(var(--s) + 2%), calc(var(--l) + 5%));
+      transform: scalex(1.02) scaleY(1.02);
+    }
+    &:after{
+      transform: scalex(1.02) scaleY(1.02);
+    }
+  }
+  &:before, &:after{
+    position: absolute;
+    content: '';
+    transition: all 0.3s ease;
   }
   &:before{
-    content: '';
-    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(var(--h), var(--s), var(--l));
+    transform-origin: bottom center;
+    border-radius: 2rem;
+  }
+  &:after{
     left: 0;
+    top: 0;
     display: block;
     width: 100%;
-    background: hsl(var(--h), var(--s), calc( var(--l) + 60%));
     height: 5rem;
+    background: hsl(var(--h), var(--s), calc( var(--l) + 60%));
     filter: blur(10rem);
     pointer-events: none;
   }
@@ -48,11 +69,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 3rem;
+  transition: all 0.3s ease;
 }
 .browserBody{
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  overflow: hidden;
+  transition: all 0.3s ease;
   .image{
     width: calc(100% - 6rem);
     height: auto;

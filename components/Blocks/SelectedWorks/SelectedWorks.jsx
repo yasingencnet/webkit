@@ -14,7 +14,6 @@ import styles from './SelectedWorks.module.scss';
 
 import Title from "@/components/UI/Title/Title";
 import Magnet from "@/components/UI/Magnet/Magnet";
-import Container from "@/components/UI/Layout/Layout";
 export default function SelectedWorks() {
     const container = useRef();
 
@@ -42,13 +41,12 @@ export default function SelectedWorks() {
 
     return (
         <section className={styles.section}>
-            <Container>
+
+            <div className={styles.xScrollContainer} ref={container}>
                 <header className={styles.header}>
                     <Title color="white">Selected <br/>Works</Title>
                 </header>
-            </Container>
 
-            <div className={styles.xScrollContainer} ref={container}>
                 {Works.map((work, index) => {
                     const lightness = parseFloat(work.bgColor.l);
                     return (

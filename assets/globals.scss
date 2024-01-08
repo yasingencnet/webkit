@@ -29,7 +29,7 @@
   --fs-xxl: 16rem;
 
   --fw-bold: 700;
-  --fw-medium: 600;
+  --fw-medium: 500;
   --fw-regular: 400;
   --fw-light: 300;
 
@@ -117,17 +117,6 @@ input, button, textarea, select {
 //////////////////////////////
 // GLOBAL STYLES
 //////////////////////////////
-h1, h3, h3, h4, h5, h6 {
-  font-weight: var(--fw-bold);
-}
-h1, h2 {
-  line-height: 1.2;
-}
-
-h3, h4, h5, h6 {
-  line-height: 1.4;
-}
-
 p{
   font-weight: var(--fw-regular);
 }

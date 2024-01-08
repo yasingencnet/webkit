@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import styles from './Navigation.module.scss'
 import Link from "next/link";
 import PageList from '@/database/PageList.json';
+
 export default function Navigation() {
     const navigationRef = useRef();
 

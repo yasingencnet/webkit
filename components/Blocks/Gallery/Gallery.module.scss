@@ -8,15 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--x-spacing);
 }
 
 .slider{
-  padding-bottom: 6rem;
+  padding: var(--x-spacing) 0;
   font-size: var(--fs-sm);
   --swiper-pagination-fraction-color: hsl(var(--color-primary));
-
-
 }
 
 .sliderItem{
@@ -25,20 +22,21 @@
 
 .figure{
   position: relative;
-  visibility: hidden;
   overflow: hidden;
   border-radius: 2rem;
 }
 
 .image{
-  transform-origin: left;
   background: hsl(var(--color-bg-alt));
   object-fit: cover;
-  max-height: calc(100vh - 10rem);
+  max-height: calc(100vh - (var(--x-spacing) * 2));
   filter: contrast(1.1);
+  transform-origin: center center;
+  transform: scale(1.2);
+  pointer-events: none;
 
   &.vertical{
-    max-width: calc(100vh - 20rem);
+    max-width: calc(100vh - 30rem);
   }
   &.horizontal{
     max-width: 100vw;

@@ -37,6 +37,10 @@
     &--v1{
       width: 28.4rem;
       border-radius: 100vw;
+      img{
+        transform: scale(1.6);
+        transform-origin: left center;
+      }
     }
     &--v2{
       width: 10rem;
@@ -80,14 +84,17 @@
     background-image: url("/hero-gradient.svg");
     background-size: 130%;
     filter: blur(2vw);
-    animation: moveBg 20s ease infinite;
+    animation: moveBg 10s ease infinite;
 
     @keyframes moveBg {
       0%{
         background-position: 0 0;
       }
-      50%{
+      35%{
         background-position: 100% 0;
+      }
+      70%{
+        background-position: 50% -20%;
       }
       100%{
         background-position: 0 0;

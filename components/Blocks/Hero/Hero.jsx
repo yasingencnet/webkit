@@ -25,51 +25,27 @@ export default function Hero() {
 
     }, []);
 
-    // GSAP Icon Slider
+    // GSAP Image Animation
     useGSAP(() => {
-        const images = gsap.utils.toArray(".icon");
-        let currentIndex = 0;
-
-        gsap.set(".icon", {
-            y: "100%"
+        gsap.to('.heroImg', {
+            x: '-30%',
+            scale: 1.3,
+            scrollTrigger: {
+                trigger: container.current,
+                scrub: true,
+                start: 'top top',
+                end: 'bottom 75%'
+            }
         });
-
-        const showImages = () => {
-            gsap.set(images[currentIndex], {
-                autoAlpha: 1
-            });
-            gsap.to(images[currentIndex], {
-                y: 0,
-                duration: 1,
-                ease: "bounce.out",
-                onComplete: () => {
-                    gsap.to(images[currentIndex], {
-                        y: "-100%",
-                        duration: 1,
-                        delay: 0.5,
-                        onComplete: () => {
-                            gsap.set(images[currentIndex], {
-                                y: "100%",
-                                autoAlpha: 0
-                            });
-                            currentIndex = (currentIndex + 1) % images.length;
-                            showImages();
-                        }
-                    });
-                }
-            })
-        };
-
-        showImages();
 
     }, { scope: container });
 
     return (
-        <section className={styles.hero}>
+        <section className={styles.hero} ref={container}>
             <div className={styles.inner}>
                 <p className={styles.description}>{greeting}</p>
 
-                <div className={styles.title} ref={container}>
+                <div className={styles.title}>
                     <Title heading={'h1'}>I&apos;m {commonConfig.personal.name}.
                         <span className={`${styles.icon} ${styles['icon--v1']}`}>
                             <Image
@@ -78,16 +54,10 @@ export default function Hero() {
                                 width={600}
                                 height={280}
                                 priority
+                                className={'heroImg'}
                             />
                         </span>
                         {commonConfig.metadata.description}
-                        <span className={`${styles.icon} ${styles['icon--v2']}`}>
-                            <Image className={'icon'} width={80} height={80} priority src="icon/icon-a11y.svg" alt={commonConfig.metadata.title} />
-                            <Image className={'icon'} width={80} height={80} priority src="icon/icon-css.svg" alt={commonConfig.metadata.title} />
-                            <Image className={'icon'} width={80} height={80} priority src="icon/icon-figma.svg" alt={commonConfig.metadata.title} />
-                            <Image className={'icon'} width={80} height={80} priority src="icon/icon-gsap.svg" alt={commonConfig.metadata.title} />
-                            <Image className={'icon'} width={80} height={80} priority src="icon/icon-html.svg" alt={commonConfig.metadata.title} />
-                        </span>
                     </Title>
                 </div>
             </div>
