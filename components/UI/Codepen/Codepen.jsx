@@ -1,5 +1,4 @@
 import React, { useEffect }  from 'react';
-import commonConfig from '@/database/config/metadata.json';
 import { useScript } from "@uidotdev/usehooks";
 
 export default function Codepen({url}) {
