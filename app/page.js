@@ -5,9 +5,9 @@ import Hero from '@/components/Blocks/Hero/Hero';
 import SkillSet from "@/components/Blocks/SkillSet/SkillSet";
 import SelectedWorks from "@/components/Blocks/SelectedWorks/SelectedWorks";
 import Gallery from "@/components/Blocks/Gallery/Gallery";
+import About from "@/components/Blocks/About/About";
 
 import Footer from "@/components/Layout/Footer/Footer";
-import CustomCursor from "@/components/UI/CustomCursor/CustomCursor";
 import BlogPosts from "@/components/Blocks/BlogPosts/BlogPosts";
 //import CodepenShowcase from "@/components/Blocks/CodepenShowcase/CodepenShowcase";
 
@@ -20,8 +20,9 @@ export default function Home() {
             <SelectedWorks></SelectedWorks>
             <SkillSet></SkillSet>
             <Gallery></Gallery>
+            <About></About>
             <BlogPosts></BlogPosts>
-            <CustomCursor></CustomCursor>
+
             {/*<CodepenShowcase></CodepenShowcase>*/}
         </main>
         <Footer></Footer>

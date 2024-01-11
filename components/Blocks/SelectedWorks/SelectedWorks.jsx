@@ -14,13 +14,15 @@ import styles from './SelectedWorks.module.scss';
 
 import Title from "@/components/UI/Title/Title";
 import Magnet from "@/components/UI/Magnet/Magnet";
+import FancyButton from "@/components/UI/Button/Button";
 export default function SelectedWorks() {
+    const galleryContainer = useRef();
     const container = useRef();
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        const gallery = container.current;
+        const gallery = galleryContainer.current;
         const galleryWidth = gallery?.clientWidth || 0;
         let amountToScroll = galleryWidth - window.innerWidth;
 
@@ -34,23 +36,36 @@ export default function SelectedWorks() {
                 end: '+=' + amountToScroll,
                 pin: true,
                 scrub: true,
-            }
+                toggleActions: "pause pause pause pause"
+            },
+            /*onComplete: () => {
+                gsap.to(gallery, {
+                    x: 0,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: container.current,
+                        start: 'bottom top',
+                    }
+                });
+            }*/
         });
 
-    }, { scope: container });
+    }, { scope: galleryContainer });
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id={'selectedWorks'} ref={container}>
 
-            <div className={styles.xScrollContainer} ref={container}>
+            <div className={styles.xScrollContainer} ref={galleryContainer}>
                 <header className={styles.header}>
                     <Title color="white">Selected <br/>Works</Title>
+                    <p className={styles.description}>I have developed many projects for our business partners in the companies I work for. Here are a few of them!</p>
+                    <FancyButton theme='button-2' link={'/contact'}>Contact</FancyButton>
                 </header>
 
                 {Works.map((work, index) => {
                     const lightness = parseFloat(work.bgColor.l);
                     return (
-                        <div key={index} className={styles.browser} style={{ '--h': work.bgColor.h, '--s': work.bgColor.s, '--l': work.bgColor.l }}>
+                        <div key={index} className={`${styles.browser} testx`} style={{ '--h': work.bgColor.h, '--s': work.bgColor.s, '--l': work.bgColor.l }}>
                             <div className={`${styles.browserHeader} ${lightness >= 50 ? styles.dark : ''}`}>
                                 <h5 className={styles.title}>{work.title}</h5>
                                 {work.url && work.url.trim() !== '' && (

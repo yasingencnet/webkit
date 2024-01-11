@@ -8,7 +8,7 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.inner}>
                 <Logo classVariable={styles.logo}></Logo>
-                <FancyButton theme='button-3' target="_blank" link={'/'}>Contact</FancyButton>
+                <FancyButton theme='button-3' link={'/contact'}>Contact</FancyButton>
             </div>
             <Navigation></Navigation>
         </header>

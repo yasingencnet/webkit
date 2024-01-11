@@ -1,48 +1,48 @@
 [
   {
-    "image": "icon/icon-js.svg",
+    "icon": "IconJS",
     "title": "JavaScript",
     "subtitle": "Vanilla, jQuery",
     "description": "I’m ready to use what your project needs. Whatever React, Vanilla JS, or old-school jQuery."
   },
   {
-    "image": "icon/icon-react.svg",
+    "icon": "IconReact",
     "title": "React JS",
     "subtitle": "Ecosystem",
     "description": "I’m ready to use what your project needs. Whatever React, Vanilla JS, or old-school jQuery."
   },
   {
-    "image": "icon/icon-css.svg",
+    "icon": "IconCSS",
     "title": "CSS",
     "subtitle": "Animations, Sass",
     "description": "CSS evolved. It’s not weird anymore. If <prefers-reduced-motion> do nothing, else fire sparklers!"
   },
   {
-    "image": "icon/icon-gsap.svg",
+    "icon": "IconGSAP",
     "title": "GSAP",
     "subtitle": "Scroll Animations",
     "description": "CSS evolved. It’s not weird anymore. If <prefers-reduced-motion> do nothing, else fire sparklers!"
   },
   {
-    "image": "icon/icon-html.svg",
+    "icon": "IconHTML",
     "title": "HTML",
     "subtitle": "Semantic Markup",
     "description": "Semantic markup is mandatory for an accessible website. So I follow rules meticulously."
   },
   {
-    "image": "icon/icon-a11y.svg",
+    "icon": "IconA11Y",
     "title": "A11Y",
     "subtitle": "Web Accessibility",
     "description": "I have a responsibility to make sure that everyone has access to what I create regardless of ability."
   },
   {
-    "image": "icon/icon-figma.svg",
+    "icon": "IconFigma",
     "title": "Design",
     "subtitle": "Figma & Photoshop",
     "description": "I’m not a full-time UI designer but I have the ability and experience in design."
   },
   {
-    "image": "icon/icon-webpack.svg",
+    "icon": "IconWebpack",
     "title": "Development Env.",
     "subtitle": "Webpack",
     "description": "I choose Webpack, Parcel, or Gulp to automate project workflow on your dependents."

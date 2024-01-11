@@ -1,29 +1,34 @@
 {
-  "about": {
-    "title": "About",
-    "description": "I design & develop modern and accessible web interfaces.",
-    "image": "",
-    "link": "/about"
-  },
   "works": {
+    "showOnNavigation":  true,
     "title": "Works",
     "description": "It’s time to see some work. Here are a few projects I’ve done for clients.",
     "image": "",
     "link": "/works"
   },
+  "about": {
+    "showOnNavigation": true,
+    "title": "About",
+    "description": "I design & develop modern and accessible web interfaces.",
+    "image": "",
+    "link": "/about"
+  },
   "blog": {
+    "showOnNavigation":  true,
     "title": "Blog",
     "description": "Articles focused on CSS, HTML, JavaScript, and other frontend stuff.",
     "image": "",
     "link": "/blog"
   },
   "contact": {
+    "showOnNavigation":  true,
     "title": "Contact",
     "description": "Now it’s your turn to say hi. I hope to hear from you!",
     "image": "",
     "link": "/contact"
   },
   "instagram": {
+    "showOnNavigation":  false,
     "title": "Instagram",
     "description": "Good memories, best times. My photo journal.",
     "image": "",

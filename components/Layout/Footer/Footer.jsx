@@ -11,6 +11,8 @@ import {getCurrentYear } from "@/utils/utils.js";
 import SocialLinks from "@/components/UI/SocialLinks/SocialLinks";
 import NavDetailed from "@/components/UI/NavDetailed/NavDetailed";
 
+import WeatherAPI from "@/components/UI/WeatherAPI/WeatherAPI";
+
 export default function Footer() {
     const currentYear = getCurrentYear();
 
@@ -48,12 +50,14 @@ export default function Footer() {
                     <Logo classVariable={styles.badge}></Logo>
                     <div className={styles.copyright}>&copy; {currentYear} {commonConfig.personal.name} {commonConfig.personal.surname}
                         <br/>
-                        Powered by &nbsp;
+                        Powered by&nbsp;
                         Vercel,&nbsp;
                         Next.js, and &nbsp;
                         <Link href="https://github.com/yasingencnet/webkit">GitHub</Link>.
                         <br/>
-                        {`${commonConfig.personal.city}, ${commonConfig.personal.state} ${currentTime}`}
+                        {`${commonConfig.personal.city}, ${commonConfig.personal.state} ${currentTime}`}&nbsp;
+                        •&nbsp;
+                        <WeatherAPI></WeatherAPI>
                     </div>
                     <div className={styles.verse}>{commonConfig.content.verse}</div>
                 </div>

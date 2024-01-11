@@ -1,19 +1,20 @@
 'use client';
 
-import React, {useRef } from 'react';
+import React, {useRef, useState } from 'react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import styles from './CustomCursor.module.scss';
 
-export default function CustomCursor() {
+export default function CustomCursor({ children }) {
     const container = useRef();
 
     useGSAP(() => {
-            const cursor = container.current;
+            const cursor = `.${styles.customCursor}`;
 
             // Handle mousemove event
             const handleMouseMove = (event) => {
                 const { clientX, clientY } = event;
+
                 // Update cursor position
                 gsap.to(cursor, {
                     x: clientX - 6,
@@ -47,12 +48,10 @@ export default function CustomCursor() {
                 window.removeEventListener('click', handleClick);
             };
         }, { scope: container } );
-
     return (
-        <div
-            className={`${styles.customCursor}`}
-            ref={container}
-        >
+        <div ref={container}>
+            <div className={`${styles.customCursor}`}></div>
+            <div>{children}</div>
         </div>
     );
 }

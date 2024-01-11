@@ -11,10 +11,11 @@
 .navigation{
   position: relative;
   z-index: 1;
-  background: hsl(var(--color-bg-alt));
   border-radius: 100vw;
-  border: 1px solid hsl(var(--color-black));
-
+  backdrop-filter: blur(.4rem);
+  background-color: hsla(var(--color-bg-alt), .8);
+  border: .05rem solid hsla(var(--color-white), .16);
+  box-shadow: .01rem .01rem .07rem hsla(var(--color-black), .16);
   ul{
     display: flex;
     padding: 1rem 1.5rem;
@@ -33,10 +34,6 @@
       }
     }
   }
-}
-
-.button{
-
 }
 
 .bg{

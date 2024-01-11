@@ -1,8 +1,11 @@
 "use client";
 
 import React, { useRef } from "react";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, FreeMode } from 'swiper/modules';
 
@@ -26,7 +29,7 @@ export default function Gallery() {
     const { contextSafe } = useGSAP({scope: container});
 
     const onEnterAnim = contextSafe((e) => {
-        let imageElement = e.currentTarget.querySelector(`.${styles.image}`); // Updated line
+        let imageElement = e.currentTarget.querySelector(`.${styles.image}`);
 
         let rect = e.target.getBoundingClientRect();
 
@@ -43,13 +46,26 @@ export default function Gallery() {
         });
     });
     const onLeaveAnim = contextSafe((e) => {
-        let imageElement = e.currentTarget.querySelector(`.${styles.image}`); // Updated line
+        let imageElement = e.currentTarget.querySelector(`.${styles.image}`);
         gsap.to(imageElement, {
             x: 0,
             y: 0,
             duration: 0.5,
         });
     });
+
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        /*gsap.from(`.${styles.sliderItem}`, {
+            x: '-50%',
+            stagger: 0.1,
+            duration: 1,
+            scrollTrigger: {
+                trigger: `.${styles.sliderItem}`,
+                start: 'top 80%',
+            }
+        });*/
+    }, {scope: container});
 
     return (
         <section className={styles.section} ref={container}>
@@ -74,7 +90,7 @@ export default function Gallery() {
                     enabled: true,
                 }}
                 modules={[Pagination, FreeMode]}
-                className={`${styles.slider} gallery-slider`}
+                className={`${styles.slider} gallerySlider`}
             >
                 {ImageVideo.map((item, index) => (
                     <SwiperSlide key={index} className={`${styles.sliderItem}`}>

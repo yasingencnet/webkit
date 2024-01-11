@@ -42,11 +42,13 @@ export default function Navigation() {
         <div className={styles.container}>
             <nav className={styles.navigation} ref={navigationRef}>
                 <ul>
-                    {Object.values(PageList).map((item, index) => (
-                        <li key={index}>
-                            <Link href={item.link} onMouseEnter={doAnim} onMouseLeave={resetAnim}>{item.title}</Link>
-                        </li>
-                    ))}
+                    {Object.values(PageList)
+                        .filter(item => item.showOnNavigation)
+                        .map((item, index) => (
+                            <li key={index}>
+                                <Link href={item.link} onMouseEnter={doAnim} onMouseLeave={resetAnim}>{item.title}</Link>
+                            </li>
+                        ))}
                 </ul>
                 <span className={styles.bg}></span>
             </nav>
