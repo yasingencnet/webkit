@@ -2,28 +2,25 @@ import React from "react";
 
 import Header from '@/components/Layout/Header/Header';
 import Hero from '@/components/Blocks/Hero/Hero';
-import SkillSet from "@/components/Blocks/SkillSet/SkillSet";
 import SelectedWorks from "@/components/Blocks/SelectedWorks/SelectedWorks";
+import SkillSet from "@/components/Blocks/SkillSet/SkillSet";
 import Gallery from "@/components/Blocks/Gallery/Gallery";
 import About from "@/components/Blocks/About/About";
+import BlogPosts from "@/components/Blocks/BlogPosts/BlogPosts";
 
 import Footer from "@/components/Layout/Footer/Footer";
-import BlogPosts from "@/components/Blocks/BlogPosts/BlogPosts";
-//import CodepenShowcase from "@/components/Blocks/CodepenShowcase/CodepenShowcase";
 
 export default function Home() {
   return (
     <>
         <Header></Header>
         <main>
-            <Hero></Hero>
-            <SelectedWorks></SelectedWorks>
-            <SkillSet></SkillSet>
-            <Gallery></Gallery>
-            <About></About>
-            <BlogPosts></BlogPosts>
-
-            {/*<CodepenShowcase></CodepenShowcase>*/}
+            <Hero />
+            <SelectedWorks />
+            <SkillSet />
+            <Gallery />
+            <About />
+            {/*<BlogPosts />*/}
         </main>
         <Footer></Footer>
     </>

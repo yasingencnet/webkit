@@ -13,8 +13,7 @@ export default function Title({heading, color, children}) {
     const textRef = useRef();
 
     useGSAP(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.registerPlugin(SplitText);
+        gsap.registerPlugin(ScrollTrigger, SplitText);
 
         const title = textRef.current;
 
@@ -23,7 +22,6 @@ export default function Title({heading, color, children}) {
         const splitText = new SplitText(title, {
             type: 'words, chars',
             wordsClass: `${styles.splitLine}`,
-
         });
 
         const elements = splitText.chars;

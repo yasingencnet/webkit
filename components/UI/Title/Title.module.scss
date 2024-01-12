@@ -14,12 +14,12 @@
   }
 }
 
-h1, h2, h3 {
+h1, h2 {
   &.title{
     font-size: var(--fs-xl);
   }
 }
-h4, h5 {
+h3, h4, h5 {
   &.title{
     font-size: var(--fs-lg);
   }

@@ -3,48 +3,54 @@
     "icon": "IconJS",
     "title": "JavaScript",
     "subtitle": "Vanilla, jQuery",
-    "description": "I’m ready to use what your project needs. Whatever React, Vanilla JS, or old-school jQuery."
+    "description": "I bring websites to life with JavaScript, adding interactive features and optimizing performance with clean and efficient code."
   },
   {
     "icon": "IconReact",
     "title": "React JS",
-    "subtitle": "Ecosystem",
-    "description": "I’m ready to use what your project needs. Whatever React, Vanilla JS, or old-school jQuery."
+    "subtitle": "Next.js, Vercel",
+    "description": "Using React, I craft scalable user interfaces with components, state management, and virtual DOM manipulation for seamless web applications."
   },
   {
     "icon": "IconCSS",
     "title": "CSS",
     "subtitle": "Animations, Sass",
-    "description": "CSS evolved. It’s not weird anymore. If <prefers-reduced-motion> do nothing, else fire sparklers!"
+    "description": "I prioritize pixel perfection, paying close attention to details for visually polished and precisely aligned designs, ensuring a seamless user experience."
   },
   {
     "icon": "IconGSAP",
     "title": "GSAP",
     "subtitle": "Scroll Animations",
-    "description": "CSS evolved. It’s not weird anymore. If <prefers-reduced-motion> do nothing, else fire sparklers!"
+    "description": "I use GSAP for captivating animations that bring web pages to life, enhancing the overall user experience."
   },
   {
     "icon": "IconHTML",
     "title": "HTML",
     "subtitle": "Semantic Markup",
-    "description": "Semantic markup is mandatory for an accessible website. So I follow rules meticulously."
+    "description": "Beyond markup, HTML is crucial for an inclusive web. I structure content carefully for universal accessibility."
   },
   {
     "icon": "IconA11Y",
     "title": "A11Y",
     "subtitle": "Web Accessibility",
-    "description": "I have a responsibility to make sure that everyone has access to what I create regardless of ability."
+    "description": "Accessibility is a must. I ensure everyone can use what I create, focusing on keyboard navigation and screen reader compatibility."
   },
   {
     "icon": "IconFigma",
     "title": "Design",
     "subtitle": "Figma & Photoshop",
-    "description": "I’m not a full-time UI designer but I have the ability and experience in design."
+    "description": "While not a full-time UI designer, I have an eye for aesthetics, creating visually appealing and user-friendly interfaces."
   },
   {
     "icon": "IconWebpack",
     "title": "Development Env.",
     "subtitle": "Webpack",
-    "description": "I choose Webpack, Parcel, or Gulp to automate project workflow on your dependents."
+    "description": "I use tools like Webpack, Vite, Parcel, or Gulp to streamline workflows, automating development for efficiency."
+  },
+  {
+    "icon": "IconAPI",
+    "title": "REST APIs",
+    "subtitle": "Axios x Fetch",
+    "description": "I integrate data and functionality seamlessly with REST APIs, creating dynamic web applications for enhanced performance."
   }
 ]

@@ -10,7 +10,7 @@ import Card1 from "@/components/UI/Card1/Card1";
 import Title from "@/components/UI/Title/Title";
 import Skills from '@/database/Skills.json';
 
-import {IconA11Y, IconCSS, IconFigma, IconGSAP, IconHTML, IconJS, IconReact, IconWebpack} from "@/components/UI/Icons/Icons";
+import {IconA11Y, IconCSS, IconFigma, IconGSAP, IconHTML, IconJS, IconReact, IconWebpack, IconAPI} from "@/components/UI/Icons/Icons";
 
 export default function SkillSet() {
     const getIconFromName = (iconName) => {
@@ -31,6 +31,8 @@ export default function SkillSet() {
                 return <IconFigma></IconFigma>;
             case 'IconWebpack':
                 return <IconWebpack></IconWebpack>;
+            case 'IconAPI':
+                return <IconAPI></IconAPI>;
         }
     }
 

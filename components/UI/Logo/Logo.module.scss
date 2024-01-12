@@ -26,6 +26,10 @@
   }
 
   &:hover{
+    .spin {
+      animation-play-state: paused;
+      animation: revertRotate 5s linear infinite;
+    }
     .outer{
       transform: scale(1.1);
     }
@@ -38,5 +42,14 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes revertRotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

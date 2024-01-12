@@ -15,6 +15,7 @@ import styles from './SelectedWorks.module.scss';
 import Title from "@/components/UI/Title/Title";
 import Magnet from "@/components/UI/Magnet/Magnet";
 import FancyButton from "@/components/UI/Button/Button";
+import Paragraph from "@/components/UI/Paragraph/Paragraph";
 export default function SelectedWorks() {
     const galleryContainer = useRef();
     const container = useRef();
@@ -26,7 +27,6 @@ export default function SelectedWorks() {
         const galleryWidth = gallery?.clientWidth || 0;
         let amountToScroll = galleryWidth - window.innerWidth;
 
-
         gsap.to(gallery, {
             x: -amountToScroll,
             ease: 'none',
@@ -36,18 +36,7 @@ export default function SelectedWorks() {
                 end: '+=' + amountToScroll,
                 pin: true,
                 scrub: true,
-                toggleActions: "pause pause pause pause"
             },
-            /*onComplete: () => {
-                gsap.to(gallery, {
-                    x: 0,
-                    ease: 'none',
-                    scrollTrigger: {
-                        trigger: container.current,
-                        start: 'bottom top',
-                    }
-                });
-            }*/
         });
 
     }, { scope: galleryContainer });
@@ -58,16 +47,21 @@ export default function SelectedWorks() {
             <div className={styles.xScrollContainer} ref={galleryContainer}>
                 <header className={styles.header}>
                     <Title color="white">Selected <br/>Works</Title>
-                    <p className={styles.description}>I have developed many projects for our business partners in the companies I work for. Here are a few of them!</p>
+                    <Paragraph className={styles.description}>
+                        I&apos;ve played a key role in developing impactful projects. Here&apos;s a curated selection showcasing my expertise and the achieved results.
+                    </Paragraph>
+                    {/*<p className={styles.description}>I've played a key role in developing impactful projects. Here's a curated selection showcasing my expertise and the achieved results.</p>*/}
                     <FancyButton theme='button-2' link={'/contact'}>Contact</FancyButton>
                 </header>
 
                 {Works.map((work, index) => {
                     const lightness = parseFloat(work.bgColor.l);
                     return (
-                        <div key={index} className={`${styles.browser} testx`} style={{ '--h': work.bgColor.h, '--s': work.bgColor.s, '--l': work.bgColor.l }}>
+                        <div key={index} className={`${styles.browser}`} style={{ '--h': work.bgColor.h, '--s': work.bgColor.s, '--l': work.bgColor.l }}>
                             <div className={`${styles.browserHeader} ${lightness >= 50 ? styles.dark : ''}`}>
                                 <h5 className={styles.title}>{work.title}</h5>
+                                <span className={styles.date}>{work.date}</span>
+
                                 {work.url && work.url.trim() !== '' && (
                                     <Magnet>
                                         <Link target={'_blank'} className={styles.redirect} href={work.url}>

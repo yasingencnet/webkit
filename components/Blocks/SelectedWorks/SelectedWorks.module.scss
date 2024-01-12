@@ -15,9 +15,6 @@
 }
 
 .description{
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-regular);
-  color: hsl(var(--color-body));
   margin-bottom: auto;
 }
 
@@ -50,6 +47,9 @@
   &:hover{
     .browserHeader{
       transform: translateY(-2rem);
+    }
+    .date{
+      opacity: 1;
     }
     &:before{
       background: hsl(calc(var(--h) + 2), calc(var(--s) + 2%), calc(var(--l) + 5%));
@@ -85,6 +85,7 @@
   }
 }
 .browserHeader{
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,6 +115,20 @@
     color: hsl(var(--color-black));
   }
 }
+.date{
+  position: absolute;
+  bottom: 1rem;
+  left: 3rem;
+  font-size: var(--fs-xxs);
+  font-weight: var(--fw-regular);
+  color: hsl(var(--color-white));
+  opacity: 0;
+  transition: all 0.3s ease;
+  .dark & {
+    color: hsl(var(--color-black));
+  }
+}
+
 .redirect{
   display: flex;
   justify-content: center;

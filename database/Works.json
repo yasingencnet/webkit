@@ -1,9 +1,10 @@
 [
   {
-    "image": "/reference/uae-yearof.jpg",
     "title": "UAE Year of",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/uae-yearof.jpg",
+    "description": "Welcome to the Year of Sustainability. Sustainability is about protecting our land, resources and one another today, for a better tomorrow.",
     "url": "https://uaeyearof.ae/",
+    "date": "2023",
     "bgColor": {
       "h": "30",
       "s": "100%",
@@ -11,10 +12,11 @@
     }
   },
   {
-    "image": "/reference/rqitects.jpg",
     "title": "R Qitects",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/rqitects.jpg",
+    "description": "Premier design studio and architecture company in the UAE. Enhance your projects with our top architects, leading the way in innovative and timeless design solutions.",
     "url":  "https://rqitects.com/",
+    "date": "2022",
     "bgColor": {
       "h": "0",
       "s": "0%",
@@ -22,10 +24,11 @@
     }
   },
   {
-    "image": "/reference/fintx.jpg",
     "title": "FINTX",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/fintx.jpg",
+    "description": "FINTX is the fintech arm of the Emirates Post Group, with the vision of building a fintech ecosystem for the UAE & beyond.",
     "url":  "https://fintx.ae/",
+    "date": "2023",
     "bgColor": {
       "h": "70",
       "s": "100%",
@@ -33,10 +36,11 @@
     }
   },
   {
-    "image": "/reference/g42.jpg",
     "title": "G42",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/g42.jpg",
+    "description": "G42 is a technology group that invents visionary artificial intelligence for a better everyday. Born in Abu Dhabi and operating across the world, we champion AI as a powerful force for good across industries and societies.",
     "url":  "https://g42.ai/",
+    "date": "2022",
     "bgColor": {
       "h": "0",
       "s": "0%",
@@ -44,10 +48,11 @@
     }
   },
   {
-    "image": "/reference/ferronato.jpg",
     "title": "Ferronato Swiss",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/ferronato.jpg",
+    "description": "In a world of data theft and device tracking, FERRONATO is the first luxury accessories range to combine privacy technology with handcrafted Italian design.",
     "url":  "https://www.ferronato-switzerland.com/en/the-luxury-of-privacy/technology",
+    "date": "2022",
     "bgColor": {
       "h": "207",
       "s": "18%",
@@ -55,10 +60,11 @@
     }
   },
   {
-    "image": "/reference/luxuryx.jpg",
     "title": "Luxury X",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/luxuryx.jpg",
+    "description": "Luxury X, a holding company that specializes in communications for the most luxury of brands. We generate bespoke creative communications for our brands with a common vision to add the X factor, which we describe as a classy, contemporary luxe twist. We work with a list of exclusive brands across the globe that share our passion to push creative and artistic boundaries for the richest outcomes. Our goal is singular, but shared across our portfolio.",
     "url":  "https://luxuryx.com/",
+    "date": "2023",
     "bgColor": {
       "h": "0",
       "s": "0%",
@@ -66,10 +72,11 @@
     }
   },
   {
-    "image": "/reference/msa-restorani.jpg",
     "title": "MSA'nin Restorani",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/msa-restorani.jpg",
+    "description": "Since 2004, MSA, The Culinary Arts Academy of Istanbul has been delivering professional education programs.",
     "url":  "https://msa.com.tr/msaninrestorani",
+    "date": "2017",
     "bgColor": {
       "h": "19",
       "s": "35%",
@@ -77,10 +84,11 @@
     }
   },
   {
-    "image": "/reference/denge.jpg",
     "title": "Denge Bilgisayar",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/denge.jpg",
+    "description": "All over the country with widespread distribution network and world brands.",
     "url":  "https://denge.com.tr/",
+    "date": "2018",
     "bgColor": {
       "h": "207",
       "s": "81%",
@@ -88,10 +96,11 @@
     }
   },
   {
-    "image": "/reference/fareya.jpg",
     "title": "Fareya Azfar Araoui",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/fareya.jpg",
+    "description": "Arbitration and Private Capital law firm with a boutique based in Abu Dhabi serving globally with a cross-disciplinary expertise of industry specialists.",
     "url":  "",
+    "date": "2023",
     "bgColor": {
       "h": "120",
       "s": "29%",
@@ -99,10 +108,11 @@
     }
   },
   {
-    "image": "/reference/bull-and-bear.jpg",
     "title": "Bull & Bear",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/bull-and-bear.jpg",
+    "description": "Bull & Bear, Award-winning signature restaurant , the acclaimed signature steakhouse of Waldorf Astoria DIFC, is an exquisite culinary masterpiece that transcends the traditional meat eatery. Book Now at Bull & Bear Waldorf Astoria",
     "url":  "",
+    "date": "2022",
     "bgColor": {
       "h": "190",
       "s": "190%",
@@ -110,10 +120,11 @@
     }
   },
   {
-    "image": "/reference/peninsula.jpg",
     "title": "Peninsula REH",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/peninsula.jpg",
+    "description": "Connecting Intelligence. Unlocking Value.",
     "url":  "",
+    "date": "2023",
     "bgColor": {
       "h": "180",
       "s": "20%",
@@ -121,10 +132,11 @@
     }
   },
   {
-    "image": "/reference/aliel.jpg",
     "title": "Aliel Jewelery",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab enim eum ex, excepturi exercitationem fugit iusto labore odio quas temporibus.",
+    "image": "/reference/aliel.jpg",
+    "description": "When beauty meets modern elegance.",
     "url":  "",
+    "date": "2023",
     "bgColor": {
       "h": "345",
       "s": "22%",
