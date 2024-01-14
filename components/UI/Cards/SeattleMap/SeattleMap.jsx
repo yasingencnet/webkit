@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {getRandomValue} from "@/utils/utils";
 
-export default function SeattleMap() {
+export default function SeattleMap({className}) {
     const container = useRef();
 
     useGSAP(() => {
@@ -47,7 +47,7 @@ export default function SeattleMap() {
     }, { scope: container });
 
     return (
-        <div className={styles.container} ref={container}>
+        <div className={`${styles.container} ${className}`} ref={container}>
             <span className={`${styles.city} ${styles.v3}`} style={{
                 top: '20%',
                 left: '75%',

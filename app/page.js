@@ -19,7 +19,7 @@ export default function Home() {
             <SelectedWorks />
             <SkillSet />
             <Gallery />
-            {/*<About />*/}
+            <About />
             {/*<BlogPosts />*/}
         </main>
         <Footer></Footer>

@@ -1,3 +1,4 @@
+@import '/assets/media-queries.scss';
 .section{
   position: relative;
   padding: calc(var(--y-spacing) - var(--x-spacing)) var(--x-spacing);
@@ -20,6 +21,10 @@
 .description{
   margin-top: 3rem;
   max-width: 80%;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  color: hsl(var(--color-body));
+  margin-bottom: 3rem;
 }
 
 .grid{
@@ -27,33 +32,57 @@
   grid-gap: var(--x-spacing);
   grid-template-columns: repeat(3, minmax(320px, 1fr));
   grid-template-rows: repeat(2, auto);
+  @include respond-below(xl) {
+    grid-gap: 6rem;
+  }
+  @include respond-below(lg) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  @include respond-below(sm) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+  }
   > * {
-    &:nth-child(5n + 1){
-      align-self: flex-start;
-      &:not(.header){
-        align-self: flex-end;
-        max-width: 60%;
-      }
-    }
-    &:nth-child(5n + 2){
-      align-self: center;
-      grid-row: span 2;
-    }
-    &:nth-child(5n + 3){
-      &:not(.header){
+    @include respond-above(md) {
+      &:nth-child(5n + 1){
         align-self: flex-start;
-        max-width: 60%;
+        &:not(.header){
+          align-self: flex-end;
+          max-width: 60%;
+        }
+      }
+      &:nth-child(5n + 2){
+        align-self: center;
+        grid-row: span 2;
+      }
+      &:nth-child(5n + 3){
+        &:not(.header){
+          align-self: flex-start;
+          max-width: 65%;
+        }
+      }
+      &:nth-child(5n + 4){
+        align-self: center;
+        margin-left: auto;
+        max-width: 45%;
+      }
+      &:nth-child(5n + 5){
+        margin-top: 0;
+        margin-left: auto;
+        max-width: 65%;
       }
     }
-    &:nth-child(5n + 4){
-      align-self: center;
-      margin-left: auto;
-      max-width: 40%;
-    }
-    &:nth-child(5n + 5){
-      margin-top: 0;
-      margin-left: auto;
-      max-width: 60%;
+    @include respond-below(sm) {
+      &.header{
+        grid-column: 1 / -1;
+      }
+      &.map, &.stats{
+        transform: none !important;
+      }
+      &.figure{
+        height: 100%;
+      }
+
     }
   }
 }

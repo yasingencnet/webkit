@@ -5,10 +5,10 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
-import styles from './Paragraph.module.scss';
+import styles from './TextReveal.module.scss';
 
 
-export default function Paragraph({className, children}) {
+export default function TextReveal({className, children, type}) {
     const textRef = useRef();
 
     useGSAP(() => {
@@ -17,7 +17,7 @@ export default function Paragraph({className, children}) {
         const splitText = new SplitText(textRef.current, {
             type: 'words, lines',
             linesClass: `${styles.splitLine}`,
-            lineThreshold: 2,
+            lineThreshold: 5,
         });
 
         const elements = splitText.words;
@@ -31,14 +31,18 @@ export default function Paragraph({className, children}) {
             duration: 0.8,
             opacity: 0,
             ease: "power1.out",
-            stagger: 0.02,
+            stagger: 0.01,
         });
 
     }, { scope: textRef });
 
+    const Tag = type ? type : 'p';
+
     return (
-        <p className={`${styles.description} ${className}`} ref={textRef}>
-            {children}
-        </p>
+        (
+            <Tag className={`${className}`} ref={textRef}>
+                {children}
+            </Tag>
+        )
     );
 }

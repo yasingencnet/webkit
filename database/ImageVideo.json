@@ -18,6 +18,12 @@
     "direction": "horizontal"
   },
   {
+    "url": "/gallery/IMG_20230325_154428.jpg",
+    "date": "March 2023",
+    "location": "Pamukkale, Turkey",
+    "direction": "vertical"
+  },
+  {
     "url": "/gallery/IMG-20190712-WA0010.jpg",
     "date": "July 2019",
     "location": "Kyiv, Ukraine",
@@ -81,12 +87,6 @@
     "url": "/gallery/IMG_20220821_193826.jpg",
     "date": "August 2022",
     "location": "Antalya, Turkey",
-    "direction": "vertical"
-  },
-  {
-    "url": "/gallery/IMG_20230325_154428.jpg",
-    "date": "March 2023",
-    "location": "Pamukkale, Turkey",
     "direction": "vertical"
   },
   {

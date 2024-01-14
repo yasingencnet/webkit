@@ -1,19 +1,20 @@
 'use client';
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import {useGSAP} from "@gsap/react";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {DrawSVGPlugin} from "gsap/DrawSVGPlugin";
 
 import styles from './Hero.module.scss'
 import Image from "next/image";
 import Title from "@/components/UI/Elements/Title/Title";
 import commonConfig from '@/database/config/metadata.json';
 import Magnet from "@/components/UI/Magnet/Magnet";
+
 export default function Hero() {
     const container = useRef();
-    const { contextSafe } = useGSAP({scope: container});
+    const {contextSafe} = useGSAP({scope: container});
 
     // Scroll to Selected Works
     const scrollTo = contextSafe(() => {
@@ -65,12 +66,17 @@ export default function Hero() {
         })
 
         // Draw ScrollDown
-        gsap.from(`.${styles.scroll} svg *`, {
+        gsap.from(`.${styles.scroll} svg path`, {
             drawSVG: '0',
             delay: 1,
-            stagger: 0.2,
         });
-    }, { scope: container });
+        gsap.from(`.${styles.scroll} svg rect`, {
+            drawSVG: '0',
+            delay: 0.5,
+            duration: 1.5
+        });
+
+    }, {scope: container});
 
 
     return (
@@ -103,9 +109,13 @@ export default function Hero() {
             <Magnet>
                 <button type={'button'} onClick={scrollTo} className={styles.scroll}>
                     <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="62" height="62" rx="31" fill="transparent" stroke="black" strokeWidth={1}/>
-                        <path d="M34.1371 35.1502L29.0686 40.2187L24 35.1502" stroke="#000000" strokeWidth="1.39444" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M40.2194 23.9993L33.1234 23.9993C32.048 23.9993 31.0166 24.4265 30.2562 25.1869C29.4957 25.9474 29.0685 26.9787 29.0685 28.0542L29.0685 40.2187" stroke="#000000" strokeWidth="1.39444" strokeLinecap="round" strokeLinejoin="round"/>
+                        <rect x="0.5" y="0.5" width="62" height="62" rx="31" fill="transparent" stroke="black"
+                              strokeWidth={1}/>
+                        <path d="M34.1371 35.1502L29.0686 40.2187L24 35.1502" stroke="#000000" strokeWidth="1.39444"
+                              strokeLinecap="round" strokeLinejoin="round"/>
+                        <path
+                            d="M40.2194 23.9993L33.1234 23.9993C32.048 23.9993 31.0166 24.4265 30.2562 25.1869C29.4957 25.9474 29.0685 26.9787 29.0685 28.0542L29.0685 40.2187"
+                            stroke="#000000" strokeWidth="1.39444" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                 </button>
             </Magnet>

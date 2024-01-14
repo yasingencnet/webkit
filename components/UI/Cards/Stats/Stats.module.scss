@@ -1,3 +1,5 @@
+@import '/assets/media-queries.scss';
+
 .stats{
   position: relative;
   background: hsla(var(--color-bg-alt), 1) url("/card-bg-1.svg") no-repeat;
@@ -9,6 +11,11 @@
   gap: 3rem;
   padding: 3rem;
   animation: moveBg 5s ease infinite;
+
+  @include respond-below(sm) {
+    gap: 1.5rem;
+    padding: 2rem;
+  }
 
   @keyframes moveBg {
     0%{

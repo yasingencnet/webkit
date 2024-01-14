@@ -7,8 +7,9 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { getRandomValue } from "@/utils/utils";
+import commonConfig from "@/database/config/metadata.json";
 
-export default function Stats() {
+export default function Stats({className}) {
     const container = useRef();
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -46,10 +47,10 @@ export default function Stats() {
     }, { scope: container })
 
     return (
-        <div className={styles.stats} ref={container}>
+        <div className={`${styles.stats} ${className}`} ref={container}>
             <div className={styles.stat}>
                 <div className={`${styles.statValue}`}>
-                    <span className={'statValue'}>7</span>+
+                    <span className={'statValue'}>{commonConfig.personal.experience}</span>+
                 </div>
                 <span className={styles.statDesc}>Years of <br/>
                             Experience

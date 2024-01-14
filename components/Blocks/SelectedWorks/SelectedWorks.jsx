@@ -15,7 +15,7 @@ import styles from './SelectedWorks.module.scss';
 import Title from "@/components/UI/Elements/Title/Title";
 import Magnet from "@/components/UI/Magnet/Magnet";
 import FancyButton from "@/components/UI/Elements/Button/Button";
-import Paragraph from "@/components/UI/Elements/Paragraph/Paragraph";
+import TextReveal from "@/components/UI/Elements/TextReveal/TextReveal";
 export default function SelectedWorks() {
     const galleryContainer = useRef();
     const container = useRef();
@@ -62,9 +62,9 @@ export default function SelectedWorks() {
             <div className={styles.xScrollContainer} ref={galleryContainer}>
                 <header className={styles.header}>
                     <Title color="white">Selected <br/>Works</Title>
-                    <Paragraph className={styles.description}>
+                    <TextReveal className={styles.description}>
                         I&apos;ve played a key role in developing impactful projects. Here&apos;s a curated selection showcasing my expertise and the achieved results.
-                    </Paragraph>
+                    </TextReveal>
                     <FancyButton theme='button-2' link={'/contact'}>Contact</FancyButton>
                 </header>
 

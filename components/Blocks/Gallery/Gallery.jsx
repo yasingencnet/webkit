@@ -77,18 +77,37 @@ export default function Gallery() {
             </Container>
 
             <Swiper
-                slidesPerView={'auto'}
+                slidesPerView={1.2}
                 speed={1200}
-                spaceBetween={90}
-                slidesOffsetAfter={90}
-                slidesOffsetBefore={90}
+                spaceBetween={30}
+                slidesOffsetAfter={30}
+                slidesOffsetBefore={30}
+                breakpoints={{
+                    768: {
+                        slidesPerView: 1.8,
+                        spaceBetween: 60,
+                        slidesOffsetAfter: 60,
+                        slidesOffsetBefore: 60,
+                    },
+                    992: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 60,
+                        slidesOffsetAfter: 60,
+                        slidesOffsetBefore: 60,
+                    },
+                    1600: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 90,
+                        slidesOffsetAfter: 90,
+                        slidesOffsetBefore: 90,
+                        freeMode: true,
+                    },
+                }}
                 touchEventsTarget={'container'}
                 pagination={{
                     type: 'fraction',
                 }}
-                freeMode={{
-                    enabled: true,
-                }}
+
                 modules={[Pagination, FreeMode]}
                 className={`${styles.slider} gallerySlider`}
             >

@@ -8,26 +8,12 @@ import { getRandomValue } from "@/utils/utils.js";
 
 import Image from "next/image";
 import styles from './ParallaxImage.module.scss';
-export default function ParallaxImage({ src, alt, width, height}) {
+export default function ParallaxImage({ src, alt, width, height, className}) {
     const container = useRef();
     const image = useRef();
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
-
-        /*let tlReveal = gsap.timeline({
-            scrollTrigger: {
-                trigger: container.current,
-                scrub: 2,
-                toggleActions: "restart none none reset"
-            }
-        });
-
-        const yPercentValue = getRandomValue(50, 30);
-        tlReveal.to(container.current, {
-            yPercent: -yPercentValue,
-            ease: 'Power2.out',
-        });*/
 
         let tlParallaxImg = gsap.timeline({
             scrollTrigger: {
@@ -50,7 +36,7 @@ export default function ParallaxImage({ src, alt, width, height}) {
     }, {scope: container});
 
     return (
-        <figure ref={container} className={styles.figure}>
+        <figure ref={container} className={`${styles.figure} ${className}`}>
             <Image ref={image} src={src} alt={alt} width={width} height={height} loading="lazy" className={`${styles.image}`}/>
         </figure>
     );

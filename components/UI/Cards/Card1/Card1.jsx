@@ -1,5 +1,7 @@
 import React  from 'react';
 import styles from './Card1.module.scss';
+import commonConfig from "@/database/config/metadata.json";
+import TextReveal from "@/components/UI/Elements/TextReveal/TextReveal";
 
 export default function Card1({icon, title, subtitle, description}) {
     return(
@@ -10,7 +12,9 @@ export default function Card1({icon, title, subtitle, description}) {
             <h2 className={styles.title}>
                 {title} <br/> {subtitle}
             </h2>
-            <p className={styles.description}>{description}</p>
+            <TextReveal className={styles.description}>
+                {description}
+            </TextReveal>
         </div>
     );
 }
