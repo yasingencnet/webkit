@@ -1,0 +1,54 @@
+.card{
+  position: relative;
+  padding: 3rem;
+  z-index: 0;
+  .icon{
+    margin-bottom: 6rem;
+    width: 8rem;
+    height: 8rem;
+    > * {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .title{
+    font-size: var(--fs-md);
+    color: hsl(var(--color-black));
+    font-weight: var(--fw-medium);
+    margin-bottom: 3rem;
+  }
+  .description{
+    font-size: var(--fs-sm);
+    color: hsl(var(--color-body));
+  }
+
+  &:hover{
+    .icon{
+      animation:bounce .8s cubic-bezier(0.280, 0.840, 0.420, 1) forwards;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, .9) translateY(0);
+  }
+  30% {
+    transform: scale(.9, 1.1) translateY(-20px);
+  }
+  50% {
+    transform: scale(1.05, .95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-5px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}

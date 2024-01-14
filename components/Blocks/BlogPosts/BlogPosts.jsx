@@ -2,10 +2,10 @@ import React from "react";
 
 import styles from './BlogPosts.module.scss';
 
-import Title from "@/components/UI/Title/Title";
-import Card2 from "@/components/UI/Card2/Card2";
-import FancyButton from "@/components/UI/Button/Button";
-import Logo from "@/components/UI/Logo/Logo";
+import Title from "@/components/UI/Elements/Title/Title";
+import Card2 from "@/components/UI/Cards/Card2/Card2";
+import FancyButton from "@/components/UI/Elements/Button/Button";
+import Logo from "@/components/UI/Elements/Logo/Logo";
 import Container from "@/components/UI/Layout/Layout";
 export default function BlogPosts() {
 

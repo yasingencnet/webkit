@@ -2,7 +2,7 @@ import { Manrope, Libre_Baskerville } from 'next/font/google';
 import '@/assets/globals.scss';
 import commonConfig from '@/database/config/metadata.json';
 import LenisScroller from '@/components/UI/LenisScroller/LenisScroller';
-import CustomCursor from "@/components/UI/CustomCursor/CustomCursor";
+import CustomCursor from "@/components/UI/Elements/CustomCursor/CustomCursor";
 
 const bodyFont = Manrope({
     subsets: ['latin'],

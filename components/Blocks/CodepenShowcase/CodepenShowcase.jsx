@@ -2,9 +2,9 @@
 import React from "react";
 import styles from './CodepenShowcase.module.scss';
 
-import Title from "@/components/UI/Title/Title";
+import Title from "@/components/UI/Elements/Title/Title";
 import Container from "@/components/UI/Layout/Layout";
-import Codepen from "@/components/UI/Codepen/Codepen";
+import Codepen from "@/components/UI/Cards/Codepen/Codepen";
 export default function CodepenShowcase() {
 
     return (

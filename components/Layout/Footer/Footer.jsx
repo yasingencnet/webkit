@@ -1,19 +1,26 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './Footer.module.scss';
 import Image from "next/image";
 import Link from "next/link";
-import Logo from '@/components/UI/Logo/Logo';
-import Title from "@/components/UI/Title/Title";
 import commonConfig from '@/database/config/metadata.json';
-import {getCurrentYear } from "@/utils/utils.js";
-import SocialLinks from "@/components/UI/SocialLinks/SocialLinks";
-import NavDetailed from "@/components/UI/NavDetailed/NavDetailed";
 
-import WeatherAPI from "@/components/UI/WeatherAPI/WeatherAPI";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import Logo from '@/components/UI/Elements/Logo/Logo';
+import Title from "@/components/UI/Elements/Title/Title";
+import { getCurrentYear } from "@/utils/utils.js";
+import SocialLinks from "@/components/UI/Cards/SocialLinks/SocialLinks";
+import NavDetailed from "@/components/UI/Cards/NavDetailed/NavDetailed";
+import WeatherAPI from "@/components/UI/Elements/WeatherAPI/WeatherAPI";
 
 export default function Footer() {
+    const container = useRef(null);
+    const footerBottom = useRef(null);
+    const skeleton = useRef(null);
     const currentYear = getCurrentYear();
 
     // Get current time in Seattle, WA (PST)
@@ -26,8 +33,26 @@ export default function Footer() {
         timeZoneName: 'short'
     });
 
+    // Skeleton Animation
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(skeleton.current, {
+            scrollTrigger: {
+                trigger: container.current,
+                start: "bottom bottom",
+            },
+            yPercent: 100,
+            duration: 1,
+            onComplete: () => {
+                skeleton.current.classList.add(`${styles.animating}`);
+            }
+        });
+
+    }, {scope: container})
+
     return (
-        <footer className={styles.footer}>
+        <footer className={styles.footer} ref={container}>
             <div className={styles.inner}>
                 <div className={styles.connect}>
                     <div className={styles.title}>
@@ -46,7 +71,7 @@ export default function Footer() {
                     <NavDetailed></NavDetailed>
                 </div>
 
-                <div className={styles.bottom}>
+                <div className={styles.bottom} ref={footerBottom}>
                     <Logo classVariable={styles.badge}></Logo>
                     <div className={styles.copyright}>&copy; {currentYear} {commonConfig.personal.name} {commonConfig.personal.surname}
                         <br/>
@@ -62,7 +87,7 @@ export default function Footer() {
                     <div className={styles.verse}>{commonConfig.content.verse}</div>
                 </div>
             </div>
-            <figure className={styles.skeleton}>
+            <figure className={styles.skeleton} ref={skeleton}>
                 <Image src="/skeleton.png" alt={commonConfig.metadata.title} width={379} height={259} loading={"lazy"} />
                 <span className={`${styles.eyeball} ${styles.left}`}></span>
                 <span className={`${styles.eyeball} ${styles.right}`}></span>

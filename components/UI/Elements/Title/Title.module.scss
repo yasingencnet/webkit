@@ -1,0 +1,38 @@
+.title {
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: hsl(var(--color-black));
+  opacity: 0;
+  span:not([class]) {
+    opacity: .5;
+  }
+
+  .splitLine{
+    overflow: hidden;
+    margin: calc(-1 * 1.2rem) 0;
+    padding: 1.2rem 0;
+  }
+}
+
+h1, h2 {
+  &.title{
+    font-size: var(--fs-xl);
+  }
+}
+h3, h4, h5 {
+  &.title{
+    font-size: var(--fs-lg);
+  }
+}
+h6{
+  &.title{
+    font-size: var(--fs-md);
+  }
+}
+
+.white{
+  color: hsl(var(--color-white));
+}
+.black{
+  color: hsl(var(--color-black));
+}

@@ -1,0 +1,55 @@
+.logo{
+  --spin-text: hsl(var(--color-black));
+  --inner-circle: transparent;
+  --inner-stroke: hsl(var(--color-black));
+  --inner-path: hsl(var(--color-black));
+  display: block;
+  .outer{
+    transform-origin: 50% 50%;
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  .spin{
+    animation: freeRotate 20s linear infinite;
+    transform-origin: 50% 50%;
+    path{
+      fill: var(--spin-text);
+    }
+  }
+  .inner{
+    circle{
+      fill: var(--inner-circle);
+      stroke: var(--inner-stroke);
+    }
+    path{
+      fill: var(--inner-path);
+    }
+  }
+
+  &:hover{
+    .spin {
+      animation-play-state: paused;
+      animation: revertRotate 5s linear infinite;
+    }
+    .outer{
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes freeRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes revertRotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

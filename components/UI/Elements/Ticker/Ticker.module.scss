@@ -1,0 +1,17 @@
+.ticker__text{
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  line-height: 118%;
+  font-family: var(--font-alt);
+  font-size: var(--fs-xxl);
+  font-weight: var(--fw-bold);
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: hsl(var(--color-black));
+
+  svg{
+    transform: translateY(17px);
+    margin: 0 60px;
+  }
+}

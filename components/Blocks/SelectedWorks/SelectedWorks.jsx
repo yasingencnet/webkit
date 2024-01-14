@@ -12,10 +12,10 @@ import Works from '@/database/Works.json';
 
 import styles from './SelectedWorks.module.scss';
 
-import Title from "@/components/UI/Title/Title";
+import Title from "@/components/UI/Elements/Title/Title";
 import Magnet from "@/components/UI/Magnet/Magnet";
-import FancyButton from "@/components/UI/Button/Button";
-import Paragraph from "@/components/UI/Paragraph/Paragraph";
+import FancyButton from "@/components/UI/Elements/Button/Button";
+import Paragraph from "@/components/UI/Elements/Paragraph/Paragraph";
 export default function SelectedWorks() {
     const galleryContainer = useRef();
     const container = useRef();
@@ -50,7 +50,6 @@ export default function SelectedWorks() {
                     <Paragraph className={styles.description}>
                         I&apos;ve played a key role in developing impactful projects. Here&apos;s a curated selection showcasing my expertise and the achieved results.
                     </Paragraph>
-                    {/*<p className={styles.description}>I've played a key role in developing impactful projects. Here's a curated selection showcasing my expertise and the achieved results.</p>*/}
                     <FancyButton theme='button-2' link={'/contact'}>Contact</FancyButton>
                 </header>
 

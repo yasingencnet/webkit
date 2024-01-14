@@ -1,33 +1,46 @@
 {
   "works": {
+    "isActive": true,
     "showOnNavigation":  true,
     "title": "Works",
-    "description": "It’s time to see some work. Here are a few projects I’ve done for clients.",
+    "description": "Here's a curated selection showcasing my expertise and the achieved results.",
     "image": "",
-    "link": "/works"
+    "link": "#works"
   },
   "about": {
+    "isActive":  true,
     "showOnNavigation": true,
     "title": "About",
     "description": "I design & develop modern and accessible web interfaces.",
     "image": "",
-    "link": "/about"
+    "link": "#about"
   },
   "blog": {
+    "isActive":  false,
     "showOnNavigation":  true,
     "title": "Blog",
     "description": "Articles focused on CSS, HTML, JavaScript, and other frontend stuff.",
     "image": "",
     "link": "/blog"
   },
+  "skillset": {
+    "isActive":  true,
+    "showOnNavigation":  true,
+    "title": "Skillset",
+    "description": "I bring websites to life with JavaScript, CSS and HTML.",
+    "image": "",
+    "link": "#skillset"
+  },
   "contact": {
+    "isActive":  true,
     "showOnNavigation":  true,
     "title": "Contact",
     "description": "Now it’s your turn to say hi. I hope to hear from you!",
     "image": "",
-    "link": "/contact"
+    "link": "#contact"
   },
   "instagram": {
+    "isActive":  true,
     "showOnNavigation":  false,
     "title": "Instagram",
     "description": "Good memories, best times. My photo journal.",

@@ -8,7 +8,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
 import styles from './Hero.module.scss'
 import Image from "next/image";
-import Title from "@/components/UI/Title/Title";
+import Title from "@/components/UI/Elements/Title/Title";
 import commonConfig from '@/database/config/metadata.json';
 import Magnet from "@/components/UI/Magnet/Magnet";
 export default function Hero() {

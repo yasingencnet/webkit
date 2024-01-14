@@ -2,8 +2,11 @@
   position: relative;
   background: hsl(var(--color-bg-alt));
   padding: var(--y-spacing) var(--x-spacing) var(--x-spacing);
+  overflow: hidden;
 
   .inner{
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-areas:
           "connect nav"
@@ -104,11 +107,11 @@
 
 // Skeleton
 .skeleton{
-  display: inline-block;
   position: absolute;
   right: 0;
   bottom: 0;
   pointer-events: none;
+  z-index: 0;
 
   .eyeball{
     position: absolute;
@@ -116,7 +119,8 @@
     height: 5px;
     background: #ffbebe;
     border-radius: 50%;
-    animation: skullEye 1.8s infinite;
+    scale: 0;
+    transition: all 0.3s linear;
     &.left{
       left: 6%;
       top: 62%;
@@ -127,6 +131,12 @@
     }
   }
 
+  &.animating {
+    .eyeball{
+      scale: 1;
+      animation: skullEye 1.8s infinite;
+    }
+  }
   @keyframes skullEye {
     0%,
     100% {
@@ -137,8 +147,6 @@
     }
   }
 }
-
-
 
 
 // Capillary

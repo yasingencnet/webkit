@@ -1,3 +1,5 @@
+
+@import 'media-queries.scss';
 //////////////////////////////
 // THEMING
 //////////////////////////////
@@ -36,6 +38,20 @@
   --header-height: 22rem;
   --x-spacing: 9rem;
   --y-spacing: 24rem;
+
+  @include respond-below(lg) {
+    --fs-xxs: 1.4rem;
+    --fs-xs: 1.6rem;
+    --fs-sm: 2.8rem;
+    --fs-md: 2.4rem;
+    --fs-lg: 3.6rem;
+    --fs-xl: 6.0rem;
+    --fs-xxl: 12rem;
+
+    --x-spacing: 6rem;
+    --y-spacing: 20rem;
+  }
+
 }
 
 

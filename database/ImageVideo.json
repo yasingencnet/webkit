@@ -82,5 +82,24 @@
     "date": "August 2022",
     "location": "Antalya, Turkey",
     "direction": "vertical"
+  },
+  {
+    "url": "/gallery/IMG_20230325_154428.jpg",
+    "date": "March 2023",
+    "location": "Pamukkale, Turkey",
+    "direction": "vertical"
+  },
+  {
+    "url": "/gallery/IMG_20231210_140134.jpg",
+    "date": "December 2023",
+    "location": "Seattle, WA",
+    "direction": "vertical"
+  },
+  {
+    "url": "/gallery/IMG_20230420_161256.jpg",
+    "date": "December 2023",
+    "location": "Gelidonya, Antalya",
+    "direction": "vertical"
   }
+
 ]

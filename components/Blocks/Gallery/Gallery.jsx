@@ -17,9 +17,9 @@ import 'swiper/scss';
 import 'swiper/scss/pagination';
 import 'swiper/scss/free-mode';
 
-import Title from "@/components/UI/Title/Title";
-import ImageTip from "@/components/UI/ImageTip/ImageTip";
-import FancyButton from "@/components/UI/Button/Button";
+import Title from "@/components/UI/Elements/Title/Title";
+import ImageTip from "@/components/UI/Elements/ImageTip/ImageTip";
+import FancyButton from "@/components/UI/Elements/Button/Button";
 
 import commonConfig from '@/database/config/metadata.json';
 import ImageVideo from '@/database/ImageVideo.json';

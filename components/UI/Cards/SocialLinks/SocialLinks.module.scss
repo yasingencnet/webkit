@@ -1,0 +1,47 @@
+.social{
+  --size: 5rem;
+  --icon-color: hsl(var(--color-white));
+  --bg-color: hsl(var(--color-primary));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  li{
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--size);
+      height: var(--size);
+
+      position: relative;
+      z-index: 1;
+      border-radius: 50%;
+      //transition: all 0.3s ease;
+
+      &:before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        scale: 0;
+        z-index: -1;
+        transition: all 0.3s ease;
+        background: var(--bg-color);
+        border-radius: 50%;
+      }
+      &:hover{
+        --icon-color: hsl(var(--color-black));
+        &:before{
+          scale: 1;
+        }
+      }
+    }
+    svg{
+      path, rect {
+        fill: var(--icon-color);
+      }
+    }
+  }
+}

@@ -44,6 +44,7 @@ export default function Navigation() {
                 <ul>
                     {Object.values(PageList)
                         .filter(item => item.showOnNavigation)
+                        .filter(item => item.isActive)
                         .map((item, index) => (
                             <li key={index}>
                                 <Link href={item.link} onMouseEnter={doAnim} onMouseLeave={resetAnim}>{item.title}</Link>

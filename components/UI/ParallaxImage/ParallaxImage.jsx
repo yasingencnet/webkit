@@ -15,7 +15,7 @@ export default function ParallaxImage({ src, alt, width, height}) {
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        let tlReveal = gsap.timeline({
+        /*let tlReveal = gsap.timeline({
             scrollTrigger: {
                 trigger: container.current,
                 scrub: 2,
@@ -23,11 +23,11 @@ export default function ParallaxImage({ src, alt, width, height}) {
             }
         });
 
-        const yPercentValue = getRandomValue(70, 30);
+        const yPercentValue = getRandomValue(50, 30);
         tlReveal.to(container.current, {
             yPercent: -yPercentValue,
             ease: 'Power2.out',
-        });
+        });*/
 
         let tlParallaxImg = gsap.timeline({
             scrollTrigger: {

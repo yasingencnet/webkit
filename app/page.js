@@ -15,9 +15,10 @@ export default function Home() {
     <>
         <Header></Header>
         <main>
-            <Hero />
+            {/*<Hero />
             <SelectedWorks />
             <SkillSet />
+            */}
             <Gallery />
             <About />
             {/*<BlogPosts />*/}
