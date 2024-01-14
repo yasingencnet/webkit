@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styles from './Footer.module.scss';
 import Image from "next/image";
 import Link from "next/link";
@@ -23,15 +23,19 @@ export default function Footer() {
     const skeleton = useRef(null);
     const currentYear = getCurrentYear();
 
-    // Get current time in Seattle, WA (PST)
-    const timeZone = commonConfig.metadata.timeZone;
-    const currentTime = new Date().toLocaleString(commonConfig.metadata.locale, {
-        timeZone: timeZone,
-        hour: 'numeric',
-        minute: 'numeric',
-        hour12: true,
-        timeZoneName: 'short'
-    });
+    const [currentTime, setCurrentTime] = useState('');
+    useEffect(() => {
+        // Get current time in Seattle, WA (PST) on the client side
+        const timeZone = commonConfig.metadata.timeZone;
+        const clientTime = new Date().toLocaleString(commonConfig.metadata.locale, {
+            timeZone: timeZone,
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true,
+            timeZoneName: 'short'
+        });
+        setCurrentTime(clientTime);
+    }, []);
 
     // Skeleton Animation
     useGSAP(() => {

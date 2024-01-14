@@ -88,7 +88,7 @@ export default function Hero() {
                         <span className={`${styles.icon}`}>
                             <span className={styles.reveal}></span>
                             <Image
-                                src="/hero-image-v2.jpg"
+                                src="/hero-image.jpg"
                                 alt={commonConfig.metadata.title}
                                 width={640}
                                 height={300}
@@ -107,7 +107,7 @@ export default function Hero() {
             </div>
 
             <Magnet>
-                <button type={'button'} onClick={scrollTo} className={styles.scroll}>
+                <button type={'button'} onClick={scrollTo} className={styles.scroll} aria-label="Scroll Down">
                     <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.5" y="0.5" width="62" height="62" rx="31" fill="transparent" stroke="black"
                               strokeWidth={1}/>

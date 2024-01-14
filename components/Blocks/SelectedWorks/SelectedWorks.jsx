@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from 'react';
+import React, { useRef, useEffect  } from 'react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -33,6 +33,7 @@ export default function SelectedWorks() {
                 },
                 pin: true,
                 scrub: true,
+                markers: true,
                 invalidateOnRefresh: true,
             }
         });
@@ -73,7 +74,7 @@ export default function SelectedWorks() {
                     return (
                         <div key={index} className={`${styles.browser}`} style={{ '--h': work.bgColor.h, '--s': work.bgColor.s, '--l': work.bgColor.l }}>
                             <div className={`${styles.browserHeader} ${lightness >= 50 ? styles.dark : ''}`}>
-                                <h5 className={styles.title}>{work.title}</h5>
+                                <h3 className={styles.title}>{work.title}</h3>
                                 <span className={styles.date}>{work.date}</span>
 
                                 {work.url && work.url.trim() !== '' && (

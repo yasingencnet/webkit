@@ -49,7 +49,7 @@ export default function SocialLinks() {
                 <li key={index}>
                     {socialMediaIcons[item] && (
                         <Magnet>
-                            <Link href={value} target="_blank">
+                            <Link href={value} target="_blank" aria-label={'Social Media'}>
                                 {socialMediaIcons[item]}
                             </Link>
                         </Magnet>

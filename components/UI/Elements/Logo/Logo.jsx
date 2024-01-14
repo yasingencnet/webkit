@@ -1,9 +1,10 @@
 import styles from './Logo.module.scss';
 import Link from 'next/link';
+import commonConfig from '@/database/config/metadata.json';
 
 export default function Logo({classVariable}) {
     return (
-        <Link href="/" className={classVariable}>
+        <Link href="/" className={classVariable} aria-label={commonConfig.metadata.title}>
             <svg className={styles.logo} width="120" height="120" viewBox="0 0 120 120" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <g className={styles.outer}>
