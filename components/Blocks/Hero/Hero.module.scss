@@ -1,8 +1,12 @@
+@import '/assets/media-queries.scss';
+
 .hero {
   position: relative;
   .inner{
     position: relative;
-    padding: calc(var(--header-height) + (var(--x-spacing) / 2)) var(--x-spacing) var(--x-spacing);
+    padding: calc(var(--header-height) + (var(--x-spacing) / 2))
+    var(--x-spacing)
+    calc(var(--x-spacing) * 1.5);
     z-index: 1;
     overflow: hidden;
     min-height: 100vh;
@@ -11,7 +15,9 @@
 
 .title{
   margin-bottom: 3rem;
-  max-width: 68vw;
+  @include respond-above(xl) {
+    max-width: 68vw;
+  }
   h1{
     font-weight: var(--fw-light);
     line-height: 1.1;
@@ -21,7 +27,7 @@
     justify-content: center;
     align-items: center;
     width: 28.4rem;
-    height: 8.8rem;
+    height: 8.3rem;
     border-radius: 100vw;
     vertical-align: baseline;
     overflow: hidden;
@@ -29,6 +35,14 @@
     background: hsl(var(--color-bg-alt));
     z-index: 111;
     position: relative;
+    @include respond-below(lg) {
+      height: 6.6rem;
+      width: 22rem;
+    }
+    @include respond-below(sm) {
+      margin: 1.5rem 0;
+      display: flex;
+    }
 
     .heroImg{
       width: 100%;
@@ -72,8 +86,9 @@
   }
   .gradient{
     background-image: url("/hero-gradient.svg");
-    background-size: 130%;
-    filter: blur(2vw);
+    /*background-size: 130%;*/
+    background-size: cover;
+    filter: blur(4rem);
     animation: moveBg 10s ease infinite;
 
     @keyframes moveBg {
@@ -122,5 +137,9 @@
         stroke: hsl(var(--color-white));
       }
     }
+  }
+
+  @include respond-below(sm) {
+    display: none;
   }
 }

@@ -22,21 +22,36 @@ export default function SelectedWorks() {
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
-
         const gallery = galleryContainer.current;
-        const galleryWidth = gallery?.clientWidth || 0;
-        let amountToScroll = galleryWidth - window.innerWidth;
 
-        gsap.to(gallery, {
-            x: -amountToScroll,
-            ease: 'none',
+        let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: gallery,
-                start: 'top 0',
-                end: '+=' + amountToScroll,
+                start: 'top top',
+                end: () => {
+                    return `+=${(gallery?.clientWidth) - window.innerWidth}`;
+                },
                 pin: true,
                 scrub: true,
-            },
+                invalidateOnRefresh: true,
+            }
+        });
+
+        let mm = gsap.matchMedia();
+        mm.add("(max-width: 991px)", () => {
+            tl.to(gallery, {
+                ease: 'none',
+            });
+
+        });
+        mm.add("(min-width: 992px)", () => {
+            tl.to(gallery, {
+                x: () => {
+                    return `-${(gallery?.clientWidth) - window.innerWidth}`;
+                },
+                ease: 'none',
+            });
+
         });
 
     }, { scope: galleryContainer });

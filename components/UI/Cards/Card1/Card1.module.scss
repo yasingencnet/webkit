@@ -1,11 +1,15 @@
+@import '/assets/media-queries.scss';
+
 .card{
   position: relative;
-  padding: 3rem;
   z-index: 0;
   .icon{
     margin-bottom: 6rem;
     width: 8rem;
     height: 8rem;
+    @include respond-below(md) {
+      margin-bottom: 3rem;
+    }
     > * {
       width: 100%;
       height: auto;

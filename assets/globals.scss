@@ -42,7 +42,7 @@
   @include respond-below(lg) {
     --fs-xxs: 1.4rem;
     --fs-xs: 1.6rem;
-    --fs-sm: 2.8rem;
+    --fs-sm: 1.8rem;
     --fs-md: 2.4rem;
     --fs-lg: 3.6rem;
     --fs-xl: 6.0rem;
@@ -50,6 +50,15 @@
 
     --x-spacing: 6rem;
     --y-spacing: 20rem;
+  }
+  @include respond-below(md) {
+    --fs-xl: 4.8rem;
+    --fs-xxl: 10rem;
+    --y-spacing: 12rem;
+  }
+  @include respond-below(sm) {
+    --fs-xl: 4.0rem;
+    --x-spacing: 3rem;
   }
 
 }

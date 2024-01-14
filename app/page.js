@@ -15,12 +15,11 @@ export default function Home() {
     <>
         <Header></Header>
         <main>
-            {/*<Hero />
+            <Hero />
             <SelectedWorks />
             <SkillSet />
-            */}
             <Gallery />
-            <About />
+            {/*<About />*/}
             {/*<BlogPosts />*/}
         </main>
         <Footer></Footer>

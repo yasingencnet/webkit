@@ -1,3 +1,5 @@
+@import '/assets/media-queries.scss';
+
 .section{
   position: relative;
   padding: calc(var(--y-spacing) - var(--x-spacing)) 0;
@@ -19,20 +21,37 @@
 }
 
 .xScrollContainer{
+  display: flex;
+  gap: var(--x-spacing);
+
   height: 100dvh;
   width: fit-content;
   padding: var(--x-spacing);
-
-  display: flex;
   flex-wrap: nowrap;
-  gap: var(--x-spacing);
+
+  @include respond-below(md) {
+    flex-direction: column;
+    padding: 0 var(--x-spacing);
+    height: auto;
+    width: 100%;
+    gap: calc(var(--x-spacing) * 2);
+  }
   > * {
+    width: 40dvw;
+    height: calc(100dvh - (var(--x-spacing) * 2));
+    @include respond-below(md) {
+      width: 100%;
+      height: auto;
+      max-height: 52rem;
+    }
+
     &:first-child{
       width: auto;
       max-width: 40rem;
+      @include respond-below(md) {
+        max-width: 100%;
+      }
     }
-    width: 40dvw;
-    height: calc(100dvh - (var(--x-spacing) * 2));
   }
 }
 

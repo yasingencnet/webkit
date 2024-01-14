@@ -1,17 +1,25 @@
+@import '/assets/media-queries.scss';
 .nav{
 
 }
 .ul{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  //grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
   gap: 6rem;
   padding-left: 0;
+  @include respond-below(lg) {
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr))
+  }
+  @include respond-below(sm) {
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr))
+  }
   li{
-    &:nth-child(1){
-      grid-column: 2 / 3;
-    }
-    &:nth-child(2){
-      grid-column: 2 / 3;
+    &:nth-child(1), &:nth-child(2){
+      @include respond-above(lg) {
+        grid-column: 2 / 3;
+      }
     }
     a{
       display: block;
@@ -27,6 +35,9 @@
   color: hsl(var(--color-white));
   font-weight: var(--fw-medium);
   font-size: var(--fs-sm);
+  @include respond-below(sm) {
+    margin-bottom: 0;
+  }
 
   span{
     display: block;
@@ -51,4 +62,7 @@
   color: hsl(var(--color-body));
   font-weight: var(--fw-regular);
   font-size: var(--fs-xs);
+  @include respond-below(sm) {
+    display: none;
+  }
 }

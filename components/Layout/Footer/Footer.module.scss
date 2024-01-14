@@ -1,7 +1,9 @@
+@import '/assets/media-queries.scss';
+
 .footer{
   position: relative;
   background: hsl(var(--color-bg-alt));
-  padding: var(--y-spacing) var(--x-spacing) var(--x-spacing);
+  padding: var(--y-spacing) var(--x-spacing) 9rem;
   overflow: hidden;
 
   .inner{
@@ -12,9 +14,20 @@
           "connect nav"
           "bottom bottom";
     grid-template-columns: 1fr 2fr;
+    @include respond-below(lg) {
+      grid-template-areas:
+          "connect"
+          "nav"
+          "bottom";
+      grid-template-columns: 1fr;
+      gap: var(--x-spacing);
+    }
   }
   .connect{
     grid-area: connect;
+    @include respond-below(sm) {
+      margin-bottom: 3rem;
+    }
   }
   .nav{
     grid-area: nav;
@@ -23,6 +36,9 @@
     grid-area: bottom;
     text-align: center;
     padding: var(--y-spacing) 3rem 3rem;
+    @include respond-below(lg) {
+      padding: var(--x-spacing) 3rem 3rem;
+    }
   }
 }
 
@@ -62,12 +78,17 @@
 
 .title{
   margin-bottom: 3rem;
+  padding: 1rem;
+  @include respond-below(sm) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .email{
   position: relative;
   display: inline-block;
   margin-bottom: 3rem;
+  padding: 1rem;
   color: hsl(var(--color-body));
   font-size: var(--fs-sm);
   text-decoration: none;
@@ -112,6 +133,9 @@
   bottom: 0;
   pointer-events: none;
   z-index: 0;
+  @include respond-below(sm) {
+    display: none;
+  }
 
   .eyeball{
     position: absolute;
