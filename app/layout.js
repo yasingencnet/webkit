@@ -28,13 +28,14 @@ export default function RootLayout({ children }) {
   return (
       <html lang="en" className={bodyFont.className}>
           <body>
-            <CustomCursor>
-                <Header></Header>
-                <main>
-                    {children}
-                </main>
-                <Footer></Footer>
-            </CustomCursor>
+          <Header></Header>
+          <main>
+              {children}
+          </main>
+          <Footer></Footer>
+            {/*<CustomCursor>
+
+            </CustomCursor>*/}
             <LenisScroller></LenisScroller>
           </body>
       </html>
