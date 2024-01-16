@@ -1,5 +1,3 @@
-'use client';
-
 import React from "react";
 
 import Hero from '@/components/Blocks/Hero/Hero';
@@ -15,7 +13,7 @@ export default function Home() {
           <Hero/>
           <SelectedWorks/>
           <SkillSet/>
-          <Gallery/>
+          <Gallery />
           <About/>
       </>
   )

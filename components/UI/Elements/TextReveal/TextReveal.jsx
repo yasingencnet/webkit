@@ -8,41 +8,41 @@ import { SplitText } from "gsap/SplitText";
 import styles from './TextReveal.module.scss';
 
 
-export default function TextReveal({className, children, type}) {
+export default function TextReveal({className, children}) {
     const textRef = useRef();
 
     useGSAP(() => {
-        gsap.registerPlugin(ScrollTrigger, SplitText);
+        if(textRef.current){
+            gsap.registerPlugin(ScrollTrigger, SplitText);
 
-        const splitText = new SplitText(textRef.current, {
-            type: 'words, lines',
-            linesClass: `${styles.splitLine}`,
-            lineThreshold: 5,
-        });
+            const splitText = new SplitText(textRef.current, {
+                type: 'words, lines',
+                linesClass: `${styles.splitLine}`,
+                lineThreshold: 5,
+            });
 
-        const elements = splitText.words;
+            const elements = splitText.words;
 
-        gsap.from(elements, {
-            scrollTrigger: {
-                trigger: textRef.current,
-                toggleActions: "restart pause resume reverse",
-                start: "top 85%",
-            },
-            duration: 0.8,
-            opacity: 0,
-            ease: "power1.out",
-            stagger: 0.01,
-        });
+            gsap.from(elements, {
+                scrollTrigger: {
+                    trigger: textRef.current,
+                    toggleActions: "restart pause resume reverse",
+                    start: "top 85%",
+                },
+                duration: 0.8,
+                opacity: 0,
+                ease: "power1.out",
+                stagger: 0.01,
+            });
+        }
 
     }, { scope: textRef });
 
-    const Tag = type ? type : 'p';
-
     return (
         (
-            <Tag className={`${className}`} ref={textRef}>
+            <p className={`${className}`} ref={textRef}>
                 {children}
-            </Tag>
+            </p>
         )
     );
 }

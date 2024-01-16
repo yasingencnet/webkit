@@ -9,37 +9,43 @@ import styles from './Title.module.scss';
 
 
 export default function Title({heading, color, children}) {
-
-    const textRef = useRef();
+    const textRef = useRef(null);
 
     useGSAP(() => {
+
         gsap.registerPlugin(ScrollTrigger, SplitText);
 
-        const title = textRef.current;
+        if(textRef.current){
+            console.log("textRef", textRef.current);
 
-        title.style.opacity = 1;
+            textRef.current.style.opacity = 1;
 
-        const splitText = new SplitText(title, {
-            type: 'words, chars',
-            wordsClass: `${styles.splitLine}`,
-        });
+            const splitText = new SplitText(textRef.current, {
+                type: 'words, chars',
+                wordsClass: `${styles.splitLine}`,
+            });
 
-        const elements = splitText.chars;
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: textRef.current,
+                    toggleActions: "restart pause resume reverse",
+                    start: "top 90%",
+                },
+            });
 
-        gsap.from(elements, {
-            scrollTrigger: {
-                trigger: title,
-                toggleActions: "restart pause resume reverse",
-                start: "top 90%",
-            },
-            duration: 0.4,
-            opacity: 0,
-            y: 120,
-            ease: "power1.out",
-            stagger: 0.01,
-        });
+            tl.from(splitText.chars, {
+                duration: 0.4,
+                opacity: 0,
+                y: 120,
+                ease: "power1.out",
+                stagger: 0.01,
+                onComplete: () => {
+                    //splitText.revert();
+                }
+            });
+        }
 
-    }, { scope: textRef });
+    }, { scope: textRef, revertOnUpdate: true });
 
     const HeadingElement = heading ? heading : "h2";
     const colorClass = color === 'white' ? styles.white : color === 'black' ? styles.black : '';

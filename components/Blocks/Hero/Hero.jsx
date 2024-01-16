@@ -113,7 +113,8 @@ export default function Hero() {
             <div className={styles.inner}>
                 <p className={styles.description}>{greeting}</p>
                 <div className={styles.title}>
-                    <Title heading={'h1'}>I&apos;m {commonConfig.personal.name}.
+                    <Title heading={'h1'}>
+                        I&apos;m Yasin
                         <span className={`${styles.icon}`}>
                             <span className={styles.reveal}></span>
                             <Image
