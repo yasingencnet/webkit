@@ -7,6 +7,9 @@ export const metadata = {
 
 export default function Contact() {
   return (
-    <h1>Are you my contact page? tets</h1>
+      <div>
+        <h1>{PageList["contact"].title}</h1>
+        <p>{PageList["contact"].description}</p>
+      </div>
   )
 }
