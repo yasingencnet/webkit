@@ -121,11 +121,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0;
 
   outline: none;
   border: 0;
   background: none;
   svg{
+    width: 6rem;
+    height: 6rem;
     * {transition: all 0.3s linear;}
   }
   &:hover{

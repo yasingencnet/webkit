@@ -9,6 +9,7 @@
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: hsl(var(--color-black));
+  transition: all 0.3s ease-in-out;
 
   svg{
     transform: translateY(17px);

@@ -4,8 +4,7 @@
 }
 .ul{
   display: grid;
-  //grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 6rem;
   padding-left: 0;
   @include respond-below(lg) {

@@ -18,7 +18,9 @@
   box-shadow: .01rem .01rem .07rem hsla(var(--color-black), .16);
   ul{
     display: flex;
-    padding: 1rem 1.5rem;
+    padding: 0 1.5rem;
+    height: 6rem;
+    align-items: center;
     li{
       a{
         display: block;

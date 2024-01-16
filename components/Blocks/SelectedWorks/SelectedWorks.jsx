@@ -33,7 +33,6 @@ export default function SelectedWorks() {
                 },
                 pin: true,
                 scrub: true,
-                markers: true,
                 invalidateOnRefresh: true,
             }
         });

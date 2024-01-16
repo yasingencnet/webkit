@@ -59,7 +59,7 @@ export default function Hero() {
                         trigger: container.current,
                         scrub: true,
                         start: 'top top',
-                        end: 'bottom 75%'
+                        end: 'bottom 50%'
                     }
                 });
             }
@@ -75,6 +75,35 @@ export default function Hero() {
             delay: 0.5,
             duration: 1.5
         });
+
+        // Pin Hero
+/*
+        gsap.to(container.current, {
+            scrollTrigger: {
+                trigger: container.current,
+                start: 'top top',
+                end: 'bottom top',
+                pin: true,
+                pinSpacing: false,
+                scrub: true,
+                onUpdate: (scrollTrigger) => {
+                    if(scrollTrigger.progress >0.05){
+                        gsap.to(`.${styles.heroImg}`, {
+                            x: '-30%',
+                            scale: 1.3,
+                            duration: 1.5,
+                        });
+                    } else {
+                        gsap.to(`.${styles.heroImg}`, {
+                            x: '0',
+                            scale: 1.6,
+                            duration: 1.5,
+                        });
+                    }
+                },
+            },
+        });
+*/
 
     }, {scope: container});
 

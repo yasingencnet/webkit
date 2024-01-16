@@ -8,9 +8,12 @@
 }
 %button{
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  height: 6rem;
+  padding: 0 3rem;
+  //padding: 1.8rem 3rem;
 
-  padding: 1.8rem 3rem;
   cursor: pointer;
   text-decoration: none;
   font-size: var(--fs-sm);

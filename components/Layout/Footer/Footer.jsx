@@ -43,7 +43,7 @@ export default function Footer() {
 
         gsap.from(skeleton.current, {
             scrollTrigger: {
-                trigger: container.current,
+                trigger: footerBottom.current,
                 start: "bottom bottom",
             },
             yPercent: 100,
