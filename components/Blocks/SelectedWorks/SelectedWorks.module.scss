@@ -14,6 +14,33 @@
     background-image: url('/grid-pattern.svg');
     background-position: top center;
     background-size: 100%;
+    &:before{
+      content: '';
+      display: block;
+      width: 80%;
+      height: 4px;
+      margin: 0 auto;
+      background: linear-gradient(to right, transparent 0%, white 50%, transparent 100%);
+    }
+    .showcase{
+      font-size: var(--fs-xs);
+      text-transform: uppercase;
+      color: hsla(var(--color-white), .2);
+      text-align: center;
+      font-family: var(--font-primary);
+      letter-spacing: 0.1em;
+      margin: 3rem 0;
+      pointer-events: none;
+      svg{
+        width: 2rem;
+        height: auto;
+        transform: none;
+        margin: 0 3rem;
+        path{
+          stroke: hsla(var(--color-white), .3);
+        }
+      }
+    }
   }
   .ear{
     --width: 12rem;

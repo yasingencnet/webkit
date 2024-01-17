@@ -45,6 +45,9 @@ export default function Hero() {
         gsap.registerPlugin(ScrollTrigger);
         gsap.registerPlugin(DrawSVGPlugin);
 
+        // BG Animation
+
+
         // Image Reveal
         gsap.to(`.${styles.reveal}`, {
             x: '-100%',

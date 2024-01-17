@@ -12,7 +12,7 @@ export default function ImageTip({date, children}) {
                     alt={commonConfig.metadata.title}
                     width={40}
                     height={40}
-                    priority
+                    loading={'lazy'}
                 />
             </figure>
             <div className={styles.detail}>

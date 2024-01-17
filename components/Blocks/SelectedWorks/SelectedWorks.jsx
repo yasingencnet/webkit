@@ -16,6 +16,7 @@ import Title from "@/components/UI/Elements/Title/Title";
 import Magnet from "@/components/UI/Magnet/Magnet";
 import FancyButton from "@/components/UI/Elements/Button/Button";
 import TextReveal from "@/components/UI/Elements/TextReveal/TextReveal";
+import Ticker from "@/components/UI/Elements/Ticker/Ticker";
 export default function SelectedWorks() {
     const galleryContainer = useRef();
     const container = useRef();
@@ -70,7 +71,9 @@ export default function SelectedWorks() {
 
     return (
         <section className={styles.section} id={'selectedWorks'} ref={container}>
-            <div className={styles.bg} ref={bg}></div>
+            <div className={styles.bg} ref={bg}>
+                <Ticker className={styles.showcase} words={['showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase']}></Ticker>
+            </div>
             {/*<div className={styles.ear}></div>*/}
 
             <div className={styles.xScrollContainer} ref={galleryContainer}>
