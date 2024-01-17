@@ -4,7 +4,7 @@ import commonConfig from '@/database/config/metadata.json';
 import LenisScroller from '@/components/UI/LenisScroller/LenisScroller';
 import Header from "@/components/Layout/Header/Header";
 import Footer from "@/components/Layout/Footer/Footer";
-import Hero from "@/components/Blocks/Hero/Hero";
+import CustomCursor from "@/components/UI/Elements/CustomCursor/CustomCursor";
 
 const bodyFont = Manrope({
     subsets: ['latin'],
@@ -33,7 +33,8 @@ export default function RootLayout({ children }) {
                   {children}
               </main>
               <Footer></Footer>
-              <LenisScroller></LenisScroller>
+              <CustomCursor />
+              <LenisScroller />
           </body>
       </html>
   )

@@ -3,7 +3,49 @@
 .section{
   position: relative;
   padding: calc(var(--y-spacing) - var(--x-spacing)) 0;
-  background: hsl(var(--color-bg-alt));
+  .bg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: calc(100% + var(--x-spacing));
+    clip-path: inset(0px var(--x-spacing) round 3rem 3rem 0rem 0rem);
+    margin-top: calc(-1 * var(--x-spacing));
+    background-color: hsl(var(--color-bg-alt));
+    background-image: url('/grid-pattern.svg');
+    background-position: top center;
+    background-size: 100%;
+  }
+  .ear{
+    --width: 12rem;
+    --radius: 2rem;
+    position: absolute;
+    top: calc(-1 * (var(--x-spacing) + (var(--width) / 2 - var(--radius))));
+    right: calc(var(--x-spacing) + var(--width) / 2);
+    width: var(--width);
+    height: calc(var(--width) / 3);
+    background-color: hsl(var(--color-bg-alt));
+    &:before, &:after{
+      position: absolute;
+      content: '';
+      width: var(--width);
+      z-index: 1;
+    }
+    &:before{
+      right: calc(-1 * var(--width) / 2);
+      bottom: calc(-1 * var(--radius) * 2);
+      border-radius: var(--radius) var(--radius) 0 0;
+      background-color: hsl(var(--color-bg-alt));
+      height: calc(var(--width) / 1);
+    }
+    &:after{
+      right: calc(var(--width) / 2);
+      top: calc(-1 * var(--radius));
+      border-radius: 0 0 var(--radius) 0;
+      background: white;
+      height: calc(var(--width) / 2);
+    }
+
+  }
 }
 
 .header{
@@ -101,7 +143,7 @@
     display: block;
     width: 100%;
     height: 5rem;
-    background: hsl(var(--h), var(--s), calc( var(--l) + 60%));
+    background: hsl(var(--h), var(--s), calc( var(--l) + 30%));
     filter: blur(10rem);
     pointer-events: none;
   }

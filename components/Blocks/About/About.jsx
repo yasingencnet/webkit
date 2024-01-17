@@ -6,7 +6,6 @@ import Title from "@/components/UI/Elements/Title/Title";
 import TextReveal from "@/components/UI/Elements/TextReveal/TextReveal";
 import SeattleMap from "@/components/UI/Cards/SeattleMap/SeattleMap";
 import Stats from "@/components/UI/Cards/Stats/Stats";
-import commonConfig from '@/database/config/metadata.json';
 import ParallaxImage from "@/components/UI/ParallaxImage/ParallaxImage";
 
 export default function About() {
@@ -19,7 +18,7 @@ export default function About() {
                         Creative Frontend Developer
                     </Title>
                     <TextReveal className={styles.description}>
-                        I would describe myself as a creative web developer with over {commonConfig.personal.experience} years of experience in development.
+                        I would describe myself as a creative web developer with over 7 years of experience in development.
                     </TextReveal>
                 </header>
 

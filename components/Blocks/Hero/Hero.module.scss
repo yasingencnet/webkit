@@ -9,7 +9,7 @@
     calc(var(--x-spacing) * 1.5);
     z-index: 1;
     overflow: hidden;
-    min-height: 100vh;
+    min-height: 100dvh;
   }
 }
 
@@ -26,8 +26,8 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 28.4rem;
-    height: 8.3rem;
+    width: 26rem;
+    height: 7.7rem;
     border-radius: 100vw;
     vertical-align: baseline;
     overflow: hidden;
@@ -85,7 +85,7 @@
     object-fit: cover;
   }
   .gradient{
-    background-image: url("/hero-gradient.svg");
+    background-image: url("/hero-gradient-2.svg");
     /*background-size: 130%;*/
     background-size: cover;
     filter: blur(4rem);
@@ -116,7 +116,7 @@
   position: absolute;
   z-index: 1;
   right: var(--x-spacing);
-  bottom: var(--x-spacing);
+  bottom: calc(var(--x-spacing) * 1.5);
 
   display: flex;
   flex-direction: column;

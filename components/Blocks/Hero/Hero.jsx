@@ -22,7 +22,6 @@ export default function Hero() {
         if (selectedWorksElement) {
             selectedWorksElement.scrollIntoView({
                 behavior: 'smooth',
-                block: 'start',
             });
         }
     });
@@ -133,7 +132,7 @@ export default function Hero() {
 
             <div className={styles.background}>
                 <div className={styles.gradient}></div>
-                <div className={styles.noise}></div>
+                {/*<div className={styles.noise}></div>*/}
             </div>
 
             <Magnet>

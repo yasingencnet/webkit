@@ -1,11 +1,11 @@
 'use client';
 
-import React, {useRef, useState} from 'react';
+import React, { useRef } from 'react';
 import gsap from "gsap";
-import {useGSAP} from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import styles from './CustomCursor.module.scss';
 
-export default function CustomCursor({children}) {
+export default function CustomCursor() {
     const container = useRef();
 
     useGSAP(() => {
@@ -50,7 +50,6 @@ export default function CustomCursor({children}) {
     }, {scope: container});
     return (
         <div ref={container}>
-            {children}
             <div className={`${styles.customCursor}`}></div>
         </div>
     );

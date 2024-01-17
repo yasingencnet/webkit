@@ -12,11 +12,9 @@ export default function Title({heading, color, children}) {
     const textRef = useRef(null);
 
     useGSAP(() => {
-
         gsap.registerPlugin(ScrollTrigger, SplitText);
 
         if(textRef.current){
-            console.log("textRef", textRef.current);
 
             textRef.current.style.opacity = 1;
 
@@ -40,12 +38,12 @@ export default function Title({heading, color, children}) {
                 ease: "power1.out",
                 stagger: 0.01,
                 onComplete: () => {
-                    //splitText.revert();
+                    textRef.current.classList.add(`animated`);
                 }
             });
         }
 
-    }, { scope: textRef, revertOnUpdate: true });
+    }, { scope: textRef });
 
     const HeadingElement = heading ? heading : "h2";
     const colorClass = color === 'white' ? styles.white : color === 'black' ? styles.black : '';
