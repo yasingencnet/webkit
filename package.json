@@ -13,6 +13,7 @@
     "@studio-freight/lenis": "^1.0.33",
     "@uidotdev/usehooks": "^2.4.1",
     "axios": "^1.6.5",
+    "framer-motion": "^10.18.0",
     "gsap": "file:gsap-bonus.tgz",
     "next": "^14.0.4",
     "react": "^18",

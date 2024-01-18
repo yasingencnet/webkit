@@ -16,7 +16,6 @@ import Title from "@/components/UI/Elements/Title/Title";
 import Magnet from "@/components/UI/Magnet/Magnet";
 import FancyButton from "@/components/UI/Elements/Button/Button";
 import TextReveal from "@/components/UI/Elements/TextReveal/TextReveal";
-import Ticker from "@/components/UI/Elements/Ticker/Ticker";
 export default function SelectedWorks() {
     const galleryContainer = useRef();
     const container = useRef();
@@ -72,7 +71,8 @@ export default function SelectedWorks() {
     return (
         <section className={styles.section} id={'selectedWorks'} ref={container}>
             <div className={styles.bg} ref={bg}>
-                <Ticker className={styles.showcase} words={['showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase', 'showcase']}></Ticker>
+                <div className={`${styles.showcase} ${styles.v1}`}></div>
+                <div className={`${styles.showcase} ${styles.v2}`}></div>
             </div>
             {/*<div className={styles.ear}></div>*/}
 
@@ -87,10 +87,9 @@ export default function SelectedWorks() {
                 </header>
 
                 {Works.map((work, index) => {
-                    const lightness = parseFloat(work.bgColor.l);
+                    const lightness = parseFloat(work.color.l);
                     return (
-                        <div key={index} className={`${styles.browser}`}
-                             style={{'--h': work.bgColor.h, '--s': work.bgColor.s, '--l': work.bgColor.l}}>
+                        <div key={index} className={`${styles.browser}`} style={{'--h': work.color.h, '--s': work.color.s, '--l': work.color.l}}>
                             <div className={`${styles.browserHeader} ${lightness >= 50 ? styles.dark : ''}`}>
                                 <h3 className={styles.title}>{work.title}</h3>
                                 <span className={styles.date}>{work.date}</span>
@@ -121,8 +120,9 @@ export default function SelectedWorks() {
                                 />
                             </div>
                         </div>
-                    )
+                    );
                 })}
+
             </div>
         </section>
     );

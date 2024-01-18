@@ -1,0 +1,10 @@
+@import '/assets/media-queries.scss';
+
+.section{
+  padding: var(--y-spacing) var(--x-spacing);
+  background-color: hsl(var(--color-bg-alt));
+}
+
+.header{
+  margin-bottom: var(--x-spacing);
+}

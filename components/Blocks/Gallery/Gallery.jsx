@@ -71,17 +71,17 @@ export default function Gallery() {
         <section className={styles.section} ref={container}>
             <Container>
                 <header className={styles.header}>
-                    <Title color="white"><span>My</span> Photo <br/>Journal</Title>
-                    <FancyButton theme='button-2' target="_blank" link={commonConfig.social.instagram}>Follow on Instagram</FancyButton>
+                    <Title><span>My</span> Photo <br/>Journal</Title>
+                    <FancyButton theme='button-1' target="_blank" link={commonConfig.social.instagram}>Follow on Instagram</FancyButton>
                 </header>
             </Container>
 
             <Swiper
                 slidesPerView={1.2}
-                speed={1200}
                 spaceBetween={30}
                 slidesOffsetAfter={30}
                 slidesOffsetBefore={30}
+                freeMode={true}
                 breakpoints={{
                     768: {
                         slidesPerView: 1.8,
@@ -100,7 +100,6 @@ export default function Gallery() {
                         spaceBetween: 90,
                         slidesOffsetAfter: 90,
                         slidesOffsetBefore: 90,
-                        freeMode: true,
                     },
                 }}
                 touchEventsTarget={'container'}
@@ -130,6 +129,7 @@ export default function Gallery() {
                         </figure>
                     </SwiperSlide>
                 ))}
+                <div className={'test'}></div>
             </Swiper>
 
         </section>

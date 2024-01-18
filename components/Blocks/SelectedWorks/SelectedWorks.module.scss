@@ -4,6 +4,8 @@
   position: relative;
   padding: calc(var(--y-spacing) - var(--x-spacing)) 0;
   .bg{
+    display: flex;
+    flex-direction: column;
     position: absolute;
     inset: 0;
     width: 100%;
@@ -23,21 +25,34 @@
       background: linear-gradient(to right, transparent 0%, white 50%, transparent 100%);
     }
     .showcase{
-      font-size: var(--fs-xs);
-      text-transform: uppercase;
-      color: hsla(var(--color-white), .2);
-      text-align: center;
-      font-family: var(--font-primary);
-      letter-spacing: 0.1em;
-      margin: 3rem 0;
-      pointer-events: none;
-      svg{
-        width: 2rem;
-        height: auto;
-        transform: none;
-        margin: 0 3rem;
-        path{
-          stroke: hsla(var(--color-white), .3);
+      width: 100%;
+      height: 9rem;
+      opacity: 0;
+      background-image: url('/showcase.svg');
+      background-position: 0 50%;
+      background-repeat: repeat-x;
+      animation: fadeIn 2s ease-in-out forwards 1s, slideBg 60s linear infinite;
+
+      &.v1{
+      }
+      &.v2{
+        margin-top: auto;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes slideBg {
+        0% {
+          background-position: 0 50%;
+        }
+        100% {
+          background-position: 100% 50%;
         }
       }
     }

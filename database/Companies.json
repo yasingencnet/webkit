@@ -1,0 +1,76 @@
+[
+  {
+    "position": "Senior Frontend Developer",
+    "company": "TenTwenty Digital Agency",
+    "duration": "January 2022 - September 2023",
+    "location": "Remote",
+    "image": "/company/tentwenty.svg",
+    "url": "https://www.tentwenty.me/",
+    "responsibilities": [
+      "Built animation-focused websites using React JS, GSAP, and the Locomotive Scroll library.",
+      "Integrated websites seamlessly with Concrete CMS for 100% easy content management.",
+      "Collaborated with designers and backend developers, delivering 10+ top-notch websites on time.",
+      "Achieved more than 50% faster webpage loading on every project, prioritizing performance and speed.",
+      "Experienced Arabic RTL layout in two significant projects.",
+      "Successfully met deadlines, delivering 10+ projects on time."
+    ],
+    "color": {
+      "h": "221",
+      "s": "79%",
+      "l": "51%"
+    }
+  },
+  {
+    "position": "UI & FE Developer",
+    "company": "Denge Bilgisayar",
+    "duration": "May 2018 - January 2022",
+    "location": "Hybrid",
+    "image": "/company/denge-bilgisayar.svg",
+    "url": "httsp://denge.com.tr/",
+    "responsibilities": [
+      "Re-designed over 85 unique pages for B2B, CRM, and corporate websites in Figma.",
+      "Collaborated closely with two backend developers, creating the frontend of the entire project.",
+      "Ensured fast page loading, scoring over 90 in page speed.",
+      "Focused on making the B2B e-commerce platform easy to use for 3000+ business customers."
+    ],
+    "color": {
+      "h": "206",
+      "s": "59%",
+      "l": "44%"
+    }
+  },
+  {
+    "position": "Frontend Developer",
+    "company": "Agency Look",
+    "duration": "April 2017 - May 2018",
+    "location": "On-site",
+    "image": "/company/agency-look.svg",
+    "url": "https://look.agency/",
+    "responsibilities": [
+      "Developed and maintained functional pages for web applications.",
+      "Worked with a .NET based custom CMS.",
+      "Built hundreds of responsive HTML email template modules, reducing email template processing time significantly."
+    ],
+    "color": {
+      "h": "240",
+      "s": "100%",
+      "l": "45%"
+    }
+  },
+  {
+    "position": "Web Designer",
+    "company": "Softanka Yazılım",
+    "duration": "January 2016 - March 2017",
+    "location": "On-site",
+    "image": "/company/softanka.svg",
+    "url": "https://www.playanka.com/",
+    "responsibilities": [
+      "Designed and developed themes for game markets"
+    ],
+    "color": {
+      "h": "210",
+      "s": "0%",
+      "l": "90%"
+    }
+  }
+]
