@@ -26,7 +26,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-      <html lang="en" className={bodyFont.className}>
+      <html lang="en" className={bodyFont.className} style={{
+          '--overflow': 'auto'
+      }}>
           <body>
               <Header></Header>
               <main>

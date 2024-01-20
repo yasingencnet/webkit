@@ -18,9 +18,17 @@
   @include respond-above(xl) {
     max-width: 68vw;
   }
+  .splitLine{
+    overflow: hidden;
+    margin: calc(-1 * 1.2rem) 0;
+    padding: 1.2rem 0;
+  }
   h1{
     font-weight: var(--fw-light);
     line-height: 1.1;
+    font-size: var(--fs-xl);
+    opacity: 0;
+    transition: all 0.3s ease-in;
   }
   .icon{
     display: inline-flex;
@@ -86,7 +94,6 @@
   }
   .gradient{
     background-image: url("/hero-gradient.svg");
-    /*background-size: 130%;*/
     background-size: cover;
     filter: blur(4rem);
     animation: moveBg 10s ease infinite;

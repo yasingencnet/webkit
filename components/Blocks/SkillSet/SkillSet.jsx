@@ -54,7 +54,6 @@ export default function SkillSet() {
                             title={skill.title}
                             subtitle={skill.subtitle}
                             description={skill.description}
-                            /*icon={getIconFromName(skill.icon)}*/
                             icon={skill.image}
                         >
                         </Card1>

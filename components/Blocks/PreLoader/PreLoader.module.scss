@@ -1,0 +1,91 @@
+.container {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
+  z-index: 99999998;
+
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+
+    display: block;
+    width: 80%;
+    height: 4px;
+    margin: 0 auto;
+    background: linear-gradient(to right, transparent 0%, black 50%, transparent 100%);
+  }
+
+  &:before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: hsla(var(--color-bg-alt), 1);
+    pointer-events: none;
+    /*background-image: url("/hero-gradient-3.svg");*/
+  }
+}
+
+.badge {
+  pointer-events: none;
+  scale: 0;
+
+  svg {
+    --spin-text: hsl(var(--color-primary));
+    --inner-circle: hsl(var(--color-black));
+    --inner-stroke: hsl(var(--color-black));
+    --inner-path: hsl(var(--color-primary));
+  }
+}
+
+.progress {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.2em;
+  color: hsla(var(--color-white), 1);
+  opacity: 0;
+
+  .old {
+    opacity: .3;
+  }
+}
+
+.showcase {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 9rem;
+  opacity: 0;
+  background-image: url('/showcase.svg');
+  background-position: 0 50%;
+  background-repeat: repeat-x;
+  animation: fadeIn 2s ease-in-out forwards 1s, slideBg 60s linear infinite;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes slideBg {
+    0% {
+      background-position: 0 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}

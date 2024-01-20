@@ -24,6 +24,7 @@ import FancyButton from "@/components/UI/Elements/Button/Button";
 import commonConfig from '@/database/config/metadata.json';
 import ImageVideo from '@/database/ImageVideo.json';
 import Container from "@/components/UI/Layout/Layout";
+import FadeIn from "@/components/UI/FadeIn/FadeIn";
 export default function Gallery() {
     const container = useRef();
     const { contextSafe } = useGSAP({scope: container});
@@ -116,6 +117,8 @@ export default function Gallery() {
                             className={styles.figure}
                             onPointerMove={onEnterAnim}
                             onPointerLeave={onLeaveAnim}>
+                            <FadeIn y={50} duration={1.6} autoAlpha={1}>
+
                             <Image
                                 src={item.url}
                                 quality={90}
@@ -125,11 +128,11 @@ export default function Gallery() {
                                 loading={"lazy"}
                                 className={`${styles.image} ${styles[item.direction]}`}
                             />
+                            </FadeIn>
                             <ImageTip date={item.date}>{item.location}</ImageTip>
                         </figure>
                     </SwiperSlide>
                 ))}
-                <div className={'test'}></div>
             </Swiper>
 
         </section>

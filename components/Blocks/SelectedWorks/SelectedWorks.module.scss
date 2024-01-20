@@ -115,6 +115,7 @@
   width: fit-content;
   padding: var(--x-spacing);
   flex-wrap: nowrap;
+  align-items: center;
 
   @include respond-below(md) {
     flex-direction: column;
@@ -125,7 +126,9 @@
   }
   > * {
     width: 40dvw;
-    height: calc(100dvh - (var(--x-spacing) * 2));
+    max-height: calc(100dvh - (var(--x-spacing) * 2));
+    height: auto;
+    transition: all .3s ease;
     @include respond-below(md) {
       width: 100%;
       height: auto;
@@ -135,6 +138,7 @@
     &:first-child{
       width: auto;
       max-width: 40rem;
+      height: 100%;
       @include respond-below(md) {
         max-width: 100%;
       }
