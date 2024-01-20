@@ -126,8 +126,7 @@
   }
   > * {
     width: 40dvw;
-    max-height: calc(100dvh - (var(--x-spacing) * 2));
-    height: auto;
+    height: calc(100dvh - (var(--x-spacing) * 2));
     transition: all .3s ease;
     @include respond-below(md) {
       width: 100%;
