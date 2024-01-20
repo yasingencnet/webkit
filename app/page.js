@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <>
             <Hero/>
-            {/*<SelectedWorks/>*/}
+            <SelectedWorks/>
             <SkillSet/>
             <ExperienceBlock/>
             <Gallery/>
