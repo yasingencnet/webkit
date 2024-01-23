@@ -20,10 +20,16 @@
         grid-column: 2 / 3;
       }
     }
-    a{
+    a, button{
       display: block;
       padding: 1rem;
       text-decoration: none;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 }
@@ -42,7 +48,7 @@
   span  {
     display: block;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    a:hover & {
+    a:hover &, button:hover & {
       transform: translateY(-100%);
     }
     &:after{
@@ -54,7 +60,7 @@
     }
   }
 
-  a:hover & {
+  a:hover &, button:hover & {
     color: hsl(var(--color-primary));
   }
 }

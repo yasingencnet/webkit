@@ -22,7 +22,7 @@
     height: 6rem;
     align-items: center;
     li{
-      a{
+      a, button{
         display: block;
         padding: 1rem 1.5rem;
         font-size: var(--fs-xxs);
@@ -30,6 +30,8 @@
         text-decoration: none;
         transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         border-radius: 100vw;
+        border: 0;
+        background: transparent;
         &:hover{
           color: hsl(var(--color-black));
         }

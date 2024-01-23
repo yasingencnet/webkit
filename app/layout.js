@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
               <main>
                   {children}
               </main>
-              <Footer></Footer>
+              <Footer />
               <CustomCursor />
               <LenisScroller />
           </body>

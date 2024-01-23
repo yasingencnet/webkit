@@ -41,7 +41,7 @@ export default function Resume() {
 
 
     return (
-        <section className={styles.section} ref={container}>
+        <section className={styles.section} ref={container} id={'resume'}>
             <Container>
                 <div className={styles.content}>
                     <div className={styles.cardGroup}>
@@ -93,9 +93,9 @@ export default function Resume() {
                         <FancyButton theme='button-1' target={'_blank'} link={commonConfig.personal.resumeURL}>View Resume</FancyButton>
                     </div>
                     <div className={styles.links}>
-                        <Link href={`mailto:${commonConfig.social.linkedin}`} target={'_blank'}>LinkedIn</Link>
-                        <Link href={`mailto:${commonConfig.social.github}`} target={'_blank'}>GitHub</Link>
-                        <Link href={`mailto:${commonConfig.social.codepen}`} target={'_blank'}>CodePen</Link>
+                        <Link href={`${commonConfig.social.linkedin}`} target={'_blank'}>LinkedIn</Link>
+                        <Link href={`${commonConfig.social.github}`} target={'_blank'}>GitHub</Link>
+                        <Link href={`${commonConfig.social.codepen}`} target={'_blank'}>CodePen</Link>
                     </div>
                 </div>
             </Container>

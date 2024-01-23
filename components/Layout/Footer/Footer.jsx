@@ -56,7 +56,7 @@ export default function Footer() {
     }, {scope: container})
 
     return (
-        <footer className={styles.footer} ref={container}>
+        <footer className={styles.footer} ref={container} id={'footer'}>
             <div className={styles.inner}>
                 <div className={styles.connect}>
                     <div className={styles.title}>

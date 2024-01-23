@@ -11,7 +11,7 @@ export default function ExperienceBlock() {
     const [modal, setModal] = useState({active: false, index: 0});
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id={'experience'}>
             <header className={styles.header}>
                 <Title color={'white'}><span>Experience</span> <br/>History</Title>
             </header>

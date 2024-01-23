@@ -38,7 +38,7 @@ export default function SkillSet() {
     }
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id={'skills'}>
             <Blobs type={'v2'} />
             <Container>
                 <div className={styles.gridd}>

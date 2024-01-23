@@ -21,6 +21,7 @@ export default function SelectedWorks() {
     const galleryContainer = useRef();
     const container = useRef();
     const bg = useRef();
+    const { contextSafe } = useGSAP({scope: container});
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -69,8 +70,15 @@ export default function SelectedWorks() {
 
     }, { scope: galleryContainer });
 
+    const scrollToSection = contextSafe((e) => {
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: e
+        });
+    });
+
     return (
-        <section className={styles.section} id={'selectedWorks'} ref={container}>
+        <section className={styles.section} id={'works'} ref={container}>
             <div className={styles.bg} ref={bg}>
                 <div className={`${styles.showcase} ${styles.v2}`}></div>
             </div>
@@ -82,7 +90,9 @@ export default function SelectedWorks() {
                         I&apos;ve played a key role in developing impactful projects. Here&apos;s a curated selection
                         showcasing my expertise and the achieved results.
                     </TextReveal>
-                    <FancyButton theme='button-2' link={'/contact'}>Contact</FancyButton>
+                    <FancyButton theme='button-2' element={'button'} type={'button'} onClick={() => scrollToSection('#footer')}>
+                        Contact
+                    </FancyButton>
 
                     <Blobs type={'v3'} />
                 </header>

@@ -28,10 +28,10 @@ export default function PreLoader({ onComplete }) {
                 duration: 0.2,
             }, 0);
             tl.to(`.${styles.progress}`, {
-                duration: 2,
+                duration: 1,
                 scrambleText: {
                     text: "LOADING THE WEBSITE",
-                    revealDelay: 0.5,
+                    revealDelay: 0.2,
                     oldClass: `${styles.old}`,
                 },
                 onComplete: () => {
@@ -40,7 +40,7 @@ export default function PreLoader({ onComplete }) {
                         duration: 0.8,
                         ease: "sine.out",
                         onUpdate: () => {
-                            if(tl2.progress() >= 0.5){
+                            if(tl2.progress() >= 0.4){
                                 onComplete();
                             }
                         },

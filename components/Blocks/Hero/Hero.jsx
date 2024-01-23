@@ -43,6 +43,9 @@ export default function Hero() {
     // GSAP Animations
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin, SplitText);
+        gsap.set(`.${styles.line} svg path`, {
+            drawSVG: '0%',
+        });
 
         if (preloaderComplete) {
             // Image Reveal
@@ -64,16 +67,16 @@ export default function Hero() {
                 }
             })
 
-            // Draw Lines
-            gsap.from(`.${styles.lineRight} svg path`, {
-                drawSVG: '00%',
-                duration: 0.5,
-                stagger: 0.2
+            // Line Animation
+            gsap.to(`.${styles.lineRight} svg path`, {
+                drawSVG: '100%',
+                duration: 1,
+                stagger: 0.1
             });
-            gsap.from(`.${styles.lineLeft} svg path`, {
-                drawSVG: '00%',
-                duration: 0.5,
-                stagger: 0.2
+            gsap.to(`.${styles.lineLeft} svg path`, {
+                drawSVG: '100%',
+                duration: 1,
+                stagger: 0.1
             });
 
             // Hero Title

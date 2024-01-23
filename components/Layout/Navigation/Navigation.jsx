@@ -3,12 +3,15 @@
 import React, {useRef} from 'react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 import styles from './Navigation.module.scss'
 import Link from "next/link";
 import PageList from '@/database/PageList.json';
 
 export default function Navigation() {
+    gsap.registerPlugin(ScrollToPlugin);
+
     const navigationRef = useRef();
 
     const { contextSafe } = useGSAP({scope: navigationRef});
@@ -38,6 +41,13 @@ export default function Navigation() {
         });
     });
 
+    const scrollToSection = contextSafe((e) => {
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: e
+        });
+    });
+
     return (
         <div className={styles.container}>
             <nav className={styles.navigation} ref={navigationRef}>
@@ -47,10 +57,18 @@ export default function Navigation() {
                         .filter(item => item.isActive)
                         .map((item, index) => (
                             <li key={index}>
-                                <Link href={item.link} onMouseEnter={doAnim} onMouseLeave={resetAnim}>{item.title}</Link>
+                                {item.link.startsWith('#') ? (
+                                    <button onMouseEnter={doAnim} onMouseLeave={resetAnim}
+                                            onClick={() => scrollToSection(item.link)}>
+                                        {item.title}
+                                    </button>
+                                ) : (
+                                    <Link href={item.link} onMouseEnter={doAnim} onMouseLeave={resetAnim}>{item.title}</Link>
+                                )}
                             </li>
                         ))}
                 </ul>
+
                 <span className={styles.bg}></span>
             </nav>
         </div>

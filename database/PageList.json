@@ -5,19 +5,35 @@
     "title": "Works",
     "description": "Here's a curated selection showcasing my expertise and the achieved results.",
     "image": "",
-    "link": "/works"
+    "link": "#works"
+  },
+  "skills": {
+    "isActive": true,
+    "showOnNavigation":  true,
+    "title": "Skills",
+    "description": "Check out the things I'm good at, from building websites to design and more.",
+    "image": "",
+    "link": "#skills"
+  },
+  "resume": {
+    "isActive": true,
+    "showOnNavigation":  true,
+    "title": "Resume",
+    "description": "See my work history and what I've achieved in a quick and easy resume.",
+    "image": "",
+    "link": "#resume"
   },
   "about": {
-    "isActive":  true,
-    "showOnNavigation": true,
+    "isActive":  false,
+    "showOnNavigation": false,
     "title": "About",
     "description": "I design & develop modern and accessible web interfaces.",
     "image": "",
     "link": "/about"
   },
   "blog": {
-    "isActive":  true,
-    "showOnNavigation":  true,
+    "isActive":  false,
+    "showOnNavigation":  false,
     "title": "Blog",
     "description": "Articles focused on CSS, HTML, JavaScript, and other frontend stuff.",
     "image": "",
@@ -29,7 +45,7 @@
     "title": "Contact",
     "description": "Now it’s your turn to say hi. I hope to hear from you!",
     "image": "",
-    "link": "/contact"
+    "link": "#footer"
   },
   "instagram": {
     "isActive":  true,
