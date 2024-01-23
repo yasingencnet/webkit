@@ -26,6 +26,7 @@ import ImageVideo from '@/database/ImageVideo.json';
 import Container from "@/components/UI/Layout/Layout";
 import FadeIn from "@/components/UI/FadeIn/FadeIn";
 export default function Gallery() {
+    const swiperRef = useRef();
     const container = useRef();
     const { contextSafe } = useGSAP({scope: container});
 
@@ -73,7 +74,8 @@ export default function Gallery() {
             <Container>
                 <header className={styles.header}>
                     <Title color={'white'}><span>My</span> Photo <br/>Journal</Title>
-                    <FancyButton theme='button-1' target="_blank" link={commonConfig.social.instagram}>Follow on Instagram</FancyButton>
+                    <FancyButton theme='button-1' target="_blank" link={commonConfig.social.instagram}>Follow on
+                        Instagram</FancyButton>
                 </header>
             </Container>
 
@@ -83,6 +85,10 @@ export default function Gallery() {
                 slidesOffsetAfter={30}
                 slidesOffsetBefore={30}
                 freeMode={true}
+                pagination={{
+                    type: 'fraction',
+                }}
+                modules={[Pagination, FreeMode]}
                 breakpoints={{
                     768: {
                         slidesPerView: 1.8,
@@ -104,12 +110,10 @@ export default function Gallery() {
                     },
                 }}
                 touchEventsTarget={'container'}
-                pagination={{
-                    type: 'fraction',
-                }}
-
-                modules={[Pagination, FreeMode]}
                 className={`${styles.slider} gallerySlider`}
+                onBeforeInit={(swiper) => {
+                    swiperRef.current = swiper;
+                }}
             >
                 {ImageVideo.map((item, index) => (
                     <SwiperSlide key={index} className={`${styles.sliderItem}`}>
@@ -119,21 +123,26 @@ export default function Gallery() {
                             onPointerLeave={onLeaveAnim}>
                             <FadeIn y={50} duration={1.6} autoAlpha={1}>
 
-                            <Image
-                                src={item.url}
-                                quality={90}
-                                alt={`An image from ${item.location}`}
-                                width={1400}
-                                height={1600}
-                                loading={"lazy"}
-                                className={`${styles.image} ${styles[item.direction]}`}
-                            />
+                                <Image
+                                    src={item.url}
+                                    quality={90}
+                                    alt={`An image from ${item.location}`}
+                                    width={1400}
+                                    height={1600}
+                                    loading={"lazy"}
+                                    className={`${styles.image} ${styles[item.direction]}`}
+                                />
                             </FadeIn>
                             <ImageTip date={item.date}>{item.location}</ImageTip>
                         </figure>
                     </SwiperSlide>
                 ))}
             </Swiper>
+
+            <Container>
+                <button onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
+                <button onClick={() => swiperRef.current?.slideNext()}>Next</button>
+            </Container>
 
         </section>
     );

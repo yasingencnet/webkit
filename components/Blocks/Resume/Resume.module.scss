@@ -3,7 +3,7 @@
 .section {
   position: relative;
   background-color: hsl(var(--color-bg-alt));
-  padding: var(--x-spacing) 0 var(--y-spacing);
+  padding: var(--y-spacing) 0 var(--y-spacing);
 }
 
 .content {
@@ -15,7 +15,8 @@
 
   background: url("/gradient-blob.svg") center top no-repeat;
   background-size: contain;
-  @include respond-below(sm) {
+  padding-top: 3rem;
+  @include respond-below(xs) {
     align-items: flex-start;
   }
 }

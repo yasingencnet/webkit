@@ -7,7 +7,7 @@ export default function Item({index, setModal, position, company, duration, loca
 
     return (
         <div onMouseEnter={() => {setModal({active: true, index})}} onMouseLeave={() => {setModal({active: false, index})}} className={styles.item} style={{'--h': color.h, '--s': color.s, '--l': color.l}}>
-            <FadeIn y={35} duration={0.8}>
+            <FadeIn y={50} duration={0.8}>
             <div className={styles.left}>
                 <div className={styles.title}>
                     <h3 data-text={position}>{position}</h3>
@@ -15,7 +15,7 @@ export default function Item({index, setModal, position, company, duration, loca
                 <span className={`${styles.info}`}>{company}</span>
             </div>
             </FadeIn>
-            <FadeIn y={35} duration={0.8}>
+            <FadeIn y={50} duration={0.8}>
                 <div className={styles.right}>
                     <span className={styles.info}>{duration}</span>
                     <span className={styles.info}>{location}</span>

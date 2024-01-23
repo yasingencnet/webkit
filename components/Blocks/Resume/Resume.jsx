@@ -14,14 +14,17 @@ import Link from "next/link";
 
 export default function Resume() {
     const container = useRef();
+    const cardGroup = useRef();
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
+
+        // CV Card
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: container.current,
-                start: 'top 50%',
-                end: 'top 25%',
+                trigger: cardGroup.current,
+                start: 'top 75%',
+                end: 'top top',
                 scrub: true,
                 toggleActions: 'play none none reverse',
             }
@@ -43,7 +46,7 @@ export default function Resume() {
         <section className={styles.section} ref={container} id={'resume'}>
             <Container>
                 <div className={styles.content}>
-                    <div className={styles.cardGroup}>
+                    <div className={styles.cardGroup} ref={cardGroup}>
                         <div className={`${styles.card} ${styles.cardV1}`}>
                             <div className={styles.cardInner}>
                                 <div className={styles.cardTitle}>YASIN GENC</div>
@@ -76,7 +79,7 @@ export default function Resume() {
                                 </div>
                             </div>
                             <figure className={styles.figure}>
-                            <Image src="/yasin-genc-photo.jpeg" alt="Yasin Genc" width={150} height={150}/>
+                                <Image src="/yasin-genc-photo.jpeg" alt="Yasin Genc" width={150} height={150}/>
                             </figure>
                         </div>
                         <div className={`${styles.card} ${styles.cardV2}`}>
@@ -87,7 +90,8 @@ export default function Resume() {
                     </div>
 
                     <div className={styles.cta}>
-                        <FancyButton theme='button-1' target={'_blank'} link={commonConfig.personal.resumeURL}>View Resume</FancyButton>
+                        <FancyButton theme='button-1' target={'_blank'} link={commonConfig.personal.resumeURL}>View
+                            Resume</FancyButton>
                     </div>
                     <div className={styles.links}>
                         <Link href={`${commonConfig.social.linkedin}`} target={'_blank'}>LinkedIn</Link>

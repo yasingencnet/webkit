@@ -15,7 +15,7 @@ export default function FadeIn({ children, duration = 1, y = 10, autoAlpha = 0})
             scrollTrigger: {
                 trigger: container.current,
                 toggleActions: "restart pause resume reverse",
-                start: "top 85%",
+                start: "top 95%",
             }
         });
 

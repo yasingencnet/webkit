@@ -1,0 +1,26 @@
+@import '/assets/media-queries.scss';
+
+.section {
+  position: relative;
+  background-color: hsl(var(--color-bg-alt));
+  padding: var(--y-spacing) 0 var(--y-spacing);
+}
+
+.boldTitle{
+  font-size: clamp(4.4rem, 10dvw, var(--fs-xxl));
+  color: hsl(var(--color-white));
+  line-height: 1.1cap;
+  text-align: center;
+  span{
+    display: block;
+    &.boldTitleLeft{
+      /*transform: translateX(50%);*/
+    }
+    &:nth-child(2){
+      font-style: italic;
+    }
+    &.boldTitleRight{
+      /*transform: translateX(50%);*/
+    }
+  }
+}

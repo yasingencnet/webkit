@@ -37,14 +37,12 @@ export default function NavDetailed() {
                                 <span className={styles.description}>{item.description}</span>
                             </button>
                         ) : (
-                            <FadeIn y={35} duration={0.4}>
-                                <Link href={item.link} target={item.link.startsWith('http') ? '_blank' : undefined}>
+                            <Link href={item.link} target={item.link.startsWith('http') ? '_blank' : undefined}>
                                     <span className={styles.title}>
                                         <span data-text={item.title}>{item.title}</span>
                                     </span>
-                                    <span className={styles.description}>{item.description}</span>
-                                </Link>
-                            </FadeIn>
+                                <span className={styles.description}>{item.description}</span>
+                            </Link>
                         )}
 
 

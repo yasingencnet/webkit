@@ -65,3 +65,22 @@
     }
   }
 }
+
+.swiper-button-next{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  background: red;
+}
+.swiper-button-prev{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background: lime;
+}
