@@ -16,7 +16,7 @@ export default function PreLoader({ onComplete }) {
             const tl = gsap.timeline();
             const tl2 = gsap.timeline();
 
-            // Logo
+            // Blobs
             tl.to(`.${styles.badge}`, {
                 scale: 1,
                 duration: 1,
@@ -56,7 +56,6 @@ export default function PreLoader({ onComplete }) {
                 <Logo></Logo>
             </div>
             <div className={styles.progress}></div>
-            <div className={`${styles.showcase} ${styles.v1}`}></div>
         </section>
     );
 }

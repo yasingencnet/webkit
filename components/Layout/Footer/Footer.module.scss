@@ -5,6 +5,7 @@
   background: hsl(var(--color-bg-alt));
   padding: var(--y-spacing) var(--x-spacing) 9rem;
   overflow: hidden;
+  border-top: 1px solid hsla(var(--color-white), 0.1);
 
   .inner{
     position: relative;
@@ -113,16 +114,10 @@
 }
 
 
-// Logo
+// Blobs
 .badge{
   display: inline-block;
   margin-bottom: 6rem;
-  svg{
-    --spin-text: hsl(var(--color-primary));
-    --inner-circle: hsl(var(--color-black));
-    --inner-stroke: hsl(var(--color-black));
-    --inner-path: hsl(var(--color-primary));
-  }
 }
 
 
@@ -175,7 +170,7 @@
 
 // Capillary
 .capillaryContainer {
-  --stroke: #2f2f2f;
+  --stroke: rgba(255, 255, 255, 0.2);
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -186,7 +181,7 @@
 .capillary {
   position: absolute;
   pointer-events: none;
-  opacity: 0.2;
+  opacity: 0.1;
   transition: opacity 0.2s linear;
   path{
     stroke: var(--stroke);

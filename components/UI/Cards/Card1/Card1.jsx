@@ -7,7 +7,7 @@ import FadeIn from "@/components/UI/FadeIn/FadeIn";
 
 export default function Card1({icon, title, subtitle, description}) {
     return(
-        <FadeIn y={35} duration={0.4}>
+
         <div className={`${styles.card}`}>
 
             <div className={styles.icon}>
@@ -21,6 +21,6 @@ export default function Card1({icon, title, subtitle, description}) {
                 {description}
             </TextReveal>
         </div>
-        </FadeIn>
+
     );
 }

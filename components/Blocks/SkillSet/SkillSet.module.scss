@@ -3,17 +3,18 @@
 .section{
   position: relative;
   padding: var(--y-spacing) 0;
-  background: url("/dot-pattern.svg") repeat;
+  background: hsl(var(--color-bg-alt));
+}
+
+.gridd{
+  display: grid;
+  grid-template-columns: 25dvw 1fr;
 }
 
 .grid{
   display: grid;
-  grid-gap: 16rem;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  @include respond-below(md) {
-    grid-gap: 9rem;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  }
+  grid-gap: 9rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 
   > * {
     &:nth-child(2){
@@ -29,14 +30,6 @@
       }
     }
   }
-}
-
-.decor{
-  position: absolute;
-  right: 12rem;
-  top: 12rem;
-  animation: freeRotate 8s linear infinite;
-  transform-origin: 50% 50%;
 }
 
 .ticker{

@@ -3,7 +3,7 @@
 .section{
   position: relative;
   padding: var(--y-spacing) 0;
-  background: hsl(var(--color-bg));
+  background: hsl(var(--color-bg-alt));
 }
 
 .header{
@@ -15,7 +15,7 @@
 .slider{
   padding: var(--x-spacing) 0;
   font-size: var(--fs-sm);
-  --swiper-pagination-fraction-color: hsl(var(--color-black));
+  --swiper-pagination-fraction-color: hsl(var(--color-white));
 }
 
 .sliderItem{

@@ -11,6 +11,7 @@ import Title from "@/components/UI/Elements/Title/Title";
 import Skills from '@/database/Skills.json';
 
 import {IconA11Y, IconCSS, IconFigma, IconGSAP, IconHTML, IconJS, IconReact, IconWebpack, IconAPI} from "@/components/UI/Icons/Icons";
+import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 
 export default function SkillSet() {
     const getIconFromName = (iconName) => {
@@ -38,16 +39,11 @@ export default function SkillSet() {
 
     return (
         <section className={styles.section}>
-            <div className={styles.decor}>
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 25.8L52.1 61.4L58.6 3L5 25.8Z" stroke="#FFD600" strokeWidth="4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-            </div>
-
+            <Blobs type={'v2'} />
             <Container>
+                <div className={styles.gridd}>
+                <Title color={'white'}>My <br/>Skillset</Title>
                 <div className={styles.grid}>
-                    <Title>My <br/>Skillset</Title>
-
                     {Skills.map((skill, index) => (
                         <Card1
                             key={index}
@@ -58,6 +54,7 @@ export default function SkillSet() {
                         >
                         </Card1>
                     ))}
+                </div>
                 </div>
             </Container>
 

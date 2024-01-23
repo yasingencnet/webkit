@@ -3,6 +3,8 @@
 .card{
   position: relative;
   z-index: 0;
+  padding: 3rem;
+  border-radius: 2rem;
   .icon{
     margin-bottom: 3rem;
     width: 8rem;
@@ -16,17 +18,32 @@
     }
   }
   .title{
-    font-size: var(--fs-md);
-    color: hsl(var(--color-black));
+    font-size: var(--fs-sm);
+    //color: hsl(var(--color-black));
+    color: hsla(var(--color-white), 0.8);
     font-weight: var(--fw-medium);
-    margin-bottom: 1.5rem;
   }
   .description{
-    font-size: var(--fs-sm);
+    position: absolute;
+    top: calc(100% - 3rem);
+    left: 0;
+    padding: 3rem;
+    font-size: var(--fs-xs);
     color: hsl(var(--color-body));
+    border-radius: 2rem;
+    opacity: 0;
   }
 
   &:hover{
+    background: hsl(var(--color-black));
+    z-index: 1;
+    .title{
+      color: hsla(var(--color-white), 1);
+    }
+    .description{
+      opacity: 1;
+      background: hsl(var(--color-black));
+    }
     .icon{
       animation:bounce .8s cubic-bezier(0.280, 0.840, 0.420, 1) forwards;
     }

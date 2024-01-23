@@ -4,12 +4,17 @@
   position: relative;
   .inner{
     position: relative;
-    padding: calc(var(--header-height) + (var(--x-spacing) / 2))
-    var(--x-spacing)
-    calc(var(--x-spacing) * 1.5);
     z-index: 1;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100dvh;
+    padding: calc(var(--header-height) + (var(--x-spacing) / 2)) var(--x-spacing) calc(var(--x-spacing) * 1.5);
+
+    text-align: center;
   }
 }
 
@@ -29,6 +34,7 @@
     font-size: var(--fs-xl);
     opacity: 0;
     transition: all 0.3s ease-in;
+    color: hsl(var(--color-white));
   }
   .icon{
     display: inline-flex;
@@ -74,7 +80,7 @@
 .description{
   margin-bottom: 3rem;
   font-size: var(--fs-sm);
-  color: hsl(var(--color-black));
+  color: hsl(var(--color-white));
   max-width: 50rem;
 }
 
@@ -87,69 +93,27 @@
   z-index: -1;
   > * {
     position: absolute;
+  }
+  .noise{
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-  }
-  .gradient{
-    background-image: url("/hero-gradient.svg");
-    background-size: cover;
-    filter: blur(4rem);
-    animation: moveBg 10s ease infinite;
-
-    @keyframes moveBg {
-      0%{
-        background-position: 0 0;
-      }
-      35%{
-        background-position: 100% 50%;
-      }
-      70%{
-        background-position: 50% -50%;
-      }
-      100%{
-        background-position: 0 0;
-      }
-    }
-  }
-  .noise{
     z-index: 1;
-    background: url("/noise.png") repeat;
+    background: url('/noise.png') repeat;
+    pointer-events: none;
   }
-}
-
-.scroll{
-  position: absolute;
-  z-index: 1;
-  right: var(--x-spacing);
-  bottom: calc(var(--x-spacing) * 1.5);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-
-  outline: none;
-  border: 0;
-  background: none;
-  svg{
-    width: 6rem;
-    height: 6rem;
-    * {transition: all 0.3s linear;}
-  }
-  &:hover{
-    svg{
-      rect{
-        fill: hsl(var(--color-black));
-      }
-      path{
-        stroke: hsl(var(--color-white));
-      }
+  .line{
+    width: 50%;
+    height: 100%;
+    &.lineLeft{
+      left: 0;
     }
-  }
-
-  @include respond-below(sm) {
-    display: none;
+    &.lineRight{
+      right: 0;
+    }
+    svg{
+      width: 100%;
+      height: auto;
+    }
   }
 }

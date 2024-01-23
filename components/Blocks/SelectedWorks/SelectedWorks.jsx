@@ -16,6 +16,7 @@ import Title from "@/components/UI/Elements/Title/Title";
 import Magnet from "@/components/UI/Magnet/Magnet";
 import FancyButton from "@/components/UI/Elements/Button/Button";
 import TextReveal from "@/components/UI/Elements/TextReveal/TextReveal";
+import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 export default function SelectedWorks() {
     const galleryContainer = useRef();
     const container = useRef();
@@ -29,8 +30,8 @@ export default function SelectedWorks() {
         gsap.to(bg.current, {
             scrollTrigger: {
                 trigger: container.current,
-                start: 'top bottom',
-                end: 'top 80%',
+                start: 'top 90%',
+                end: 'top 70%',
                 scrub: true,
             },
             clipPath: 'inset(0px 0px round 3rem 3rem 0rem 0rem)',
@@ -71,10 +72,8 @@ export default function SelectedWorks() {
     return (
         <section className={styles.section} id={'selectedWorks'} ref={container}>
             <div className={styles.bg} ref={bg}>
-                <div className={`${styles.showcase} ${styles.v1}`}></div>
                 <div className={`${styles.showcase} ${styles.v2}`}></div>
             </div>
-            {/*<div className={styles.ear}></div>*/}
 
             <div className={styles.xScrollContainer} ref={galleryContainer}>
                 <header className={styles.header}>
@@ -84,6 +83,8 @@ export default function SelectedWorks() {
                         showcasing my expertise and the achieved results.
                     </TextReveal>
                     <FancyButton theme='button-2' link={'/contact'}>Contact</FancyButton>
+
+                    <Blobs type={'v3'} />
                 </header>
 
                 {Works.map((work, index) => {

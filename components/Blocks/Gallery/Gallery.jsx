@@ -72,7 +72,7 @@ export default function Gallery() {
         <section className={styles.section} ref={container}>
             <Container>
                 <header className={styles.header}>
-                    <Title><span>My</span> Photo <br/>Journal</Title>
+                    <Title color={'white'}><span>My</span> Photo <br/>Journal</Title>
                     <FancyButton theme='button-1' target="_blank" link={commonConfig.social.instagram}>Follow on Instagram</FancyButton>
                 </header>
             </Container>

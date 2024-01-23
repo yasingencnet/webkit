@@ -8,7 +8,7 @@
   font-weight: var(--fw-bold);
   color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: hsl(var(--color-black));
+  -webkit-text-stroke-color: hsla(var(--color-white), .2);
   transition: all 0.3s ease-in-out;
 
   svg{

@@ -1,12 +1,8 @@
 .container{
-  /*position: fixed;
+  position: fixed;
   bottom: calc(var(--x-spacing) / 3);
   left: 50%;
-  transform: translateX(-50%);*/
-
-  /*position: fixed;
-  right: var(--x-spacing);
-  top: 80px;*/
+  transform: translateX(-50%);
 
   display: flex;
   justify-content: center;
@@ -17,7 +13,7 @@
   z-index: 1;
   border-radius: 100vw;
   backdrop-filter: blur(.4rem);
-  background-color: hsla(var(--color-bg-alt), .8);
+  background-color: hsla(var(--color-black), .8);
   border: .05rem solid hsla(var(--color-white), .16);
   box-shadow: .01rem .01rem .07rem hsla(var(--color-black), .16);
   ul{

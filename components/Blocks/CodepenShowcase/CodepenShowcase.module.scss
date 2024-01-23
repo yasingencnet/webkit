@@ -1,7 +1,7 @@
 .section{
   position: relative;
   padding: var(--y-spacing) 0;
-  background: hsl(var(--color-bg-alt)) url("/dash-pattern.svg") repeat;
+  background: hsl(var(--color-bg-alt));
 }
 
 .header{

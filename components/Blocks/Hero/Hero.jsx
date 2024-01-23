@@ -9,12 +9,10 @@ import {SplitText} from "gsap/SplitText";
 
 import styles from './Hero.module.scss'
 import Image from "next/image";
-import Title from "@/components/UI/Elements/Title/Title";
 import commonConfig from '@/database/config/metadata.json';
-import Magnet from "@/components/UI/Magnet/Magnet";
 import FadeIn from "@/components/UI/FadeIn/FadeIn";
-
 import PreLoader from "@/components/Blocks/PreLoader/PreLoader";
+import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 
 
 export default function Hero() {
@@ -23,16 +21,6 @@ export default function Hero() {
     const container = useRef();
     const textRef = useRef(null);
     const {contextSafe} = useGSAP({scope: container});
-
-    // Scroll to Selected Works
-    const scrollTo = contextSafe(() => {
-        const selectedWorksElement = document.getElementById('selectedWorks');
-        if (selectedWorksElement) {
-            selectedWorksElement.scrollIntoView({
-                behavior: 'smooth',
-            });
-        }
-    });
 
     // Greeting Message
     const [greeting, setGreeting] = useState('');
@@ -76,15 +64,16 @@ export default function Hero() {
                 }
             })
 
-            // Draw ScrollDown
-            gsap.from(`.${styles.scroll} svg path`, {
-                drawSVG: '0',
-                delay: 1,
+            // Draw Lines
+            gsap.from(`.${styles.lineRight} svg path`, {
+                drawSVG: '00%',
+                duration: 0.5,
+                stagger: 0.2
             });
-            gsap.from(`.${styles.scroll} svg rect`, {
-                drawSVG: '0',
-                delay: 0.5,
-                duration: 1.5
+            gsap.from(`.${styles.lineLeft} svg path`, {
+                drawSVG: '00%',
+                duration: 0.5,
+                stagger: 0.2
             });
 
             // Hero Title
@@ -138,22 +127,166 @@ export default function Hero() {
                 </div>
 
                 <div className={styles.background}>
-                    <div className={styles.gradient}></div>
-                </div>
-
-                <Magnet>
-                    <button type={'button'} onClick={scrollTo} className={styles.scroll} aria-label="Scroll Down">
-                        <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.5" y="0.5" width="62" height="62" rx="31" fill="transparent" stroke="black"
-                                  strokeWidth={1}/>
-                            <path d="M34.1371 35.1502L29.0686 40.2187L24 35.1502" stroke="#000000" strokeWidth="1.39444"
-                                  strokeLinecap="round" strokeLinejoin="round"/>
-                            <path
-                                d="M40.2194 23.9993L33.1234 23.9993C32.048 23.9993 31.0166 24.4265 30.2562 25.1869C29.4957 25.9474 29.0685 26.9787 29.0685 28.0542L29.0685 40.2187"
-                                stroke="#000000" strokeWidth="1.39444" strokeLinecap="round" strokeLinejoin="round"/>
+                    <div className={styles.noise}></div>
+                    <div className={`${styles.line} ${styles.lineLeft}`}>
+                        <svg width="962" height="995" viewBox="0 0 962 995" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M961 995L0 1.00093" stroke="url(#paint0_linear_2321_30777)"/>
+                            <path d="M961 994.807L0 139.055" stroke="url(#paint1_linear_2321_30777)"/>
+                            <path d="M961 995L0 268.279" stroke="url(#paint2_linear_2321_30777)"/>
+                            <path d="M961 994.998L0 388.092" stroke="url(#paint3_linear_2321_30777)"/>
+                            <path d="M961 995L0 498.692" stroke="url(#paint4_linear_2321_30777)"/>
+                            <path d="M961 995L0 600.073" stroke="url(#paint5_linear_2321_30777)"/>
+                            <path d="M961 994.998L0 692.236" stroke="url(#paint6_linear_2321_30777)"/>
+                            <path d="M961 994.998L0 775.185" stroke="url(#paint7_linear_2321_30777)"/>
+                            <path d="M961 994.998L0 851.682" stroke="url(#paint8_linear_2321_30777)"/>
+                            <path d="M961 994.998L0 916.197" stroke="url(#paint9_linear_2321_30777)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_2321_30777" x1="960.499" y1="992.187" x2="-6.38836"
+                                                y2="985.916" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_2321_30777" x1="960.499" y1="992.385" x2="-6.37415"
+                                                y2="985.101" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_2321_30777" x1="960.499" y1="992.944" x2="-6.35294"
+                                                y2="984.366" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint3_linear_2321_30777" x1="960.499" y1="993.281" x2="-6.31993"
+                                                y2="983.01" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint4_linear_2321_30777" x1="960.499" y1="993.596" x2="-6.26589"
+                                                y2="981.037" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint5_linear_2321_30777" x1="960.499" y1="993.883" x2="-6.17141"
+                                                y2="978.102" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint6_linear_2321_30777" x1="960.499" y1="994.141" x2="-5.99077"
+                                                y2="973.56" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint7_linear_2321_30777" x1="960.499" y1="994.376" x2="-5.59793"
+                                                y2="966.04" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint8_linear_2321_30777" x1="960.499" y1="994.593" x2="-4.47619"
+                                                y2="951.182" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint9_linear_2321_30777" x1="960.499" y1="994.775" x2="0.00045284"
+                                                y2="916.191" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                            </defs>
                         </svg>
-                    </button>
-                </Magnet>
+                    </div>
+                    <div className={`${styles.line} ${styles.lineRight}`}>
+                        <svg width="962" height="995" viewBox="0 0 962 995" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 995L962 1.00093" stroke="url(#paint0_linear_2321_30690)"/>
+                            <path d="M1 994.807L962 139.055" stroke="url(#paint1_linear_2321_30690)"/>
+                            <path d="M1 995L962 268.279" stroke="url(#paint2_linear_2321_30690)"/>
+                            <path d="M1 994.998L962 388.092" stroke="url(#paint3_linear_2321_30690)"/>
+                            <path d="M1 995L962 498.692" stroke="url(#paint4_linear_2321_30690)"/>
+                            <path d="M1 995L962 600.073" stroke="url(#paint5_linear_2321_30690)"/>
+                            <path d="M1 994.998L962 692.236" stroke="url(#paint6_linear_2321_30690)"/>
+                            <path d="M1 994.998L962 775.185" stroke="url(#paint7_linear_2321_30690)"/>
+                            <path d="M1 994.998L962 851.682" stroke="url(#paint8_linear_2321_30690)"/>
+                            <path d="M1 994.998L962 916.197" stroke="url(#paint9_linear_2321_30690)"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_2321_30690" x1="1.50051" y1="992.187" x2="968.388"
+                                                y2="985.916" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_2321_30690" x1="1.50051" y1="992.385" x2="968.374"
+                                                y2="985.101" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint2_linear_2321_30690" x1="1.50051" y1="992.944" x2="968.353"
+                                                y2="984.366" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint3_linear_2321_30690" x1="1.50051" y1="993.281" x2="968.32"
+                                                y2="983.01" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint4_linear_2321_30690" x1="1.50051" y1="993.596" x2="968.266"
+                                                y2="981.037" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint5_linear_2321_30690" x1="1.50051" y1="993.883" x2="968.171"
+                                                y2="978.102" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint6_linear_2321_30690" x1="1.50051" y1="994.141" x2="967.991"
+                                                y2="973.56" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint7_linear_2321_30690" x1="1.50051" y1="994.376" x2="967.598"
+                                                y2="966.04" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint8_linear_2321_30690" x1="1.50051" y1="994.593" x2="966.476"
+                                                y2="951.182" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                                <linearGradient id="paint9_linear_2321_30690" x1="1.50051" y1="994.775" x2="962"
+                                                y2="916.191" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#261308"/>
+                                    <stop offset="0.0001" stopColor="#241004" stopOpacity="0.9"/>
+                                    <stop offset="1" stopColor="#061D49"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <Blobs type={'v1'}/>
+                    <Blobs type={'v2'}/>
+                    <Blobs type={'v3'}/>
+                </div>
             </section>
         </>
     )

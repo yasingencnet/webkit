@@ -1,0 +1,29 @@
+.blob{
+  position: absolute;
+  pointer-events: none;
+  filter: blur(100rem);
+  .gradient{
+
+  }
+}
+.v1{
+  right: -50%;
+  top: -50%;
+  width: 60%;
+  height: 80%;
+  background: conic-gradient(#000, #0528a2);
+}
+.v2{
+  left: -20%;
+  top: 10%;
+  width: 30%;
+  height: 40%;
+  background: conic-gradient(from 2.35rad, hsl(29, 100%, 39%), hsla(234, 94%, 46.1%, 0.5));
+}
+.v3{
+  left: 10%;
+  top: 50%;
+  width: 30%;
+  height: 50%;
+  background: conic-gradient(hsla(0, 0%, 24%, 1), hsla(234, 94%, 31%, 0.29));
+}
