@@ -7,13 +7,13 @@
     "image": "",
     "link": "#works"
   },
-  "skills": {
+  "experience": {
     "isActive": true,
     "showOnNavigation":  true,
-    "title": "Skills",
+    "title": "Experience",
     "description": "Check out the things I'm good at, from building websites to design and more.",
     "image": "",
-    "link": "#skills"
+    "link": "#experience"
   },
   "resume": {
     "isActive": true,
@@ -22,6 +22,14 @@
     "description": "See my work history and what I've achieved in a quick and easy resume.",
     "image": "",
     "link": "#resume"
+  },
+  "skills": {
+    "isActive": true,
+    "showOnNavigation":  true,
+    "title": "Skills",
+    "description": "Check out the things I'm good at, from building websites to design and more.",
+    "image": "",
+    "link": "#skills"
   },
   "about": {
     "isActive":  false,

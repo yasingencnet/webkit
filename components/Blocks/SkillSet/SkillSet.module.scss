@@ -6,25 +6,40 @@
   background: hsl(var(--color-bg-alt));
 }
 
-.gridd{
+.wrapper{
   display: grid;
   grid-template-columns: 25dvw 1fr;
+  @include respond-below(md) {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
 }
 
 .grid{
   display: grid;
   grid-gap: 9rem;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  @include respond-below(xl) {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  @include respond-below(md) {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-column-gap: 3rem;
+  }
+  @include respond-below(sm) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+  }
 
   > * {
     &:nth-child(2){
-      @include respond-above(md) {
+      @include respond-above(xl) {
         grid-column-start: 2;
         grid-column-end: 3;
       }
     }
     &:nth-child(3){
-      @include respond-above(md) {
+      @include respond-above(xl) {
         grid-column-start: 1;
         grid-column-end: 2;
       }

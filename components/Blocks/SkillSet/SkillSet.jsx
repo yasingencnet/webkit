@@ -41,7 +41,7 @@ export default function SkillSet() {
         <section className={styles.section} id={'skills'}>
             <Blobs type={'v2'} />
             <Container>
-                <div className={styles.gridd}>
+                <div className={styles.wrapper}>
                 <Title color={'white'}>My <br/>Skillset</Title>
                 <div className={styles.grid}>
                     {Skills.map((skill, index) => (

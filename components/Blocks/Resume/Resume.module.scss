@@ -15,6 +15,9 @@
 
   background: url("/gradient-blob.svg") center top no-repeat;
   background-size: contain;
+  @include respond-below(sm) {
+    align-items: flex-start;
+  }
 }
 
 .cardGroup{
@@ -44,6 +47,10 @@
   aspect-ratio: 3 / 4;
   max-width: 38rem;
   transition: all .3s ease;
+  @include respond-below(sm) {
+    max-width: 24rem;
+    border-radius: 1rem;
+  }
 
   &.cardV1 {
     /*transform: rotate(-5deg);*/
@@ -62,7 +69,6 @@
 
   &.cardV2 {
     /*transform: rotate(5deg);*/
-
     position: absolute;
     bottom: -10%;
     z-index: -1;
@@ -95,7 +101,7 @@
 
     h5 {
       font-size: var(--fs-xxs);
-      color: hsl(var(--color-alert));
+      color: hsl(var(--color-black));
     }
 
     h6 {
@@ -106,7 +112,7 @@
     p {
       position: relative;
       overflow: hidden;
-      max-height: 12rem;
+      max-height: 14rem;
 
       font-size: var(--fs-xxs);
       color: hsl(var(--color-body));

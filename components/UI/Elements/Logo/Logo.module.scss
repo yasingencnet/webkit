@@ -1,9 +1,15 @@
+@import '/assets/media-queries.scss';
+
 .logo{
   --spin-text: hsl(var(--color-primary));
   --inner-circle: hsl(var(--color-black));
   --inner-stroke: hsl(var(--color-black));
   --inner-path: hsl(var(--color-primary));
   display: block;
+  height: auto;
+  @include respond-below(sm) {
+    max-width: 10rem;
+  }
   .outer{
     transform-origin: 50% 50%;
     transition: all .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);

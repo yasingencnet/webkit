@@ -58,6 +58,7 @@
   @include respond-below(sm) {
     --fs-xl: 4.0rem;
     --x-spacing: 3rem;
+    --header-height: 18rem;
   }
 
 }

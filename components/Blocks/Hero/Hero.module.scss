@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100dvh;
-    padding: calc(var(--header-height) + (var(--x-spacing) / 2)) var(--x-spacing) calc(var(--x-spacing) * 1.5);
+    padding: calc(var(--header-height) + (var(--x-spacing) / 2)) var(--x-spacing) calc(var(--x-spacing) * 2);
 
     text-align: center;
   }
@@ -35,6 +35,9 @@
     opacity: 0;
     transition: all 0.3s ease-in;
     color: hsl(var(--color-white));
+    @include respond-below(xs) {
+      --fs-xl: 3rem;
+    }
   }
   .icon{
     display: inline-flex;
@@ -54,7 +57,7 @@
       width: 22rem;
     }
     @include respond-below(sm) {
-      margin: 1.5rem 0;
+      margin: 1.5rem auto;
       display: flex;
     }
 

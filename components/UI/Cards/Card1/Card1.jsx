@@ -1,9 +1,6 @@
 import React  from 'react';
 import styles from './Card1.module.scss';
-import commonConfig from "@/database/config/metadata.json";
-import TextReveal from "@/components/UI/Elements/TextReveal/TextReveal";
 import Image from "next/image";
-import FadeIn from "@/components/UI/FadeIn/FadeIn";
 
 export default function Card1({icon, title, subtitle, description}) {
     return(
@@ -17,9 +14,9 @@ export default function Card1({icon, title, subtitle, description}) {
                 {title} <br/> {subtitle}
             </h2>
 
-            <TextReveal className={styles.description}>
+            <p className={styles.description}>
                 {description}
-            </TextReveal>
+            </p>
         </div>
 
     );

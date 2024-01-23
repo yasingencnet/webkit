@@ -11,7 +11,6 @@ import Container from "@/components/UI/Layout/Layout";
 import FancyButton from "@/components/UI/Elements/Button/Button";
 import commonConfig from "@/database/config/metadata.json";
 import Link from "next/link";
-import {getRandomValue} from "@/utils/utils";
 
 export default function Resume() {
     const container = useRef();
@@ -58,9 +57,6 @@ export default function Resume() {
                                 <div>
                                     <Link href={`mailto:${commonConfig.personal.email}`} target={'_blank'}>
                                         {commonConfig.personal.email}
-                                    </Link>
-                                    <Link href={`tel:${commonConfig.personal.phone}`} target={'_blank'}>
-                                        {commonConfig.personal.phone}
                                     </Link>
                                     <span>{commonConfig.personal.city}, {commonConfig.personal.state}</span>
                                 </div>
