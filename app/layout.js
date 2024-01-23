@@ -1,4 +1,4 @@
-import { Manrope, Libre_Baskerville } from 'next/font/google';
+import {Manrope, Libre_Baskerville} from 'next/font/google';
 import '@/assets/globals.scss';
 import commonConfig from '@/database/config/metadata.json';
 import LenisScroller from '@/components/UI/LenisScroller/LenisScroller';
@@ -20,24 +20,28 @@ export const altFont = Libre_Baskerville({
 });
 
 export const metadata = {
-  title: commonConfig.metadata.title,
-  description: commonConfig.metadata.description,
+    title: commonConfig.metadata.title,
+    description: commonConfig.metadata.description,
 }
 
-export default function RootLayout({ children }) {
-  return (
-      <html lang="en" className={bodyFont.className} style={{
-          '--overflow': 'auto'
-      }}>
-          <body>
-              <Header></Header>
-              <main>
-                  {children}
-              </main>
-              <Footer />
-              <CustomCursor />
-              <LenisScroller />
-          </body>
-      </html>
-  )
+export const viewport = {
+    themeColor: '#FFD600',
+}
+
+export default function RootLayout({children}) {
+    return (
+        <html lang="en" className={bodyFont.className} style={{
+            '--overflow': 'auto'
+        }}>
+        <body>
+        <Header />
+        <main>
+            {children}
+        </main>
+        <Footer/>
+        <CustomCursor/>
+        <LenisScroller/>
+        </body>
+        </html>
+    )
 }

@@ -46,11 +46,12 @@ export default function Resume() {
                     <div className={styles.cardGroup}>
                         <div className={`${styles.card} ${styles.cardV1}`}>
                             <div className={styles.cardInner}>
-                                <h4>YASIN GENC</h4>
-                                <h6>Senior Frontend Developer</h6>
+                                <div className={styles.cardTitle}>YASIN GENC</div>
+                                <div className={styles.cardDesc}>Senior Frontend Developer</div>
                                 <hr/>
                                 <p>I am Yasin, a senior frontend developer with over 7 years of professional experience.
-                                    Successfully building user-friendly websites with ReactJS & NextJS. I pay attention to
+                                    Successfully building user-friendly websites with ReactJS & NextJS. I pay attention
+                                    to
                                     small details, enjoy technical problems, and work well in teams. I like learning new
                                     technologies and always aim to improve my skills.
                                 </p>
@@ -61,7 +62,7 @@ export default function Resume() {
                                     <span>{commonConfig.personal.city}, {commonConfig.personal.state}</span>
                                 </div>
                                 <hr/>
-                                <h5>WORK EXPERIENCE</h5>
+                                <div className={styles.cardSectionTitle}>WORK EXPERIENCE</div>
                                 <div className={styles.pseudo}>
                                     <span></span><span></span><span></span>
                                     <span></span><span></span><span></span>
@@ -75,7 +76,7 @@ export default function Resume() {
                                 </div>
                             </div>
                             <figure className={styles.figure}>
-                                <Image src="/yasin-genc-photo.jpeg" alt="Yasin Genc" width={150} height={150}/>
+                            <Image src="/yasin-genc-photo.jpeg" alt="Yasin Genc" width={150} height={150}/>
                             </figure>
                         </div>
                         <div className={`${styles.card} ${styles.cardV2}`}>

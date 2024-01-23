@@ -94,19 +94,22 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    h4 {
+    .cardTitle {
       font-size: var(--fs-xs);
       color: hsl(var(--color-alert));
+      font-weight: var(--fw-bold);
     }
 
-    h5 {
+    .cardSectionTitle {
       font-size: var(--fs-xxs);
       color: hsl(var(--color-black));
+      font-weight: var(--fw-bold);
     }
 
-    h6 {
+    .cardDesc {
       font-size: var(--fs-xxs);
       color: hsl(var(--color-black));
+      font-weight: var(--fw-bold);
     }
 
     p {

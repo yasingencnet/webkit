@@ -124,6 +124,11 @@ export default function SelectedWorks() {
                                 <Image
                                     src={work.image}
                                     alt={work.title}
+                                    sizes="100vw"
+                                    style={{
+                                        width: '100%',
+                                        height: 'auto',
+                                    }}
                                     width={1920}
                                     height={1080}
                                     className={styles.image}
