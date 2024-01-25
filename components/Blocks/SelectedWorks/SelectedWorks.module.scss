@@ -10,7 +10,6 @@
     inset: 0;
     width: 100%;
     height: calc(100% + var(--x-spacing));
-    clip-path: inset(0px var(--x-spacing) round 3rem 3rem 0rem 0rem);
     background-color: hsl(var(--color-bg-alt));
     .showcase{
       width: 100%;

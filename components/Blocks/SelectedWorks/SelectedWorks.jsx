@@ -27,17 +27,6 @@ export default function SelectedWorks() {
         gsap.registerPlugin(ScrollTrigger);
         const gallery = galleryContainer.current;
 
-        // BG Animation
-        gsap.to(bg.current, {
-            scrollTrigger: {
-                trigger: container.current,
-                start: 'top 90%',
-                end: 'top 70%',
-                scrub: true,
-            },
-            clipPath: 'inset(0px 0px round 3rem 3rem 0rem 0rem)',
-        });
-
         // Horizontal Scroll
         let tl = gsap.timeline({
             scrollTrigger: {
@@ -66,8 +55,7 @@ export default function SelectedWorks() {
             });
         });
 
-        let browserArray = gsap.utils.toArray(`.${styles.browser}`);
-        browserArray.forEach((browser, index) => {
+        gsap.utils.toArray(`.${styles.browser}`).forEach((browser, index) => {
             gsap.from(browser, {
                 xPercent: 20,
                 duration: 1,
@@ -94,7 +82,7 @@ export default function SelectedWorks() {
     return (
         <section className={styles.section} id={'works'} ref={container}>
             <div className={styles.bg} ref={bg}>
-                <div className={`${styles.showcase} ${styles.v2}`}></div>
+                <div className={`${styles.showcase}`}></div>
             </div>
 
             <div className={styles.xScrollContainer} ref={galleryContainer}>
