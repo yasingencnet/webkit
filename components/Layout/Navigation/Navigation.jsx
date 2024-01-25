@@ -9,7 +9,7 @@ import styles from './Navigation.module.scss'
 import Link from "next/link";
 import PageList from '@/database/PageList.json';
 
-export default function Navigation() {
+export default function Navigation({ isMenuOpen }) {
     gsap.registerPlugin(ScrollToPlugin);
 
     const navigationRef = useRef();
@@ -49,7 +49,7 @@ export default function Navigation() {
     });
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${isMenuOpen ? styles.menuOpen : ''}`}>
             <nav className={styles.navigation} ref={navigationRef}>
                 <ul>
                     {Object.values(PageList)

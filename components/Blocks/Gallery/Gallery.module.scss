@@ -66,21 +66,28 @@
   }
 }
 
-.swiper-button-next{
-  width: 100px;
-  height: 100px;
+.buttonPrev, .buttonNext{
+  border: none;
+  background: none;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  background: red;
+  height: 100%;
+  width: calc(var(--x-spacing) + 6.4rem);
+  top: 0;
+  z-index: 1;
+  svg{
+    transition: all .2s ease-in-out;
+  }
+  &:hover{
+    svg{
+      transform: scale(1.1);
+    }
+  }
 }
-.swiper-button-prev{
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.buttonPrev{
   left: 0;
-  background: lime;
+  padding-left: var(--x-spacing);
+}
+.buttonNext{
+  right: 0;
+  padding-right: var(--x-spacing);
 }

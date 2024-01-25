@@ -13,9 +13,9 @@ export default function Home() {
             <Hero/>
             <SelectedWorks/>
             <ExperienceBlock/>
+            <SkillSet/>
             <BoldTitle></BoldTitle>
             <Resume/>
-            <SkillSet/>
             <Gallery/>
         </>
     )

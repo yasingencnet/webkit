@@ -15,7 +15,7 @@
     "axios": "^1.6.5",
     "framer-motion": "^10.18.0",
     "gsap": "file:gsap-bonus.tgz",
-    "next": "^14.0.4",
+    "next": "^14.1.0",
     "react": "^18",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.2",

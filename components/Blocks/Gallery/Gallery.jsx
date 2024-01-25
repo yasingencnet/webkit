@@ -137,11 +137,30 @@ export default function Gallery() {
                         </figure>
                     </SwiperSlide>
                 ))}
+                <button onClick={() => swiperRef.current?.slidePrev()} className={styles.buttonPrev}>
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.96046e-08 32C5.96046e-08 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32C64 49.6731 49.6731 64 32 64C14.3269 64 5.96046e-08 49.6731 5.96046e-08 32Z"
+                            fill="white"/>
+                        <path
+                            d="M48 31C48.5523 31 49 31.4477 49 32C49 32.5523 48.5523 33 48 33V31ZM17.2929 32.7071C16.9024 32.3166 16.9024 31.6834 17.2929 31.2929L23.6569 24.9289C24.0474 24.5384 24.6805 24.5384 25.0711 24.9289C25.4616 25.3195 25.4616 25.9526 25.0711 26.3431L19.4142 32L25.0711 37.6569C25.4616 38.0474 25.4616 38.6805 25.0711 39.0711C24.6805 39.4616 24.0474 39.4616 23.6569 39.0711L17.2929 32.7071ZM48 33H18V31H48V33Z"
+                            fill="black"/>
+                    </svg>
+                </button>
+                <button onClick={() => swiperRef.current?.slideNext()} className={styles.buttonNext}>
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M64 32C64 14.3269 49.6731 0 32 0C14.3269 0 0 14.3269 0 32C0 49.6731 14.3269 64 32 64C49.6731 64 64 49.6731 64 32Z"
+                            fill="white"/>
+                        <path
+                            d="M16 31C15.4477 31 15 31.4477 15 32C15 32.5523 15.4477 33 16 33V31ZM46.7071 32.7071C47.0976 32.3166 47.0976 31.6834 46.7071 31.2929L40.3431 24.9289C39.9526 24.5384 39.3195 24.5384 38.9289 24.9289C38.5384 25.3195 38.5384 25.9526 38.9289 26.3431L44.5858 32L38.9289 37.6569C38.5384 38.0474 38.5384 38.6805 38.9289 39.0711C39.3195 39.4616 39.9526 39.4616 40.3431 39.0711L46.7071 32.7071ZM16 33H46V31H16V33Z"
+                            fill="black"/>
+                    </svg>
+                </button>
             </Swiper>
 
             <Container>
-                <button onClick={() => swiperRef.current?.slidePrev()}>Prev</button>
-                <button onClick={() => swiperRef.current?.slideNext()}>Next</button>
+
             </Container>
 
         </section>

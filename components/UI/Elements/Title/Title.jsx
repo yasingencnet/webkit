@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from './Title.module.scss';
 
 
-export default function Title({heading, color, children}) {
+export default function Title({heading, color, children, className}) {
     const textRef = useRef(null);
 
     useGSAP(() => {

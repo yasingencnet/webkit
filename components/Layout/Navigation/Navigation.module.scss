@@ -8,6 +8,16 @@
 
   display: flex;
   justify-content: center;
+
+  @include respond-below(xs) {
+    transform: none;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &.menuOpen{
+    background: red;
+  }
 }
 
 .navigation{
@@ -18,11 +28,19 @@
   background-color: hsla(var(--color-black), .8);
   border: .05rem solid hsla(var(--color-white), .16);
   box-shadow: .01rem .01rem .07rem hsla(var(--color-black), .16);
+  @include respond-below(xs) {
+    border-radius: 0;
+    width: 100%;
+    padding-top: var(--header-height);
+  }
   ul{
     display: flex;
     padding: 0 1.5rem;
     height: 6rem;
     align-items: center;
+    @include respond-below(xs) {
+      display: block;
+    }
     li{
       a, button{
         display: block;
@@ -35,7 +53,11 @@
         border: 0;
         background: transparent;
         @include respond-below(xs) {
-          padding: 1rem 1.2rem;
+          --fs-xxs: 2rem;
+          display: block;
+          width: 100%;
+          padding: 2rem 3rem;
+          text-align: left;
         }
         &:hover{
           color: hsl(var(--color-black));

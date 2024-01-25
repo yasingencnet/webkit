@@ -1,17 +1,29 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import styles from './Header.module.scss'
 import Logo from '@/components/UI/Elements/Logo/Logo';
 import FancyButton from '@/components/UI/Elements/Button/Button';
 import Navigation from '@/components/Layout/Navigation/Navigation';
-
-import PageList from '@/database/PageList.json';
 export default function Header() {
+    const [isMenuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!isMenuOpen);
+    };
+
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${isMenuOpen ? styles.menuOpen : ''}`}>
             <div className={styles.inner}>
                 <Logo classVariable={styles.logo}></Logo>
-                <Navigation></Navigation>
-                {/*<FancyButton theme='button-3' link={PageList.contact.link}>Contact</FancyButton>*/}
+                <Navigation isMenuOpen={isMenuOpen}></Navigation>
+                {/*<FancyButton theme='button-2' link={'/'}>Contact</FancyButton>*/}
+                <button type={'button'} className={styles.menuToggle} onClick={toggleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </header>
     )

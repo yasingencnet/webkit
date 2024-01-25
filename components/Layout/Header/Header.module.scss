@@ -1,9 +1,15 @@
+@import '/assets/media-queries.scss';
+
 .header{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 2;
+
+  /*&.menuOpen{
+
+  }*/
 }
 .inner{
   display: flex;
@@ -14,4 +20,73 @@
 }
 .logo{
   display: inline-block;
+}
+
+.menuToggle{
+  --size: 5rem;
+  --lineHeight: 0.2rem;
+  --lineWidth: 40%;
+  position: relative;
+  background: none;
+  border: 0;
+  padding: 0;
+  width: var(--size);
+  height: var(--size);
+  cursor: pointer;
+
+  @include respond-above(xs) {
+    display: none;
+  }
+
+  span{
+    display: block;
+    width: var(--lineWidth);
+    height: var(--lineHeight);
+    background: hsl(var(--color-white));
+
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    &:nth-child(1){
+      transform-origin: right bottom;
+      top: calc(50% - var(--lineHeight) * 3);
+      left: 10%;
+    }
+    &:nth-child(2){
+      transform-origin: left bottom;
+      top: calc(50% - var(--lineHeight) * 3);
+      left: 50%;
+    }
+    &:nth-child(3){
+      transform-origin: right top;
+      top: calc(50% + var(--lineHeight) * 3);
+      left: 10%;
+    }
+    &:nth-child(4){
+      transform-origin: left bottom;
+      top: calc(50% + var(--lineHeight) * 3);
+      left: 50%;
+    }
+  }
+
+
+  &:hover{
+    span{
+      &:nth-child(1){
+        transform: rotateZ(45deg);
+        top: 50%;
+      }
+      &:nth-child(2){
+        transform: rotateZ(-45deg);
+        top: 50%;
+      }
+      &:nth-child(3){
+        transform: rotateZ(-45deg);
+        top: 50%;
+      }
+      &:nth-child(4){
+        transform: rotateZ(45deg);
+        top: 50%;
+      }
+    }
+  }
 }

@@ -3,7 +3,13 @@
 .section {
   position: relative;
   background-color: hsl(var(--color-bg-alt));
-  padding: var(--y-spacing) 0 var(--y-spacing);
+  padding: var(--x-spacing) 0;
+}
+
+.grid{
+  display: flex;
+  flex-direction: column;
+  gap: var(--x-spacing);
 }
 
 .boldTitle{
@@ -23,4 +29,23 @@
       /*transform: translateX(50%);*/
     }
   }
+}
+
+.paragraph{
+  font-size: var(--fs-sm);
+  color: hsl(var(--color-body));
+  max-width: 35ch;
+
+  &.paragraphAlt{
+    margin-left: auto;
+  }
+}
+
+.blob{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+  background: conic-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 100%, 0.1));
 }

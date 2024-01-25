@@ -1,8 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, {useRef} from 'react';
 
 import styles from './SkillSet.module.scss';
+
+import gsap from "gsap";
+import {useGSAP} from "@gsap/react";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 import Container from "@/components/UI/Layout/Layout";
 import Ticker from '@/components/UI/Elements/Ticker/Ticker';
@@ -14,6 +18,7 @@ import {IconA11Y, IconCSS, IconFigma, IconGSAP, IconHTML, IconJS, IconReact, Ico
 import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 
 export default function SkillSet() {
+    const container = useRef();
     const getIconFromName = (iconName) => {
         switch (iconName) {
             case 'IconJS':
@@ -37,12 +42,29 @@ export default function SkillSet() {
         }
     }
 
+    // GSAP Animations
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        /*gsap.to(`.${styles.title}`, {
+            scrollTrigger: {
+                trigger: container.current,
+                start: 'top 20%',
+                end: 'bottom 50%',
+                toggleActions: 'play none none reverse',
+                pin: true,
+                scrub: true,
+                markers: true,
+            },
+            scale: 2,
+        });*/
+    });
+
     return (
         <section className={styles.section} id={'skills'}>
             <Blobs type={'v2'} />
             <Container>
                 <div className={styles.wrapper}>
-                <Title color={'white'}>My <br/>Skillset</Title>
+                    <Title className={styles.title} color={'white'}>My <br/>Skillset</Title>
                 <div className={styles.grid}>
                     {Skills.map((skill, index) => (
                         <Card1

@@ -18,33 +18,21 @@
     "direction": "horizontal"
   },
   {
-    "url": "/gallery/IMG_20230325_154428.jpg",
-    "date": "March 2023",
-    "location": "Pamukkale, Turkey",
+    "url": "/gallery/20180411_151600.jpg",
+    "date": "April 2018",
+    "location": "Bangkok, Thailand",
+    "direction": "vertical"
+  },
+  {
+    "url": "/gallery/IMG20210306162608.jpg",
+    "date": "March 2021",
+    "location": "Chernobyl, Ukraine",
     "direction": "vertical"
   },
   {
     "url": "/gallery/IMG-20190712-WA0010.jpg",
     "date": "July 2019",
     "location": "Kyiv, Ukraine",
-    "direction": "vertical"
-  },
-  {
-    "url": "/gallery/IMG_20190301_132934.jpg",
-    "date": "March 2019",
-    "location": "Istanbul, Turkey",
-    "direction": "horizontal"
-  },
-  {
-    "url": "/gallery/IMG_20190527_201259.jpg",
-    "date": "May 2019",
-    "location": "Bursa, Turkey",
-    "direction": "vertical"
-  },
-  {
-    "url": "/gallery/20180411_151600.jpg",
-    "date": "April 2018",
-    "location": "Bangkok, Thailand",
     "direction": "vertical"
   },
   {
@@ -60,21 +48,9 @@
     "direction": "vertical"
   },
   {
-    "url": "/gallery/IMG_20210313_134427.jpg",
-    "date": "March 2021",
-    "location": "Lutsk, Ukraine",
-    "direction": "horizontal"
-  },
-  {
     "url": "/gallery/IMG_20210713_103018.jpg",
     "date": "July 2021",
     "location": "Kamianets-Podilskyi, Ukraine",
-    "direction": "vertical"
-  },
-  {
-    "url": "/gallery/IMG_20220129_133838.jpg",
-    "date": "January 2022",
-    "location": "Polyanytsya, Ukraine",
     "direction": "vertical"
   },
   {
@@ -84,21 +60,15 @@
     "direction": "horizontal"
   },
   {
-    "url": "/gallery/IMG_20220821_193826.jpg",
-    "date": "August 2022",
-    "location": "Antalya, Turkey",
+    "url": "/gallery/image_2024-01-24_23-54-41.png",
+    "date": "February 2021",
+    "location": "Lviv, Ukraine",
     "direction": "vertical"
   },
   {
-    "url": "/gallery/IMG_20231210_140134.jpg",
-    "date": "December 2023",
-    "location": "Seattle, WA",
-    "direction": "vertical"
-  },
-  {
-    "url": "/gallery/IMG_20230420_161256.jpg",
-    "date": "December 2023",
-    "location": "Gelidonya, Antalya",
+    "url": "/gallery/IMG20210707082309.jpg",
+    "date": "July 2021",
+    "location": "Kyiv, Ukraine",
     "direction": "vertical"
   }
 

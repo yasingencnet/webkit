@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect  } from 'react';
+import React, { useRef } from 'react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -56,7 +56,6 @@ export default function SelectedWorks() {
             tl.to(gallery, {
                 ease: 'none',
             });
-
         });
         mm.add("(min-width: 992px)", () => {
             tl.to(gallery, {
@@ -65,7 +64,22 @@ export default function SelectedWorks() {
                 },
                 ease: 'none',
             });
+        });
 
+        let browserArray = gsap.utils.toArray(`.${styles.browser}`);
+        browserArray.forEach((browser, index) => {
+            gsap.from(browser, {
+                xPercent: 20,
+                duration: 1,
+                ease: "elastic",
+                scrollTrigger: {
+                    trigger: browser,
+                    containerAnimation: tl,
+                    start: "left right",
+                    toggleActions: "play none none reverse",
+                    id: index,
+                }
+            });
         });
 
     }, { scope: galleryContainer });
@@ -94,11 +108,12 @@ export default function SelectedWorks() {
                         Contact
                     </FancyButton>
 
-                    <Blobs type={'v3'} />
+                    <Blobs type={'v2'} />
                 </header>
 
                 {Works.map((work, index) => {
                     const lightness = parseFloat(work.color.l);
+
                     return (
                         <div key={index} className={`${styles.browser}`} style={{'--h': work.color.h, '--s': work.color.s, '--l': work.color.l}}>
                             <div className={`${styles.browserHeader} ${lightness >= 50 ? styles.dark : ''}`}>
@@ -138,7 +153,6 @@ export default function SelectedWorks() {
                         </div>
                     );
                 })}
-
             </div>
         </section>
     );

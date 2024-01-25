@@ -17,11 +17,12 @@
     inset: 0;
     width: 100%;
     z-index: -1;
-    border-radius: 2rem;
+    border-radius: 2rem 2rem 0 0;
     background-color: hsl(var(--color-black));
     transform: scale(0.9);
     opacity: 0;
     transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid hsla(var(--color-white), 0.15);
     @include respond-below(md) {
       display: none;
     }
@@ -31,6 +32,10 @@
       backdrop-filter: blur(1rem);
       transform: scale(1);
     }
+  }
+  &:after{
+    border-bottom: none;
+    box-shadow: 0 -5rem 25rem -1rem rgba(255, 255, 255, .1);
   }
 
   .icon{
@@ -64,10 +69,13 @@
     padding: 3rem;
     font-size: var(--fs-xs);
     color: hsl(var(--color-body));
-    border-radius: 2rem;
     opacity: 0;
     transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: translateY(15%);
+    &:after{
+      border-top: none;
+      border-radius: 0 0 2rem 2rem;
+    }
     @include respond-below(md) {
       display: none;
     }

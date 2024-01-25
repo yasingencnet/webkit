@@ -15,14 +15,6 @@
     "image": "",
     "link": "#experience"
   },
-  "resume": {
-    "isActive": true,
-    "showOnNavigation":  true,
-    "title": "Resume",
-    "description": "See my work history and what I've achieved in a quick and easy resume.",
-    "image": "",
-    "link": "#resume"
-  },
   "skills": {
     "isActive": true,
     "showOnNavigation":  true,
@@ -31,21 +23,13 @@
     "image": "",
     "link": "#skills"
   },
-  "about": {
-    "isActive":  false,
-    "showOnNavigation": false,
-    "title": "About",
-    "description": "I design & develop modern and accessible web interfaces.",
+  "resume": {
+    "isActive": true,
+    "showOnNavigation":  true,
+    "title": "Resume",
+    "description": "See my work history and what I've achieved in a quick and easy resume.",
     "image": "",
-    "link": "/about"
-  },
-  "blog": {
-    "isActive":  false,
-    "showOnNavigation":  false,
-    "title": "Blog",
-    "description": "Articles focused on CSS, HTML, JavaScript, and other frontend stuff.",
-    "image": "",
-    "link": "/blog"
+    "link": "#resume"
   },
   "contact": {
     "isActive":  true,
@@ -62,5 +46,21 @@
     "description": "Good memories, best times. My photo journal.",
     "image": "",
     "link": "https://www.instagram.com/yasingencnet/"
+  },
+  "about": {
+    "isActive":  false,
+    "showOnNavigation": false,
+    "title": "About",
+    "description": "I design & develop modern and accessible web interfaces.",
+    "image": "",
+    "link": "/about"
+  },
+  "blog": {
+    "isActive":  false,
+    "showOnNavigation":  false,
+    "title": "Blog",
+    "description": "Articles focused on CSS, HTML, JavaScript, and other frontend stuff.",
+    "image": "",
+    "link": "/blog"
   }
 }
