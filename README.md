@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<center>
 
-## Getting Started
+Hello 👋 
 
-First, run the development server:
+[![alt text](https://github.com/yasingencnet/webkit/assets/5924267/993af830-5a00-42ed-9949-a86de938ef4f)](https://yasingenc.net)
+
+[![LinkedIn](https://github.com/yasingencnet/webkit/assets/5924267/63307c26-ed84-4027-b970-c6b972d4419e)](https://www.linkedin.com/in/yasingencnet/)
+[![Twitter](https://github.com/yasingencnet/webkit/assets/5924267/2fdb1fd7-16ad-4a95-89f6-074b022b96be)](https://twitter.com/yasingencnet)
+[![GitHub](https://github.com/yasingencnet/webkit/assets/5924267/d99ace42-aaee-4aae-95f0-9149e975c261)](https://github.com/yasingencnet)
+[![Awwwards](https://github.com/yasingencnet/webkit/assets/5924267/15d35a80-a264-4674-9958-e9421a06e462)](https://www.awwwards.com/yasingencnet/)
+[![Codepen](https://github.com/yasingencnet/webkit/assets/5924267/e5084782-3645-4a25-8116-6641a3d6a7af)](https://codepen.io/yasingencnet)
+
+
+
+This is my portfolio [https://yasingenc.net](https://yasingenc.net). Drop me a line if I can do anything else for you.
+
+</center>
+
+---
+
+### Run Project
 
 ```bash
+# Run Development
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Run Production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Package List
 
-## Learn More
+Powered by Vercel, Next.js, GSAP, and GitHub.
 
-To learn more about Next.js, take a look at the following resources:
+| Core               | Others                |
+|--------------------|-----------------------|
+| react              | sass                  |
+| react-dom          | @gsap/react           |
+| next               | gsap                  |
+| @uidotdev/usehooks | @studio-freight/lenis |
+| axios              | framer-motion         |
+|                    | react-fast-marquee    |
+|                    | swiper                |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+Feel free to use this project.
