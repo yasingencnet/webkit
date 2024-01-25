@@ -1,10 +1,18 @@
 @import '/assets/media-queries.scss';
 
 .section{
+  position: relative;
   padding: var(--y-spacing) var(--x-spacing);
   background-color: hsl(var(--color-bg-alt));
 }
 
 .header{
   margin-bottom: var(--x-spacing);
+}
+
+.blob{
+  width: 10%;
+  height: 30%;
+  right: 0;
+  top: -20%;
 }

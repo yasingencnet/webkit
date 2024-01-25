@@ -20,7 +20,6 @@ import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 export default function SelectedWorks() {
     const galleryContainer = useRef();
     const container = useRef();
-    const bg = useRef();
     const { contextSafe } = useGSAP({scope: container});
 
     useGSAP(() => {
@@ -55,21 +54,6 @@ export default function SelectedWorks() {
             });
         });
 
-        gsap.utils.toArray(`.${styles.browser}`).forEach((browser, index) => {
-            gsap.from(browser, {
-                xPercent: 20,
-                duration: 1,
-                ease: "elastic",
-                scrollTrigger: {
-                    trigger: browser,
-                    containerAnimation: tl,
-                    start: "left right",
-                    toggleActions: "play none none reverse",
-                    id: index,
-                }
-            });
-        });
-
     }, { scope: galleryContainer });
 
     const scrollToSection = contextSafe((e) => {
@@ -81,7 +65,7 @@ export default function SelectedWorks() {
 
     return (
         <section className={styles.section} id={'works'} ref={container}>
-            <div className={styles.bg} ref={bg}>
+            <div className={styles.bg}>
                 <div className={`${styles.showcase}`}></div>
             </div>
 

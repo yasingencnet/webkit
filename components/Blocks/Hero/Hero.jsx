@@ -28,9 +28,9 @@ export default function Hero() {
         const visitorClock = new Date().getHours();
 
         const greetingMessage =
-            visitorClock >= 5 && visitorClock <= 12 ? 'Good morning,' :
-                visitorClock > 12 && visitorClock <= 17 ? 'Good afternoon,' :
-                    'Good evening,';
+            visitorClock >= 5 && visitorClock <= 12 ? 'Good morning' :
+                visitorClock > 12 && visitorClock <= 17 ? 'Good afternoon' :
+                    'Good evening';
 
         setGreeting(greetingMessage);
 
