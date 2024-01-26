@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import {Manrope, Libre_Baskerville} from 'next/font/google';
 import '@/assets/globals.scss';
 import commonConfig from '@/database/config/metadata.json';
@@ -39,6 +40,7 @@ export default function RootLayout({children}) {
         <Footer/>
         <CustomCursor/>
         <LenisScroller/>
+        <Analytics />
         </body>
         </html>
     )
