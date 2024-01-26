@@ -155,9 +155,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin-bottom: auto;
   padding: 3rem;
   transition: all 0.3s ease;
-  width: 100%;
 }
 .browserBody{
   display: flex;
