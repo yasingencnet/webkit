@@ -17,7 +17,6 @@ export default function Header() {
             <div className={styles.inner}>
                 <Logo classVariable={styles.logo}></Logo>
                 <Navigation isMenuOpen={isMenuOpen}></Navigation>
-                {/*<FancyButton theme='button-2' link={'/'}>Contact</FancyButton>*/}
                 <button type={'button'} className={styles.menuToggle} onClick={toggleMenu}>
                     <span></span>
                     <span></span>

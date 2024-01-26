@@ -1,5 +1,3 @@
-<center>
-
 Hello 👋 
 
 [![alt text](https://github.com/yasingencnet/webkit/assets/5924267/993af830-5a00-42ed-9949-a86de938ef4f)](https://yasingenc.net)
@@ -10,11 +8,7 @@ Hello 👋
 [![Awwwards](https://github.com/yasingencnet/webkit/assets/5924267/15d35a80-a264-4674-9958-e9421a06e462)](https://www.awwwards.com/yasingencnet/)
 [![Codepen](https://github.com/yasingencnet/webkit/assets/5924267/e5084782-3645-4a25-8116-6641a3d6a7af)](https://codepen.io/yasingencnet)
 
-
-
 This is my portfolio [https://yasingenc.net](https://yasingenc.net). Drop me a line if I can do anything else for you.
-
-</center>
 
 ---
 
@@ -43,8 +37,9 @@ Powered by Vercel, Next.js, GSAP, and GitHub.
 | next               | gsap                  |
 | @uidotdev/usehooks | @studio-freight/lenis |
 | axios              | framer-motion         |
-|                    | react-fast-marquee    |
+| @vercel/analytics  | react-fast-marquee    |
 |                    | swiper                |
+|                    | three.js              |
 
 
 ## License

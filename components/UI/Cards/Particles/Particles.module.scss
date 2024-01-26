@@ -1,0 +1,51 @@
+@import '/assets/media-queries.scss';
+
+.section {
+  position: relative;
+  background-color: hsl(var(--color-bg-alt));
+  padding: var(--x-spacing) 0;
+}
+
+.grid{
+  display: flex;
+  flex-direction: column;
+  gap: var(--x-spacing);
+}
+
+.boldTitle{
+  font-size: clamp(4.4rem, 10dvw, var(--fs-xxl));
+  color: hsl(var(--color-white));
+  line-height: 1.1cap;
+  text-align: center;
+  span{
+    display: block;
+    &.boldTitleLeft{
+      /*transform: translateX(50%);*/
+    }
+    &:nth-child(2){
+      font-style: italic;
+    }
+    &.boldTitleRight{
+      /*transform: translateX(50%);*/
+    }
+  }
+}
+
+.paragraph{
+  font-size: var(--fs-sm);
+  color: hsl(var(--color-body));
+  max-width: 35ch;
+
+  &.paragraphAlt{
+    margin-left: auto;
+  }
+}
+
+.blob{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+  background: conic-gradient(hsl(0, 0%, 0%), hsla(0, 0%, 100%, 0.1));
+}

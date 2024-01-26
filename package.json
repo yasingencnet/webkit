@@ -21,7 +21,8 @@
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.2",
     "sass": "^1.69.4",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.5",
+    "three": "^0.160.1"
   },
   "devDependencies": {
     "eslint": "^8",

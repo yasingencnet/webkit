@@ -2,7 +2,8 @@
 
 .hero {
   position: relative;
-  .inner{
+
+  .inner {
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -18,17 +19,19 @@
   }
 }
 
-.title{
+.title {
   margin-bottom: 3rem;
   @include respond-above(xl) {
     max-width: 68vw;
   }
-  .splitLine{
+
+  .splitLine {
     overflow: hidden;
     margin: calc(-1 * 1.2rem) 0;
     padding: 1.2rem 0;
   }
-  h1{
+
+  h1 {
     font-weight: var(--fw-light);
     line-height: 1.1;
     font-size: var(--fs-xl);
@@ -39,7 +42,8 @@
       --fs-xl: 3rem;
     }
   }
-  .icon{
+
+  .icon {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +64,7 @@
       display: flex;
     }
 
-    .heroImg{
+    .heroImg {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -68,7 +72,8 @@
       transform-origin: left center;
       border-radius: 100vw;
     }
-    .reveal{
+
+    .reveal {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -80,7 +85,7 @@
   }
 }
 
-.description{
+.description {
   margin-bottom: 3rem;
   font-size: var(--fs-sm);
   color: hsl(var(--color-white));
@@ -94,10 +99,12 @@
   height: 100%;
   inset: 0;
   z-index: -1;
+
   > * {
     position: absolute;
   }
-  .noise{
+
+  .noise {
     inset: 0;
     width: 100%;
     height: 100%;
@@ -105,17 +112,21 @@
     background: url('/noise.png') repeat;
     pointer-events: none;
   }
-  .line{
+
+  .line {
     width: 50%;
     height: 100%;
     display: flex;
-    &.lineLeft{
+
+    &.lineLeft {
       left: 0;
     }
-    &.lineRight{
+
+    &.lineRight {
       right: 0;
     }
-    svg{
+
+    svg {
       width: 100%;
       height: auto;
       margin-top: auto;
@@ -123,7 +134,7 @@
   }
 }
 
-.fakeContainer{
+.fakeContainer {
   position: absolute;
   inset: 0;
   opacity: .5;
@@ -132,4 +143,19 @@
   pointer-events: none;
   user-select: none;
   z-index: -999999;
+}
+
+.particlesBG {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+
+  > * {
+    width: 100% !important;
+    height: 100% !important;
+  }
 }

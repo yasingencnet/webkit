@@ -13,7 +13,7 @@ import commonConfig from '@/database/config/metadata.json';
 import FadeIn from "@/components/UI/FadeIn/FadeIn";
 import PreLoader from "@/components/Blocks/PreLoader/PreLoader";
 import Blobs from "@/components/UI/Elements/Blobs/Blobs";
-
+import Particles from "@/components/UI/Cards/Particles/Particles";
 
 export default function Hero() {
     const [preloaderComplete, setPreloaderComplete] = useState(false);
@@ -153,6 +153,7 @@ export default function Hero() {
                         </div>
                     </div>
                     <div className={styles.background}>
+
                         <div className={styles.noise}></div>
                         <div className={`${styles.line} ${styles.lineLeft}`}>
                             <svg width="962" height="995" viewBox="0 0 962 995" fill="none"
@@ -318,6 +319,7 @@ export default function Hero() {
                                 </defs>
                             </svg>
                         </div>
+                        <Particles className={styles.particlesBG}/>
 
                         <Blobs type={'v1'}/>
                         <Blobs type={'v2'}/>
@@ -326,6 +328,7 @@ export default function Hero() {
                 </div>
                 <div className={styles.fakeContainer} ref={fakeContainer}></div>
             </section>
+
         </>
     )
 }
