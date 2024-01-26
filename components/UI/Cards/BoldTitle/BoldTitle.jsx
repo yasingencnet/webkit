@@ -11,13 +11,14 @@ import TextReveal from "@/components/UI/Elements/TextReveal/TextReveal";
 import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 
 export default function BoldTitle() {
-    const container = useRef();
     const boldTitle = useRef();
+    const boldTitleLeft = useRef();
+    const boldTitleRight = useRef();
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        const boldTitleTL = gsap.timeline({
+        const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: boldTitle.current,
                 start: 'top bottom',
@@ -28,31 +29,31 @@ export default function BoldTitle() {
         });
 
         // BoldText
-        boldTitleTL.fromTo(`.${styles.boldTitleLeft}`, {
+        tl.fromTo(boldTitleLeft.current, {
             xPercent: -50,
         }, {
             xPercent: -10,
         }, 0);
-        boldTitleTL.fromTo(`.${styles.boldTitleRight}`, {
+        tl.fromTo(boldTitleRight.current, {
             xPercent: 50,
         }, {
             xPercent: 10,
         }, 0);
 
-    }, { scope: container });
+    });
 
     return(
 
-        <section className={styles.section} ref={container}>
+        <section className={styles.section}>
             <Container className={styles.grid}>
                 <TextReveal className={styles.paragraph}>
                     I&apos;ve worked in UI design and front-end development, so I can
                     understand designs well and builds effective communication between team members.
                 </TextReveal>
                 <h2 className={styles.boldTitle} ref={boldTitle}>
-                    <span className={styles.boldTitleLeft}>Creative</span>
+                    <span className={styles.boldTitleLeft} ref={boldTitleLeft}>Creative</span>
                     <span>Frontend</span>
-                    <span className={styles.boldTitleRight}>Developer</span>
+                    <span className={styles.boldTitleRight} ref={boldTitleRight}>Developer</span>
                 </h2>
                 <TextReveal className={`${styles.paragraph} ${styles.paragraphAlt}`}>
                     Currently, I live in Seattle. In my personal life, I love to travel with

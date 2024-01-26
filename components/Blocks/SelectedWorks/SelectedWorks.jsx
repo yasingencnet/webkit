@@ -54,6 +54,22 @@ export default function SelectedWorks() {
             });
         });
 
+        let browserArray = gsap.utils.toArray(`.${styles.browser}`);
+        browserArray.forEach((browser, index) => {
+            gsap.from(browser, {
+                xPercent: 20,
+                duration: 1,
+                ease: "elastic",
+                scrollTrigger: {
+                    trigger: browser,
+                    containerAnimation: tl,
+                    start: "left right",
+                    toggleActions: "play none none reverse",
+                    id: index,
+                }
+            });
+        });
+
     }, { scope: galleryContainer });
 
     const scrollToSection = contextSafe((e) => {

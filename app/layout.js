@@ -30,9 +30,7 @@ export const viewport = {
 
 export default function RootLayout({children}) {
     return (
-        <html lang="en" className={bodyFont.className} style={{
-            '--overflow': 'auto'
-        }}>
+        <html lang="en" className={bodyFont.className}>
         <body>
         <Header />
         <main>
