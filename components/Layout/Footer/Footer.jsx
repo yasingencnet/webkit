@@ -59,9 +59,9 @@ export default function Footer() {
         <footer className={styles.footer} ref={container} id={'footer'}>
             <div className={styles.inner}>
                 <div className={styles.connect}>
-                    <div className={styles.title}>
-                        <Title color="white"><span>Let’s</span>  <br/>Connect.</Title>
-                    </div>
+                    <h2 className={styles.title}>
+                        <span>Let’s</span>  <br/>Connect.
+                    </h2>
 
                     <Link className={styles.email} href={`mailto:${commonConfig.personal.email}`}>
                         {commonConfig.personal.email}

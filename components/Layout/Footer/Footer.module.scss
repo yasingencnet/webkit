@@ -80,6 +80,13 @@
 .title{
   margin-bottom: 3rem;
   padding: 1rem;
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  color: hsl(var(--color-white));
+  font-size: var(--fs-xl);
+  span:not([class]) {
+    opacity: .5;
+  }
   @include respond-below(sm) {
     margin-bottom: 1.5rem;
   }

@@ -102,7 +102,7 @@ export default function Hero() {
 
             // Scale Content
             gsap.to(`.${styles.inner}`, {
-                scale: 0.6,
+                scale: 0.8,
                 scrollTrigger: {
                     trigger: fakeContainer.current,
                     scrub: true,
