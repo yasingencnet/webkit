@@ -11,13 +11,15 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Logo from '@/components/UI/Elements/Logo/Logo';
-import Title from "@/components/UI/Elements/Title/Title";
 import { getCurrentYear } from "@/utils/utils.js";
 import SocialLinks from "@/components/UI/Cards/SocialLinks/SocialLinks";
 import NavDetailed from "@/components/UI/Cards/NavDetailed/NavDetailed";
 import WeatherAPI from "@/components/UI/Elements/WeatherAPI/WeatherAPI";
+import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 
 export default function Footer() {
+    gsap.registerPlugin(ScrollTrigger);
+
     const container = useRef(null);
     const footerBottom = useRef(null);
     const skeleton = useRef(null);
@@ -37,10 +39,9 @@ export default function Footer() {
         setCurrentTime(clientTime);
     }, []);
 
-    // Skeleton Animation
+    // GSAP
     useGSAP(() => {
-        gsap.registerPlugin(ScrollTrigger);
-
+        // Skeleton
         gsap.from(skeleton.current, {
             scrollTrigger: {
                 trigger: footerBottom.current,
@@ -57,6 +58,7 @@ export default function Footer() {
 
     return (
         <footer className={styles.footer} ref={container} id={'footer'}>
+            <Blobs type={'v1'} classVariable={`${styles.blob}`}/>
             <div className={styles.inner}>
                 <div className={styles.connect}>
                     <h2 className={styles.title}>

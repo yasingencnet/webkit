@@ -72,7 +72,7 @@
   width: fit-content;
   padding: var(--x-spacing);
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: flex-start;
 
   @include respond-below(md) {
     flex-direction: column;
@@ -82,8 +82,8 @@
     gap: calc(var(--x-spacing) * 2);
   }
   > * {
-    width: 40dvw;
-    height: calc(100dvh - (var(--x-spacing) * 2));
+    width: 38dvw;
+    height: calc(100dvh - (var(--x-spacing) * 2.3));
     transition: all .3s ease;
     @include respond-below(md) {
       width: 100%;

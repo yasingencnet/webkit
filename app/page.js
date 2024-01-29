@@ -13,9 +13,8 @@ export default function Home() {
         <>
             <Hero/>
             <SelectedWorks/>
-            <ExperienceBlock/>
             <SkillSet/>
-            <Ticker words={['accessibility', 'responsiveness', 'interactive', 'performance']}></Ticker>
+            <ExperienceBlock/>
             <BoldTitle></BoldTitle>
             <Resume/>
             <Gallery/>

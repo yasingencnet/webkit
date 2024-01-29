@@ -90,3 +90,53 @@
     }
   }
 }
+
+.info{
+  font-size: var(--fs-xs);
+  color: hsl(var(--color-white));
+}
+.openToWork{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--fs-ms);
+  color: hsla(var(--color-white), .9);
+  line-height: 1;
+  border: 1px solid hsla(var(--color-white), .3);
+  padding: 0.8rem 1rem;
+  border-radius: 100rem;
+  span{
+    position: relative;
+    box-sizing: content-box;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: hsl(var(--color-success));
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      animation: pulsate 2s infinite;
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 0 0 hsl(var(--color-success));
+      box-shadow: 0 0 0 0 hsl(var(--color-success));
+    }
+  }
+  @keyframes pulsate {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 hsla(var(--color-success), .1);
+    }
+    50% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0.8rem hsla(var(--color-success), .2);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 hsla(var(--color-success), .1);
+    }
+  }
+}

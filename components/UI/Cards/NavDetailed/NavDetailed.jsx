@@ -26,6 +26,7 @@ export default function NavDetailed() {
             <ul className={styles.ul}>
 
                 {Object.values(PageList)
+                    .filter(item => item.showOnFooter)
                     .filter(item => item.isActive)
                     .map((item, index) => (
                     <li key={index}>

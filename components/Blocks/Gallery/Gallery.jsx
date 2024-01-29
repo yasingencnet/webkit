@@ -25,6 +25,7 @@ import commonConfig from '@/database/config/metadata.json';
 import ImageVideo from '@/database/ImageVideo.json';
 import Container from "@/components/UI/Layout/Layout";
 import FadeIn from "@/components/UI/FadeIn/FadeIn";
+import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 export default function Gallery() {
     const swiperRef = useRef();
     const container = useRef();
@@ -71,6 +72,7 @@ export default function Gallery() {
 
     return (
         <section className={styles.section} ref={container}>
+            <Blobs type={'v2'} classVariable={`${styles.blob}`}/>
             <Container>
                 <header className={styles.header}>
                     <Title color={'white'}><span>My</span> Photo <br/>Journal</Title>

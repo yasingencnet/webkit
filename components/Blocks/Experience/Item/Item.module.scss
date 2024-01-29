@@ -10,6 +10,7 @@
   transition: all 0.2s;
   padding: 4rem 0;
   gap: 3rem;
+  /*background: hsl(var(--h), var(--s), var(--l));*/
   @include respond-below(sm) {
     flex-direction: column;
     align-items: flex-start;

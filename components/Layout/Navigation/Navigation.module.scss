@@ -60,6 +60,7 @@
           text-align: left;
         }
         &:hover{
+          cursor: pointer;
           color: hsl(var(--color-black));
         }
       }

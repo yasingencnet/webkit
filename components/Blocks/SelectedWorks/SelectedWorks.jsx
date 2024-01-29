@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Works from '@/database/Works.json';
+import commonConfig from "@/database/config/metadata.json";
 
 import styles from './SelectedWorks.module.scss';
 
@@ -92,7 +93,7 @@ export default function SelectedWorks() {
                         I&apos;ve played a key role in developing impactful projects. Here&apos;s a curated selection
                         showcasing my expertise and the achieved results.
                     </TextReveal>
-                    <FancyButton theme='button-2' element={'button'} type={'button'} onClick={() => scrollToSection('#footer')}>
+                    <FancyButton theme='button-2' link={`mailto:${commonConfig.personal.email}`} target={'_blank'}>
                         Contact
                     </FancyButton>
 

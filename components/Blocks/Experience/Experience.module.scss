@@ -1,6 +1,7 @@
 @import '/assets/media-queries.scss';
 
 .section{
+  position: relative;
   padding: var(--y-spacing) var(--x-spacing);
   background-color: hsl(var(--color-bg-alt));
 }

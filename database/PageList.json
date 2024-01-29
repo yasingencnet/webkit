@@ -2,30 +2,34 @@
   "works": {
     "isActive": true,
     "showOnNavigation":  true,
+    "showOnFooter":  true,
     "title": "Works",
     "description": "Here's a curated selection showcasing my expertise and the achieved results.",
     "image": "",
     "link": "#works"
   },
-  "experience": {
-    "isActive": true,
-    "showOnNavigation":  true,
-    "title": "Experience",
-    "description": "Check out the things I'm good at, from building websites to design and more.",
-    "image": "",
-    "link": "#experience"
-  },
   "skills": {
     "isActive": true,
     "showOnNavigation":  true,
+    "showOnFooter":  true,
     "title": "Skills",
     "description": "Check out the things I'm good at, from building websites to design and more.",
     "image": "",
     "link": "#skills"
   },
+  "experience": {
+    "isActive": true,
+    "showOnNavigation":  true,
+    "showOnFooter":  true,
+    "title": "Experience",
+    "description": "Check out the things I'm good at, from building websites to design and more.",
+    "image": "",
+    "link": "#experience"
+  },
   "resume": {
     "isActive": true,
     "showOnNavigation":  true,
+    "showOnFooter":  true,
     "title": "Resume",
     "description": "See my work history and what I've achieved in a quick and easy resume.",
     "image": "",
@@ -34,6 +38,7 @@
   "contact": {
     "isActive":  true,
     "showOnNavigation":  true,
+    "showOnFooter":  false,
     "title": "Contact",
     "description": "Now it’s your turn to say hi. I hope to hear from you!",
     "image": "",
@@ -42,6 +47,7 @@
   "instagram": {
     "isActive":  true,
     "showOnNavigation":  false,
+    "showOnFooter":  true,
     "title": "Instagram",
     "description": "Good memories, best times. My photo journal.",
     "image": "",
@@ -50,6 +56,7 @@
   "about": {
     "isActive":  false,
     "showOnNavigation": false,
+    "showOnFooter": false,
     "title": "About",
     "description": "I design & develop modern and accessible web interfaces.",
     "image": "",
@@ -58,6 +65,7 @@
   "blog": {
     "isActive":  false,
     "showOnNavigation":  false,
+    "showOnFooter":  false,
     "title": "Blog",
     "description": "Articles focused on CSS, HTML, JavaScript, and other frontend stuff.",
     "image": "",

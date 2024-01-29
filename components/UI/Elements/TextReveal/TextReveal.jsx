@@ -29,7 +29,7 @@ export default function TextReveal({className, children}) {
                     toggleActions: "restart pause resume reverse",
                     start: "top 85%",
                 },
-                duration: 0.8,
+                duration: 1,
                 autoAlpha: 0,
                 ease: "power1.out",
                 stagger: 0.01,

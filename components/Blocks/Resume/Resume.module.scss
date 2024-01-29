@@ -244,13 +244,30 @@
     flex-wrap: wrap;
     gap: 1rem;
     a{
+      position: relative;
       display: inline-block;
-      padding: 1rem;
+      padding: .5rem;
       color: hsl(var(--color-body));
       font-size: var(--fs-xs);
       text-decoration: none;
       transition: all 0.3s ease-in-out;
+      &:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: hsl(var(--color-primary));
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+      }
       &:hover{
+        &:after{
+          transform-origin: left;
+          transform: scaleX(1);
+        }
         color: hsl(var(--color-primary));
       }
     }

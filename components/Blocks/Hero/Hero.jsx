@@ -22,20 +22,6 @@ export default function Hero() {
     const textRef = useRef(null);
     const {contextSafe} = useGSAP({scope: container});
 
-    // Greeting Message
-    const [greeting, setGreeting] = useState('');
-    useEffect(() => {
-        const visitorClock = new Date().getHours();
-
-        const greetingMessage =
-            visitorClock >= 5 && visitorClock <= 12 ? 'Good morning' :
-                visitorClock > 12 && visitorClock <= 17 ? 'Good afternoon' :
-                    'Good evening';
-
-        setGreeting(greetingMessage);
-
-    }, []);
-
     const handlePreloaderComplete = () => {
         setPreloaderComplete(true);
     };
@@ -63,8 +49,9 @@ export default function Hero() {
             // Hero Title
             textRef.current.style.opacity = 1;
             const splitText = new SplitText(textRef.current, {
-                type: 'words, chars',
-                wordsClass: `${styles.splitLine}`,
+                type: 'words, lines',
+                linesClass: `${styles.splitLine}`,
+                wordsClass: `${styles.splitWords}`,
             });
             const tl = gsap.timeline({
                 scrollTrigger: {
@@ -73,12 +60,12 @@ export default function Hero() {
                     start: "top 90%",
                 },
             });
-            tl.from(splitText.chars, {
+            tl.from(splitText.words, {
                 duration: 0.4,
                 autoAlpha: 0,
                 y: 120,
                 ease: "power1.out",
-                stagger: 0.01,
+                stagger: 0.08,
             });
 
             // Image Reveal
@@ -133,23 +120,21 @@ export default function Hero() {
             <section className={styles.hero}>
                 <div ref={container}>
                     <div className={styles.inner}>
-                        <FadeIn><p className={styles.description}>{greeting}</p></FadeIn>
                         <div className={styles.title}>
                             <h1 ref={textRef}>
-                                I&apos;m Yasin
-                                <span className={`${styles.icon}`}>
-                            <span className={styles.reveal}></span>
-                                <Image
-                                    src="/hero-image.jpg"
-                                    alt={commonConfig.metadata.title}
-                                    width={640}
-                                    height={300}
-                                    priority
-                                    className={styles.heroImg}
-                                />
-                            </span>
-                                {commonConfig.metadata.description}
+                                I&apos;m Yasin <span className={`${styles.icon}`}>
+                                    <span className={styles.reveal}></span>
+                                    <Image
+                                        src="/hero-image.jpg"
+                                        alt={commonConfig.metadata.title}
+                                        width={640}
+                                        height={300}
+                                        priority
+                                        className={styles.heroImg}
+                                    />
+                                </span> <br/> Creative Frontend Developer.
                             </h1>
+                            <p>{commonConfig.metadata.description}</p>
                         </div>
                     </div>
                     <div className={styles.background}>
@@ -328,7 +313,6 @@ export default function Hero() {
                 </div>
                 <div className={styles.fakeContainer} ref={fakeContainer}></div>
             </section>
-
         </>
     )
 }

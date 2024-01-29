@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import styles from './Header.module.scss'
 import Logo from '@/components/UI/Elements/Logo/Logo';
-import FancyButton from '@/components/UI/Elements/Button/Button';
 import Navigation from '@/components/Layout/Navigation/Navigation';
 export default function Header() {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -16,6 +15,7 @@ export default function Header() {
         <header className={`${styles.header} ${isMenuOpen ? styles.menuOpen : ''}`}>
             <div className={styles.inner}>
                 <Logo classVariable={styles.logo}></Logo>
+                <div className={styles.openToWork}><span></span> Open To Work</div>
                 <Navigation isMenuOpen={isMenuOpen}></Navigation>
                 <button type={'button'} className={styles.menuToggle} onClick={toggleMenu}>
                     <span></span>
