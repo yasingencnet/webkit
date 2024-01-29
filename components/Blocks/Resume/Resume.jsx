@@ -66,17 +66,11 @@ export default function Resume() {
                                 </div>
                                 <hr/>
                                 <div className={styles.cardSectionTitle}>WORK EXPERIENCE</div>
-                                <div className={styles.pseudo}>
-                                    <span></span><span></span><span></span>
-                                    <span></span><span></span><span></span>
-                                    <span></span><span></span><span></span>
-                                    <span></span><span></span><span></span>
-                                    <span></span><span></span><span></span>
-                                    <span></span><span></span><span></span>
-                                    <span></span><span></span><span></span>
-                                    <span></span><span></span><span></span>
-                                    <span></span><span></span><span></span>
-                                </div>
+                                <p>
+                                    Senior Frontend Developer | TenTwenty Digital Agency <br/>
+                                    UI & Frontend Developer | Denge Bilgisayar <br/>
+                                    Frontend Developer | Agency Look
+                                </p>
                             </div>
                             <figure className={styles.figure}>
                                 <Image src="/yasin-genc-photo.jpeg" alt="Yasin Genc" width={150} height={150}/>

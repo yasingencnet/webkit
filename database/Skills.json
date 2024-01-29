@@ -21,13 +21,6 @@
     "description": "I prioritize pixel perfection, paying close attention to details for visually polished and precisely aligned designs, ensuring a seamless user experience."
   },
   {
-    "icon": "IconGSAP",
-    "image": "/icon/icon-gsap.svg",
-    "title": "GSAP",
-    "subtitle": "Scroll Animations",
-    "description": "I use GSAP for captivating animations that bring web pages to life, enhancing the overall user experience."
-  },
-  {
     "icon": "IconHTML",
     "image": "/icon/icon-html.svg",
     "title": "HTML",
@@ -61,5 +54,12 @@
     "title": "REST APIs",
     "subtitle": "Axios x Fetch",
     "description": "I integrate data and functionality seamlessly with REST APIs, creating dynamic web applications for enhanced performance."
+  },
+  {
+    "icon": "IconGSAP",
+    "image": "/icon/icon-gsap.svg",
+    "title": "GSAP",
+    "subtitle": "Scroll Animations",
+    "description": "I use GSAP for captivating animations that bring web pages to life, enhancing the overall user experience."
   }
 ]

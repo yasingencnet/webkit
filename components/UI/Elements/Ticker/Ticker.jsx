@@ -36,8 +36,10 @@ export default function Ticker({
     });
 
     return (
-        <Marquee direction={direction} delay={delay} speed={speed}>
-            {elements}
-        </Marquee>
+        <section className={styles.section}>
+            <Marquee direction={direction} delay={delay} speed={speed}>
+                {elements}
+            </Marquee>
+        </section>
     )
 }
