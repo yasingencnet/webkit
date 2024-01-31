@@ -10,6 +10,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include respond-below(xs) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
 }
 
 .slider{
@@ -35,7 +40,7 @@
     width: fit-content;
   }
   @include respond-below(xl) {
-    height: 60rem
+    height: 50rem;
   }
 }
 

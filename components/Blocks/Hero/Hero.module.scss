@@ -40,13 +40,13 @@
   h1 {
     font-weight: var(--fw-bold);
     font-size: var(--fs-xml);
-    line-height: 0.9;
+    line-height: 1;
     opacity: 0;
     transition: all 0.3s ease-in;
     color: hsl(var(--color-white));
-
-    @include respond-below(xs) {
-      --fs-xl: 3rem;
+    @include respond-above(xl) {
+      max-width: 68vw;
+      line-height: 0.9;
     }
   }
 
@@ -62,11 +62,15 @@
     margin: 0 1.5rem;
     z-index: 111;
     position: relative;
-    @include respond-below(lg) {
-      height: 6.6rem;
-      width: 22rem;
+    @include respond-below(xml) {
+      height: 7.8rem;
+      width: 24rem;
     }
-    @include respond-below(sm) {
+    @include respond-below(lg) {
+      height: 6.4rem;
+      width: 20rem;
+    }
+    @include respond-below(md) {
       margin: 1.5rem auto;
       display: flex;
     }

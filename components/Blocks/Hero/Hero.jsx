@@ -20,6 +20,7 @@ export default function Hero() {
     const container = useRef();
     const fakeContainer = useRef();
     const textRef = useRef(null);
+    const descRef = useRef();
     const {contextSafe} = useGSAP({scope: container});
 
     const handlePreloaderComplete = () => {
@@ -32,6 +33,9 @@ export default function Hero() {
         gsap.set(`.${styles.line} svg path`, {
             drawSVG: '0%',
         });
+        gsap.set(descRef.current, {
+            autoAlpha: 0,
+        })
 
         if (preloaderComplete) {
             // Line Animation
@@ -67,6 +71,13 @@ export default function Hero() {
                 ease: "power1.out",
                 stagger: 0.08,
             });
+
+            // Description
+            gsap.to(descRef.current, {
+                autoAlpha: 1,
+                duration: 3,
+                ease: "power1.out",
+            })
 
             // Image Reveal
             gsap.to(`.${styles.reveal}`, {
@@ -134,7 +145,7 @@ export default function Hero() {
                                     />
                                 </span> <br/> Creative Frontend Developer.
                             </h1>
-                            <p>{commonConfig.metadata.description}</p>
+                            <p ref={descRef}>{commonConfig.metadata.description}</p>
                         </div>
                     </div>
                     <div className={styles.background}>

@@ -9,7 +9,7 @@ import styles from './Navigation.module.scss'
 import Link from "next/link";
 import PageList from '@/database/PageList.json';
 
-export default function Navigation({ isMenuOpen }) {
+export default function Navigation({ isMenuOpen, setMenuOpen }) {
     gsap.registerPlugin(ScrollToPlugin);
 
     const navigationRef = useRef();
@@ -42,6 +42,7 @@ export default function Navigation({ isMenuOpen }) {
     });
 
     const scrollToSection = contextSafe((e) => {
+        setMenuOpen(false);
         gsap.to(window, {
             duration: 1,
             scrollTo: e

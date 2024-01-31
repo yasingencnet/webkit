@@ -3,9 +3,12 @@
 .footer{
   position: relative;
   background: hsl(var(--color-bg-alt));
-  padding: var(--y-spacing) var(--x-spacing) 9rem;
+  padding: var(--y-spacing) var(--x-spacing) 3rem;
   overflow: hidden;
   border-top: 1px solid hsla(var(--color-white), 0.1);
+  @include respond-above(xs) {
+    padding: var(--y-spacing) var(--x-spacing) 9rem;
+  }
 
   .inner{
     position: relative;

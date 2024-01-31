@@ -53,23 +53,25 @@ export default function SelectedWorks() {
                 },
                 ease: 'none',
             });
-        });
 
-        let browserArray = gsap.utils.toArray(`.${styles.browser}`);
-        browserArray.forEach((browser, index) => {
-            gsap.from(browser, {
-                xPercent: 20,
-                duration: 1,
-                ease: "elastic",
-                scrollTrigger: {
-                    trigger: browser,
-                    containerAnimation: tl,
-                    start: "left right",
-                    toggleActions: "play none none reverse",
-                    id: index,
-                }
+            let browserArray = gsap.utils.toArray(`.${styles.browser}`);
+            browserArray.forEach((browser, index) => {
+                gsap.from(browser, {
+                    xPercent: 20,
+                    duration: 1,
+                    ease: "elastic",
+                    scrollTrigger: {
+                        trigger: browser,
+                        containerAnimation: tl,
+                        start: "left right",
+                        toggleActions: "play none none reverse",
+                        id: index,
+                    }
+                });
             });
         });
+
+
 
     }, { scope: galleryContainer });
 
@@ -85,7 +87,6 @@ export default function SelectedWorks() {
             <div className={styles.bg}>
                 <div className={`${styles.showcase}`}></div>
             </div>
-
             <div className={styles.xScrollContainer} ref={galleryContainer}>
                 <header className={styles.header}>
                     <Title color="white">Selected <br/>Works</Title>
@@ -97,14 +98,15 @@ export default function SelectedWorks() {
                         Contact
                     </FancyButton>
 
-                    <Blobs type={'v2'} />
+                    <Blobs type={'v2'}/>
                 </header>
 
                 {Works.map((work, index) => {
                     const lightness = parseFloat(work.color.l);
 
                     return (
-                        <div key={index} className={`${styles.browser}`} style={{'--h': work.color.h, '--s': work.color.s, '--l': work.color.l}}>
+                        <div key={index} className={`${styles.browser}`}
+                             style={{'--h': work.color.h, '--s': work.color.s, '--l': work.color.l}}>
                             <div className={`${styles.browserHeader} ${lightness >= 50 ? styles.dark : ''}`}>
                                 <h3 className={styles.title}>{work.title}</h3>
                                 <span className={styles.date}>{work.date}</span>

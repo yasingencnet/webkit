@@ -54,7 +54,7 @@ export default function Footer() {
             }
         });
 
-    }, {scope: container})
+    }, {scope: container});
 
     return (
         <footer className={styles.footer} ref={container} id={'footer'}>

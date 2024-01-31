@@ -15,7 +15,7 @@ export default function Home() {
             <SelectedWorks/>
             <SkillSet/>
             <ExperienceBlock/>
-            <BoldTitle></BoldTitle>
+            <BoldTitle/>
             <Resume/>
             <Gallery/>
         </>

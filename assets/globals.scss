@@ -41,6 +41,14 @@
   --x-spacing: 9rem;
   --y-spacing: 24rem;
 
+  @media (max-width: 1366px) and (max-height: 820px) {
+    --header-height: 18rem;
+  }
+
+
+  @include respond-below(xml) {
+    --fs-xml: 10rem;
+  }
   @include respond-below(lg) {
     --fs-xxs: 1.4rem;
     --fs-xs: 1.6rem;
@@ -48,20 +56,25 @@
     --fs-md: 2.4rem;
     --fs-lg: 3.6rem;
     --fs-xl: 5.8rem;
+    --fs-xml: 8rem;
     --fs-xxl: 12rem;
 
     --x-spacing: 6rem;
     --y-spacing: 20rem;
   }
   @include respond-below(md) {
+    --fs-md: 2rem;
+    --fs-xml: 6rem;
     --fs-xl: 4.8rem;
     --fs-xxl: 10rem;
     --y-spacing: 12rem;
   }
   @include respond-below(sm) {
+    --fs-md: 1.8rem;
+    --fs-xml: 5rem;
     --fs-xl: 4.0rem;
     --x-spacing: 3rem;
-    --header-height: 18rem;
+    --header-height: 14rem;
   }
 
 }

@@ -16,7 +16,7 @@ export default function Header() {
             <div className={styles.inner}>
                 <Logo classVariable={styles.logo}></Logo>
                 <div className={styles.openToWork}><span></span> Open To Work</div>
-                <Navigation isMenuOpen={isMenuOpen}></Navigation>
+                <Navigation isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen}></Navigation>
                 <button type={'button'} className={styles.menuToggle} onClick={toggleMenu}>
                     <span></span>
                     <span></span>
