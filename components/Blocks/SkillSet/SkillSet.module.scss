@@ -8,12 +8,10 @@
 .grid{
   display: grid;
   grid-template-columns: 1fr;
-  padding: 0 var(--x-spacing);
+  padding: var(--y-spacing) var(--x-spacing) 0;
   gap: 6rem;
-  /*> * {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-  }*/
+
+  overflow: hidden;
 }
 
 .sphereWrapper{
@@ -63,12 +61,22 @@
   }
 }
 
+.blobs{
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
 .blob{
   pointer-events: none;
   user-select: none;
   &.blobV1 {
     top: 20%;
-    height: 30%;
+    height: 20%;
+  }
+  &.blobV2 {
+    top: 20%;
+    height: 40%;
   }
 }
 .dragMe{
@@ -86,13 +94,21 @@
 
 .circularCarouselWrapper{
   position: relative;
-  --circSize: 70dvw;
-  --cardSize: calc(var(--circSize) / 4.8);
+  --circSize: 65dvw;
+  --cardSize: calc(var(--circSize) / 5.2);
   padding: calc(var(--cardSize) / 2);
   margin: 0 auto 0 auto;
   width: fit-content;
-  height: calc(var(--circSize) * 0.6);
+  height: calc(var(--circSize) * 0.66);
   overflow: hidden;
+
+  @include respond-below(sm) {
+    --circSize: 150dvw;
+    --cardSize: calc(var(--circSize) / 4);
+    padding: calc(var(--cardSize) / 2);
+    height: calc(var(--circSize) * 0.7);
+    left: -50dvw;
+  }
 
   .circularCarousel{
     width: var(--circSize);
@@ -114,6 +130,10 @@
     align-items: center;
     background: conic-gradient(#f0f0f0, hsla(var(--color-white), 1));
     border-radius: 2rem;
+
+    .image{
+      max-width: calc(var(--cardSize) - (var(--cardSize) / 2));
+    }
   }
   .collisionDiv{
     --width: 0.2rem;
@@ -138,6 +158,11 @@
 
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    @include respond-below(sm) {
+      padding: 0 1.5rem;
+      top: calc(var(--cardSize) * 1.3);
+      gap: 1.5rem;
+    }
     &.isActive {
       opacity: 1;
       transform: translate(-50%, 0%);

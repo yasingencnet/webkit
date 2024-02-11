@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 
 import styles from './BoldTitle.module.scss';
 import Container from "@/components/UI/Layout/Layout";
@@ -16,7 +17,15 @@ export default function BoldTitle() {
     const boldTitleRight = useRef();
 
     useGSAP(() => {
-        gsap.registerPlugin(ScrollTrigger);
+        gsap.registerPlugin(ScrollTrigger, SplitText);
+
+        const splitTextLeft = new SplitText(boldTitleLeft.current, {
+            type: 'chars',
+        });
+        const splitTextRight = new SplitText(boldTitleRight.current, {
+            type: 'chars',
+        });
+
 
         const tl = gsap.timeline({
             scrollTrigger: {

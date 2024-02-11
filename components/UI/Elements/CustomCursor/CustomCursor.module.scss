@@ -12,4 +12,8 @@
   user-select: none;
   pointer-events: none;
 
+  @media (pointer: coarse), (pointer: none) {
+    display: none;
+  }
+
 }

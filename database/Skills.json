@@ -28,6 +28,13 @@
     "description": "Beyond markup, HTML is crucial for an inclusive web. I structure content carefully for universal accessibility."
   },
   {
+    "icon": "IconOptimization",
+    "image": "/icon/icon-optimization.svg",
+    "title": "PageSpeed",
+    "subtitle": "Insights",
+    "description": "I specialize in enhancing website performance, ensuring fast loading times and efficient resource utilization for an optimal user experience."
+  },
+  {
     "icon": "IconA11Y",
     "image": "/icon/icon-a11y.svg",
     "title": "A11Y",

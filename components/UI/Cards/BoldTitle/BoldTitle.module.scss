@@ -4,6 +4,8 @@
   position: relative;
   background-color: hsl(var(--color-bg-alt));
   padding: var(--x-spacing) 0;
+  max-width: 100dvw;
+  overflow: hidden;
 }
 
 .grid{
@@ -19,14 +21,22 @@
   text-align: center;
   span{
     display: block;
-    &.boldTitleLeft{
-      /*transform: translateX(50%);*/
+    &.boldTitleLeft, &.boldTitleRight{
+      > div {
+        transition: all .3s ease;
+        &:hover{
+          transform: scale(1.3);
+        }
+        &:has(+ :hover), &:hover + div {
+          transform: scale(1.2);
+        }
+        &:has(+ div + :hover), &:hover + div + div {
+          transform: scale(1.1);
+        }
+      }
     }
     &:nth-child(2){
       font-style: italic;
-    }
-    &.boldTitleRight{
-      /*transform: translateX(50%);*/
     }
   }
 }

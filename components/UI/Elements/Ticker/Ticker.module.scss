@@ -1,7 +1,9 @@
-.section{
-    padding: var(--y-spacing) 0;
+.section {
+  padding: var(--y-spacing) 0 var(--x-spacing);
+  overflow: hidden;
 }
-.ticker__text{
+
+.ticker__text {
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -14,7 +16,7 @@
   -webkit-text-stroke-color: hsla(var(--color-white), .2);
   transition: all 0.3s ease-in-out;
 
-  svg{
+  svg {
     transform: translateY(17px);
     margin: 0 60px;
   }

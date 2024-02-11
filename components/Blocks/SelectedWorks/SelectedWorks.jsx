@@ -20,12 +20,24 @@ import TextReveal from "@/components/UI/Elements/TextReveal/TextReveal";
 import Blobs from "@/components/UI/Elements/Blobs/Blobs";
 export default function SelectedWorks() {
     const galleryContainer = useRef();
+    const bg = useRef();
     const container = useRef();
     const { contextSafe } = useGSAP({scope: container});
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
         const gallery = galleryContainer.current;
+
+        // BG Animation
+        gsap.to(bg.current, {
+            scrollTrigger: {
+                trigger: container.current,
+                start: 'top 90%',
+                end: 'top 50%',
+                scrub: true,
+            },
+            clipPath: 'inset(0px 0px round 3rem 3rem 0rem 0rem)',
+        });
 
         // Horizontal Scroll
         let tl = gsap.timeline({
@@ -84,7 +96,7 @@ export default function SelectedWorks() {
 
     return (
         <section className={styles.section} id={'works'} ref={container}>
-            <div className={styles.bg}>
+            <div className={styles.bg} ref={bg}>
                 <div className={`${styles.showcase}`}></div>
             </div>
             <div className={styles.xScrollContainer} ref={galleryContainer}>

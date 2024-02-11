@@ -105,6 +105,10 @@
   border: 1px solid hsla(var(--color-white), .3);
   padding: 0.8rem 1rem;
   border-radius: 100rem;
+  text-transform: uppercase;
+  @include respond-below(xs) {
+    display: none;
+  }
   span{
     position: relative;
     box-sizing: content-box;
@@ -138,5 +142,16 @@
       transform: scale(0.95);
       box-shadow: 0 0 0 0 hsla(var(--color-success), .1);
     }
+  }
+}
+
+.location{
+  margin-left: auto;
+  margin-right: 3rem;
+  font-size: var(--fs-ms);
+  color: hsla(var(--color-white), .9);
+  text-transform: uppercase;
+  @include respond-below(xs) {
+    display: none;
   }
 }

@@ -87,10 +87,7 @@ export default function Gallery() {
                 slidesOffsetAfter={30}
                 slidesOffsetBefore={30}
                 freeMode={true}
-                pagination={{
-                    type: 'fraction',
-                }}
-                modules={[Pagination, FreeMode]}
+                modules={[FreeMode]}
                 breakpoints={{
                     768: {
                         slidesPerView: 1.8,

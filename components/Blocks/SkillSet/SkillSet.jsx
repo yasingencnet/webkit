@@ -102,8 +102,10 @@ export default function SkillSet() {
     return (
         <>
             <section className={`${styles.section}`} id={'skills'} ref={container}>
-                <Blobs type={'v2'} classVariable={`${styles.blob}`}/>
-                <Blobs type={'v1'} classVariable={`${styles.blob} ${styles.blobV1}`}/>
+                <div className={styles.blobs}>
+                    <Blobs type={'v2'} classVariable={`${styles.blob} ${styles.blobV2}`}/>
+                    <Blobs type={'v1'} classVariable={`${styles.blob} ${styles.blobV1}`}/>
+                </div>
                 <div className={styles.grid}>
                     <Title color={'white'}><span>My</span> <br/> Skillset</Title>
                     <div className={styles.circularCarouselWrapper}>
@@ -116,12 +118,12 @@ export default function SkillSet() {
                             {Skills.map((skill, index) => (
                                 <div key={index}
                                      className={`${styles.box} ${activeIndex === index ? styles.isActive : ''}`}>
-                                    <Image src={skill.image} alt={skill.title} width={100} height={100}
+                                    <Image className={styles.image} src={skill.image} alt={skill.title} width={100}
+                                           height={100}
                                            loading={'lazy'}/>
                                 </div>
                             ))}
                         </div>
-
                         {Skills.map((skill, index) => (
                             <div key={index}
                                  className={`${styles.circularDescriptions} ${activeIndex === index ? styles.isActive : ''}`}>
