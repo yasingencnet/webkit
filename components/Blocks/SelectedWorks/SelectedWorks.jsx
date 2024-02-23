@@ -32,7 +32,7 @@ export default function SelectedWorks() {
         gsap.to(bg.current, {
             scrollTrigger: {
                 trigger: container.current,
-                start: 'top 90%',
+                start: 'top 80%',
                 end: 'top 50%',
                 scrub: true,
             },
