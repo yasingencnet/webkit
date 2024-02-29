@@ -115,6 +115,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   background: hsl(var(--color-bg-alt));
+  font-family: var(--font-primary);
 }
 
 /* Avoid text overflows */
