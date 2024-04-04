@@ -1,6 +1,6 @@
 {
   "works": {
-    "isActive": true,
+    "isActive": false,
     "showOnNavigation":  true,
     "showOnFooter":  true,
     "title": "Works",

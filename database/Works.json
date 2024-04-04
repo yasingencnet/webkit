@@ -6,6 +6,7 @@
     "url": "https://uaeyearof.ae/",
     "date": "2023",
     "service": "Frontend Development",
+    "status": false,
     "color": {
       "h": "30",
       "s": "100%",
@@ -19,6 +20,7 @@
     "url":  "https://rqitects.com/",
     "date": "2022",
     "service":  "Development",
+    "status": false,
     "color": {
       "h": "0",
       "s": "0%",
@@ -32,6 +34,7 @@
     "url":  "https://fintx.ae/",
     "date": "2023",
     "service":  "Development",
+    "status": false,
     "color": {
       "h": "70",
       "s": "100%",
@@ -45,6 +48,7 @@
     "url":  "https://g42.ai/",
     "date": "2022",
     "service":  "Development",
+    "status": false,
     "color": {
       "h": "0",
       "s": "0%",
@@ -58,6 +62,7 @@
     "url":  "https://www.ferronato-switzerland.com/en/the-luxury-of-privacy/technology",
     "date": "2022",
     "service":  "Development",
+    "status": false,
     "color": {
       "h": "207",
       "s": "18%",
@@ -71,6 +76,7 @@
     "url":  "https://luxuryx.com/",
     "date": "2023",
     "service":  "Development",
+    "status": false,
     "color": {
       "h": "0",
       "s": "0%",
@@ -84,6 +90,7 @@
     "url":  "https://msa.com.tr/msaninrestorani",
     "date": "2017",
     "service":  "Development",
+    "status": true,
     "color": {
       "h": "19",
       "s": "35%",
@@ -97,6 +104,7 @@
     "url":  "https://denge.com.tr/",
     "date": "2018",
     "service":  "Design & Development",
+    "status": true,
     "color": {
       "h": "207",
       "s": "81%",
@@ -110,6 +118,7 @@
     "url":  "",
     "date": "2023",
     "service":  "Development",
+    "status": false,
     "color": {
       "h": "120",
       "s": "29%",
@@ -123,6 +132,7 @@
     "url":  "",
     "date": "2022",
     "service":  "Development",
+    "status": false,
     "color": {
       "h": "190",
       "s": "190%",
@@ -136,6 +146,7 @@
     "url":  "",
     "date": "2023",
     "service":  "Development",
+    "status": false,
     "color": {
       "h": "180",
       "s": "20%",
@@ -149,6 +160,7 @@
     "url":  "",
     "date": "2023",
     "service":  "Development",
+    "status": false,
     "color": {
       "h": "345",
       "s": "22%",

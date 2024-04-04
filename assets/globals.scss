@@ -196,22 +196,39 @@ p{
 
 
 // Lenis Styles
-/*html.lenis {
-  height: auto;
-}*/
-
 .lenis.lenis-smooth {
   scroll-behavior: auto;
 }
-
 .lenis.lenis-smooth [data-lenis-prevent] {
   overscroll-behavior: contain;
 }
-
 .lenis.lenis-stopped {
   overflow: hidden;
 }
-
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
+}
+
+// 404
+.notFound{
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: hsl(var(--color-white));
+  text-align: center;
+  h1.notFoundTitle{
+    font-size: var(--fs-xl);
+  }
+  h2.notFoundTitle{
+    font-size: var(--fs-md);
+  }
+  p{
+    font-size: var(--fs-sm);
+    color: hsla(var(--color-white), .7);
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+  }
 }

@@ -78,19 +78,6 @@ export default function SkillSet() {
             },
         });
 
-        const sphereTL = gsap.timeline({
-            scrollTrigger: {
-                trigger: container.current,
-                start: 'top 25%',
-                end: 'bottom 75%',
-                scrub: true,
-                toggleActions: 'play none none reverse',
-            }
-        });
-        sphereTL.from(sphere.current, {
-            yPercent: -200
-        })
-
         handleResize();
         window.addEventListener('resize', handleResize);
         return () => {
@@ -98,6 +85,7 @@ export default function SkillSet() {
         };
 
     }, { scope: container });
+
 
     return (
         <>
@@ -118,8 +106,8 @@ export default function SkillSet() {
                             {Skills.map((skill, index) => (
                                 <div key={index}
                                      className={`${styles.box} ${activeIndex === index ? styles.isActive : ''}`}>
-                                    <Image className={styles.image} src={skill.image} alt={skill.title} width={100}
-                                           height={100}
+                                    <Image className={styles.image} src={skill.image} alt={skill.title} width={80}
+                                           height={80}
                                            loading={'lazy'}/>
                                 </div>
                             ))}
